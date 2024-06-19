@@ -20,6 +20,9 @@ const UserSchema = new mongoose.Schema(
       required: [true, "required field"],
       minlength: [8, "invalid length"],
     },
+    gender: {
+      type: String,
+    }
   },
   {
     timestamps: true,
