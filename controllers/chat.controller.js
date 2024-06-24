@@ -8,7 +8,7 @@ module.exports.getRecipes = (req, res, next) => {
 
   const prompt = `Quiero una receta que use estos ingredientes ${ingredients.join(
     ", "
-  )}`;
+  )}, envialo en formato html, seprando titulos, listas, enlaces... etc`;
 
   axios
     .post(
@@ -16,7 +16,6 @@ module.exports.getRecipes = (req, res, next) => {
       {
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: prompt }],
-        max_tokens: 150,
       },
       {
         headers: {
@@ -26,8 +25,8 @@ module.exports.getRecipes = (req, res, next) => {
       }
     )
     .then((response) => {
-      console.log(response);
-      res.send(response.data);
+      Recipe.create();
+      res.json(response.data);
     })
     .catch((error) => {
       if (error.response && error.response.status === 429) {
@@ -38,8 +37,8 @@ module.exports.getRecipes = (req, res, next) => {
           .send({ error: "Rate limit exceeded. Please try again later." });
       } else {
         // Handle other errors
-        console.error("Error:", error.message);
-        res.status(500).send({ error: "Something went wrong" });
+        console.error("Error:", error);
+        //res.status(500).send({ error: "Something went wrong" });
       }
     });
   //res.json(prompt)

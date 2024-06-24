@@ -33,6 +33,10 @@ const RecepiSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  html: {
+    type: String,
+    required: true,
+  },
 });
 
 const Recepi = mongoose.model("Recepi", RecepiSchema);
