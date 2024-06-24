@@ -1,0 +1,336 @@
+[
+    {
+      "name": "Spaghetti Carbonara",
+      "urlImage": "https://example.com/spaghetti-carbonara.jpg",
+      "phrase": "Un clásico italiano fácil y delicioso",
+      "preparationTime": 20,
+      "ingredients": ["Spaghetti", "Huevo", "Queso Pecorino", "Panceta", "Pimienta negra"],
+      "people": 4,
+      "steps": [
+        "Cocinar el spaghetti en agua con sal.",
+        "Freír la panceta hasta que esté crujiente.",
+        "Mezclar los huevos con el queso rallado.",
+        "Combinar el spaghetti con la mezcla de huevo y queso y la panceta.",
+        "Servir con pimienta negra recién molida."
+      ],
+      "caloricRate": 600
+    },
+    {
+      "name": "Tacos de Pollo",
+      "urlImage": "https://example.com/tacos-de-pollo.jpg",
+      "phrase": "Tacos llenos de sabor y frescura",
+      "preparationTime": 30,
+      "ingredients": ["Tortillas de maíz", "Pollo", "Cebolla", "Cilantro", "Lima", "Salsa"],
+      "people": 4,
+      "steps": [
+        "Cocinar el pollo y desmenuzarlo.",
+        "Calentar las tortillas.",
+        "Picar la cebolla y el cilantro.",
+        "Armar los tacos con pollo, cebolla, cilantro y salsa.",
+        "Exprimir jugo de lima por encima y servir."
+      ],
+      "caloricRate": 400
+    },
+    {
+      "name": "Ensalada César",
+      "urlImage": "https://example.com/ensalada-cesar.jpg",
+      "phrase": "Una ensalada fresca y clásica",
+      "preparationTime": 15,
+      "ingredients": ["Lechuga romana", "Queso parmesano", "Crutones", "Pechuga de pollo", "Aderezo César"],
+      "people": 2,
+      "steps": [
+        "Cortar la lechuga y el pollo en trozos.",
+        "Freír el pollo hasta que esté dorado.",
+        "Mezclar la lechuga con el pollo, el queso parmesano y los crutones.",
+        "Agregar el aderezo César y mezclar bien.",
+        "Servir inmediatamente."
+      ],
+      "caloricRate": 350
+    },
+    {
+      "name": "Pizza Margarita",
+      "urlImage": "https://example.com/pizza-margarita.jpg",
+      "phrase": "La pizza más simple y deliciosa",
+      "preparationTime": 25,
+      "ingredients": ["Masa de pizza", "Salsa de tomate", "Mozzarella", "Albahaca fresca", "Aceite de oliva"],
+      "people": 4,
+      "steps": [
+        "Precalentar el horno a 250°C.",
+        "Extender la masa de pizza en una bandeja para hornear.",
+        "Cubrir con salsa de tomate y mozzarella.",
+        "Hornear por 10-15 minutos hasta que esté dorada.",
+        "Añadir hojas de albahaca y un chorrito de aceite de oliva antes de servir."
+      ],
+      "caloricRate": 500
+    },
+    {
+      "name": "Sopa de Tomate",
+      "urlImage": "https://example.com/sopa-de-tomate.jpg",
+      "phrase": "Una sopa reconfortante y nutritiva",
+      "preparationTime": 40,
+      "ingredients": ["Tomates", "Cebolla", "Ajo", "Caldo de verduras", "Albahaca", "Crema"],
+      "people": 4,
+      "steps": [
+        "Sofreír la cebolla y el ajo hasta que estén tiernos.",
+        "Agregar los tomates picados y cocinar por 10 minutos.",
+        "Añadir el caldo de verduras y llevar a ebullición.",
+        "Cocinar a fuego lento por 20 minutos.",
+        "Mezclar con una batidora hasta obtener una consistencia suave.",
+        "Servir con crema y albahaca fresca."
+      ],
+      "caloricRate": 300
+    },
+    {
+      "name": "Curry de Garbanzos",
+      "urlImage": "https://example.com/curry-de-garbanzos.jpg",
+      "phrase": "Un plato vegano lleno de sabor",
+      "preparationTime": 35,
+      "ingredients": ["Garbanzos", "Cebolla", "Ajo", "Tomate", "Leche de coco", "Especias (cúrcuma, comino, cilantro)"],
+      "people": 4,
+      "steps": [
+        "Sofreír la cebolla y el ajo hasta que estén dorados.",
+        "Agregar las especias y cocinar por 1 minuto.",
+        "Añadir los tomates y cocinar por 5 minutos.",
+        "Incorporar los garbanzos y la leche de coco.",
+        "Cocinar a fuego lento por 20 minutos.",
+        "Servir con arroz o pan naan."
+      ],
+      "caloricRate": 450
+    },
+    {
+      "name": "Paella de Mariscos",
+      "urlImage": "https://example.com/paella-de-mariscos.jpg",
+      "phrase": "Un clásico español lleno de mariscos",
+      "preparationTime": 60,
+      "ingredients": ["Arroz", "Calamares", "Gambas", "Mejillones", "Pimiento rojo", "Guisantes", "Caldo de pescado", "Azafrán"],
+      "people": 6,
+      "steps": [
+        "Sofreír el pimiento rojo y los calamares.",
+        "Añadir el arroz y el azafrán, y mezclar bien.",
+        "Agregar el caldo de pescado y cocinar por 15 minutos.",
+        "Incorporar las gambas y los mejillones.",
+        "Cocinar a fuego lento hasta que el arroz esté tierno.",
+        "Servir con guisantes frescos por encima."
+      ],
+      "caloricRate": 700
+    },
+    {
+      "name": "Hamburguesa Clásica",
+      "urlImage": "https://example.com/hamburguesa-clasica.jpg",
+      "phrase": "La hamburguesa perfecta para cualquier ocasión",
+      "preparationTime": 20,
+      "ingredients": ["Carne molida", "Pan de hamburguesa", "Queso", "Lechuga", "Tomate", "Cebolla", "Ketchup", "Mostaza"],
+      "people": 4,
+      "steps": [
+        "Formar las hamburguesas con la carne molida.",
+        "Cocinar las hamburguesas a la parrilla o sartén hasta el punto deseado.",
+        "Tostar ligeramente los panes de hamburguesa.",
+        "Armar las hamburguesas con queso, lechuga, tomate y cebolla.",
+        "Añadir ketchup y mostaza al gusto.",
+        "Servir inmediatamente."
+      ],
+      "caloricRate": 550
+    },
+    {
+      "name": "Sushi de Salmón",
+      "urlImage": "https://example.com/sushi-de-salmon.jpg",
+      "phrase": "Deliciosos rollos de sushi hechos en casa",
+      "preparationTime": 50,
+      "ingredients": ["Arroz para sushi", "Vinagre de arroz", "Salmón", "Alga nori", "Pepino", "Aguacate", "Salsa de soja", "Wasabi"],
+      "people": 4,
+      "steps": [
+        "Cocinar el arroz y mezclar con vinagre de arroz.",
+        "Cortar el salmón, pepino y aguacate en tiras.",
+        "Colocar una hoja de nori sobre la esterilla de sushi.",
+        "Extender el arroz sobre la nori y colocar el relleno en el centro.",
+        "Enrollar con cuidado y cortar en porciones.",
+        "Servir con salsa de soja y wasabi."
+      ],
+      "caloricRate": 300
+    },
+    {
+      "name": "Brownies de Chocolate",
+      "urlImage": "https://example.com/brownies-de-chocolate.jpg",
+      "phrase": "Deliciosos y esponjosos brownies",
+      "preparationTime": 45,
+      "ingredients": ["Chocolate", "Mantequilla", "Azúcar", "Huevos", "Harina", "Cacao en polvo", "Vainilla"],
+      "people": 8,
+      "steps": [
+        "Precalentar el horno a 180°C.",
+        "Derretir el chocolate y la mantequilla juntos.",
+        "Batir los huevos con el azúcar y la vainilla.",
+        "Añadir la mezcla de chocolate y mantequilla.",
+        "Incorporar la harina y el cacao en polvo.",
+        "Verter la mezcla en un molde y hornear por 25-30 minutos.",
+        "Dejar enfriar antes de cortar y servir."
+      ],
+      "caloricRate": 400
+    },
+    {
+      "name": "Ceviche de Pescado",
+      "urlImage": "https://example.com/ceviche-de-pescado.jpg",
+      "phrase": "Un refrescante plato de pescado marinado",
+      "preparationTime": 20,
+      "ingredients": ["Pescado blanco", "Lima", "Cebolla morada", "Cilantro", "Ají", "Sal"],
+      "people": 4,
+      "steps": [
+        "Cortar el pescado en cubos pequeños.",
+        "Marinar el pescado en jugo de lima por 15 minutos.",
+        "Picar la cebolla morada, el cilantro y el ají.",
+        "Mezclar todos los ingredientes y sazonar con sal.",
+        "Servir inmediatamente."
+      ],
+      "caloricRate": 200
+    },
+    {
+      "name": "Panqueques",
+      "urlImage": "https://example.com/panqueques.jpg",
+      "phrase": "Panqueques esponjosos perfectos para el desayuno",
+      "preparationTime": 20,
+      "ingredients": ["Harina", "Leche", "Huevos", "Azúcar", "Mantequilla", "Polvo de hornear", "Sal"],
+      "people": 4,
+      "steps": [
+        "Mezclar la harina, el azúcar, el polvo de hornear y la sal.",
+        "Añadir la leche, los huevos y la mantequilla derretida.",
+        "Batir hasta obtener una mezcla homogénea.",
+        "Cocinar los panqueques en una sartén caliente.",
+        "Servir con jarabe de arce o frutas frescas."
+      ],
+      "caloricRate": 350
+    },
+    {
+      "name": "Guacamole",
+      "urlImage": "https://example.com/guacamole.jpg",
+      "phrase": "Una deliciosa salsa de aguacate",
+      "preparationTime": 10,
+      "ingredients": ["Aguacate", "Tomate", "Cebolla", "Lima", "Cilantro", "Sal"],
+      "people": 4,
+      "steps": [
+        "Aplastar los aguacates en un tazón.",
+        "Picar el tomate, la cebolla y el cilantro.",
+        "Mezclar todos los ingredientes y exprimir jugo de lima.",
+        "Sazonar con sal al gusto.",
+        "Servir con totopos o como acompañamiento."
+      ],
+      "caloricRate": 250
+    },
+    {
+      "name": "Pollo al Horno",
+      "urlImage": "https://example.com/pollo-al-horno.jpg",
+      "phrase": "Pollo jugoso y dorado al horno",
+      "preparationTime": 90,
+      "ingredients": ["Pollo entero", "Ajo", "Limón", "Tomillo", "Romero", "Sal", "Pimienta", "Aceite de oliva"],
+      "people": 6,
+      "steps": [
+        "Precalentar el horno a 200°C.",
+        "Rellenar el pollo con ajo y limón.",
+        "Untar el pollo con aceite de oliva y sazonar con sal, pimienta, tomillo y romero.",
+        "Hornear por 1 hora y 15 minutos.",
+        "Dejar reposar 10 minutos antes de cortar y servir."
+      ],
+      "caloricRate": 450
+    },
+    {
+      "name": "Gazpacho",
+      "urlImage": "https://example.com/gazpacho.jpg",
+      "phrase": "Una sopa fría de tomate refrescante",
+      "preparationTime": 15,
+      "ingredients": ["Tomate", "Pepino", "Pimiento verde", "Cebolla", "Ajo", "Vinagre de vino", "Aceite de oliva", "Sal"],
+      "people": 4,
+      "steps": [
+        "Picar los tomates, el pepino, el pimiento y la cebolla.",
+        "Mezclar todos los ingredientes en una licuadora.",
+        "Agregar vinagre de vino, aceite de oliva y sal al gusto.",
+        "Licuar hasta obtener una consistencia suave.",
+        "Refrigerar antes de servir."
+      ],
+      "caloricRate": 150
+    },
+    {
+      "name": "Pollo al Curry",
+      "urlImage": "https://example.com/pollo-al-curry.jpg",
+      "phrase": "Un plato exótico y lleno de sabor",
+      "preparationTime": 40,
+      "ingredients": ["Pechuga de pollo", "Cebolla", "Ajo", "Tomate", "Leche de coco", "Curry en polvo", "Aceite", "Sal"],
+      "people": 4,
+      "steps": [
+        "Sofreír la cebolla y el ajo en aceite.",
+        "Añadir el pollo y cocinar hasta que esté dorado.",
+        "Agregar el tomate y cocinar por 5 minutos.",
+        "Incorporar la leche de coco y el curry en polvo.",
+        "Cocinar a fuego lento por 20 minutos.",
+        "Servir con arroz."
+      ],
+      "caloricRate": 500
+    },
+    {
+      "name": "Crema de Calabaza",
+      "urlImage": "https://example.com/crema-de-calabaza.jpg",
+      "phrase": "Una sopa cremosa y reconfortante",
+      "preparationTime": 30,
+      "ingredients": ["Calabaza", "Cebolla", "Ajo", "Caldo de pollo", "Crema", "Sal", "Pimienta"],
+      "people": 4,
+      "steps": [
+        "Sofreír la cebolla y el ajo hasta que estén tiernos.",
+        "Agregar la calabaza picada y el caldo de pollo.",
+        "Cocinar a fuego lento por 20 minutos.",
+        "Mezclar con una batidora hasta obtener una consistencia suave.",
+        "Añadir crema y sazonar con sal y pimienta.",
+        "Servir caliente."
+      ],
+      "caloricRate": 300
+    },
+    {
+      "name": "Lasaña de Carne",
+      "urlImage": "https://example.com/lasagna-de-carne.jpg",
+      "phrase": "Una lasaña clásica y deliciosa",
+      "preparationTime": 60,
+      "ingredients": ["Láminas de lasaña", "Carne molida", "Tomate", "Cebolla", "Ajo", "Queso ricotta", "Queso mozzarella", "Parmesano", "Albahaca", "Orégano"],
+      "people": 6,
+      "steps": [
+        "Precalentar el horno a 180°C.",
+        "Cocinar la carne molida con cebolla y ajo.",
+        "Agregar tomate, albahaca y orégano, y cocinar por 10 minutos.",
+        "En una bandeja, alternar capas de láminas de lasaña, carne y quesos.",
+        "Hornear por 30-40 minutos hasta que esté dorado.",
+        "Dejar reposar 10 minutos antes de servir."
+      ],
+      "caloricRate": 600
+    },
+    {
+      "name": "Ratatouille",
+      "urlImage": "https://example.com/ratatouille.jpg",
+      "phrase": "Un plato colorido y saludable",
+      "preparationTime": 50,
+      "ingredients": ["Berenjena", "Calabacín", "Pimiento rojo", "Pimiento amarillo", "Tomate", "Cebolla", "Ajo", "Aceite de oliva", "Hierbas provenzales"],
+      "people": 4,
+      "steps": [
+        "Precalentar el horno a 200°C.",
+        "Cortar las verduras en rodajas finas.",
+        "Sofreír la cebolla y el ajo en aceite de oliva.",
+        "Agregar las verduras y sazonar con hierbas provenzales.",
+        "Hornear por 30-40 minutos hasta que las verduras estén tiernas.",
+        "Servir caliente."
+      ],
+      "caloricRate": 250
+    },
+    {
+      "name": "Quiche Lorraine",
+      "urlImage": "https://example.com/quiche-lorraine.jpg",
+      "phrase": "Un quiche clásico y delicioso",
+      "preparationTime": 45,
+      "ingredients": ["Masa de hojaldre", "Bacon", "Queso Gruyere", "Huevos", "Crema", "Leche", "Sal", "Pimienta", "Nuez moscada"],
+      "people": 6,
+      "steps": [
+        "Precalentar el horno a 180°C.",
+        "Extender la masa de hojaldre en un molde para quiche.",
+        "Cocinar el bacon hasta que esté crujiente.",
+        "Batir los huevos con la crema, la leche y los condimentos.",
+        "Añadir el queso rallado y el bacon.",
+        "Verter la mezcla en el molde y hornear por 30-35 minutos.",
+        "Dejar enfriar un poco antes de cortar y servir."
+      ],
+      "caloricRate": 450
+    }
+  ]
+  
