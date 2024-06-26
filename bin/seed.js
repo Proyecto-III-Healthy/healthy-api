@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
-const Recepi = require("./../models/Recepi.model");
-const recepies = require("./recepies.json")
+const Recipe = require("./../models/Recipe.model");
+const recipes = require("./recipes.json")
 require('../config/db.config');
 
 mongoose.connection.once('open', () => {
-  mongoose.connection.dropCollection('recepies')
+  mongoose.connection.dropCollection('recipes')
     .then(() => {
       console.log('Collection dropped');
-      return Recepi.create(recepies);
+      return Recipe.create(recipes);
     })
     .then(() => {
       console.log('Collection created');

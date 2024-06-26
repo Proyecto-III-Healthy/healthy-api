@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const RecepiSchema = mongoose.Schema({
+const RecipeSchema = mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -35,9 +35,8 @@ const RecepiSchema = mongoose.Schema({
   },
   html: {
     type: String,
-    required: true,
   },
 });
 
-const Recepi = mongoose.model("Recepi", RecepiSchema);
-module.exports = Recepi;
+const Recipe = mongoose.model("Recipe", RecipeSchema);
+module.exports = Recipe;

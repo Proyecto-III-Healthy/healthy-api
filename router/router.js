@@ -4,7 +4,11 @@ const { create, getCurrentUser } = require("./../controllers/user.controller");
 const { login } = require("./../controllers/auth.controller");
 const { isAuthenticated } = require("./../middlewares/auth.middleware");
 const { getRecipes } = require("./../controllers/chat.controller");
-const { listRecepies } = require("./../controllers/recepies.controller");
+const {
+  listRecipes,
+  recipeDetails,
+} = require("../controllers/recipe.controller");
+//const recipeController = require("./../controllers/recipe.controller");
 
 // Auth
 router.post("/login", login);
@@ -16,7 +20,8 @@ router.get("/users/me", isAuthenticated, getCurrentUser);
 //Chat gpt
 router.post("/chat", getRecipes);
 
-//Recepies
-router.get("/recepies", listRecepies);
+//Recipe
+router.get("/recipes", listRecipes);
+router.get("/recipes/:id", recipeDetails);
 
 module.exports = router;
