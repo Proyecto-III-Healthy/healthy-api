@@ -11,6 +11,7 @@ module.exports.listRecipes = (req, res, next) => {
 module.exports.recipeDetails = (req, res, next) => {
   const { id } = req.params;
 
+
   Recipe.findById(id)
     .then((recipe) => {
       res.json(recipe);
