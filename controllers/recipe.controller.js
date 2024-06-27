@@ -11,9 +11,8 @@ module.exports.listRecipes = (req, res, next) => {
 module.exports.recipeDetails = (req, res, next) => {
   const { id } = req.params;
 
-  Recipe.finById(id)
+  Recipe.findById(id)
     .then((recipe) => {
-      console.log("object", recipe);
       res.json(recipe);
     })
     .catch(next);
