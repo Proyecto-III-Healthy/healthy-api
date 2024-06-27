@@ -18,3 +18,21 @@ module.exports.recipeDetails = (req, res, next) => {
     })
     .catch(next);
 };
+exports.toggleFavorite = async (req, res, next) => {
+  const { id } = req.params;
+
+  try {
+    const recipe = await Recipe.findById(id);
+    if (!recipe) {
+      return res.status(404).json({ error: 'Receta no encontrada' });
+    }
+
+    recipe.isFavorite = !recipe.isFavorite;
+    await recipe.save();
+
+    res.json(recipe);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Error del servidor');
+  }
+};

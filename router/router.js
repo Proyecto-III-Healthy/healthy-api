@@ -7,6 +7,7 @@ const { getRecipes } = require("./../controllers/chat.controller");
 const {
   listRecipes,
   recipeDetails,
+  toggleFavorite,
 } = require("../controllers/recipe.controller");
 //const recipeController = require("./../controllers/recipe.controller");
 
@@ -23,5 +24,6 @@ router.post("/chat", getRecipes);
 //Recipe
 router.get("/recipes", listRecipes);
 router.get("/recipes/:id", recipeDetails);
+router.put('/recipes/:id/favorite', toggleFavorite);
 
 module.exports = router;
