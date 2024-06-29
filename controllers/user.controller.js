@@ -10,7 +10,6 @@ module.exports.create = (req, res, next) => {
 };
 
 module.exports.getCurrentUser = (req, res, next) => {
-  console.log("******** getCurrentUser controller: ", req.currentUserId);
   User.findById(req.currentUserId)
     .then((user) => {
       if (!user) {
