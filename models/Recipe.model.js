@@ -36,6 +36,10 @@ const RecipeSchema = mongoose.Schema({
   html: {
     type: String,
   },
+  isFavorite: { 
+    type: Boolean, 
+    default: false,
+  }
 });
 
 const Recipe = mongoose.model("Recipe", RecipeSchema);
