@@ -4,7 +4,6 @@ const createError = require("http-errors");
 module.exports.isAuthenticated = (req, res, next) => {
   //solicito si hay header de autorización
   const authorization = req.header("Authorization"); // "Bearer <token>" || null
-
   if (!authorization) {
     return next(createError(401, "Authorization header was not provided"));
   }

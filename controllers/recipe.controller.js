@@ -18,7 +18,7 @@ module.exports.recipeDetails = (req, res, next) => {
     })
     .catch(next);
 };
-exports.toggleFavorite = async (req, res, next) => {
+module.exports.toggleFavorite = async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -35,4 +35,11 @@ exports.toggleFavorite = async (req, res, next) => {
     console.error(err.message);
     res.status(500).send('Error del servidor');
   }
+};
+module.exports.listFavorites = (req, res, next) => {
+  Recipe.find({isFavorite: true})
+    .then((recipes) => {
+      res.json(recipes);
+    })
+    .catch(next);
 };
