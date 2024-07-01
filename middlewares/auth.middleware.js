@@ -28,7 +28,8 @@ module.exports.isAuthenticated = (req, res, next) => {
     }
 
     req.currentUserId = decodedToken.id; //Extrae y guarda el ID del usuario: Si el token es válido, extrae el ID del usuario y lo guarda en req.currentUserId.
-    console.log("token dado");
+    console.log("token dado ahora");
+
     next();
   });
 };

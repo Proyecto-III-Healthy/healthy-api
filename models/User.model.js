@@ -26,7 +26,27 @@ const UserSchema = new mongoose.Schema(
     },
     gender: {
       type: String,
-    }
+    },
+    weight:{
+      type: Number,
+      min: 0
+    },
+    height:{
+      type: Number,
+      min: 0
+    },
+    objetive:{
+      type: String
+    },
+    ability:{
+      type: String
+    },
+    typeDiet:{
+      type: String
+    },
+    alergic:{
+      type: String
+    },
   },
   {
     timestamps: true,

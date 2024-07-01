@@ -33,9 +33,6 @@ const RecipeSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  html: {
-    type: String,
-  },
   isFavorite: { 
     type: Boolean, 
     default: false,

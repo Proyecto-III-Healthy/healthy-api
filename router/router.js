@@ -20,7 +20,7 @@ router.post("/register", create);
 router.get("/users/me", isAuthenticated, getCurrentUser);
 
 //Chat gpt
-router.post("/chat", getRecipes);
+router.post("/chat", isAuthenticated, getRecipes);
 
 //Recipe
 router.get("/recipes", listRecipes);
