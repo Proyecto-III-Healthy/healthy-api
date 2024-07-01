@@ -1,8 +1,30 @@
 const User = require("./../models/User.model");
 module.exports.create = (req, res, next) => {
-  const { name, email, password, gender } = req.body;
+  const {
+    name,
+    email,
+    password,
+    gender,
+    weight,
+    height,
+    objetive,
+    ability,
+    typeDiet,
+    alergic,
+  } = req.body;
 
-  User.create({ name, email, password, gender })
+  User.create({
+    name,
+    email,
+    password,
+    gender,
+    weight,
+    height,
+    objetive,
+    ability,
+    typeDiet,
+    alergic,
+  })
     .then((userCreated) => {
       res.status(204).json(userCreated);
     })
