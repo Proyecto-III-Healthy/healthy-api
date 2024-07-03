@@ -4,17 +4,15 @@ const Recipe = require("./../models/Recipe.model");
 const createError = require("http-errors");
 module.exports.getRecipes = (req, res, next) => {
   const ingredients = req.body.ingredients;
- 
+
   if (!ingredients || ingredients.length === 0) {
     return res.status(400).send({ error: "Los ingredientes necesarios" });
   }
- 
+
   User.findById(req.currentUserId)
     .then((user) => {
-      
       if (!user) {
-       next(createError(402, "User not found ahora"));
-       
+        next(createError(402, "User not found ahora"));
       }
       const prompt = `Quiero una receta que use estos ingredientes ${ingredients.join(
         ", "
@@ -33,12 +31,30 @@ module.exports.getRecipes = (req, res, next) => {
         isFavorite: false
       }`;
       console.log("PROMPT", prompt);
+      return axios.post(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: prompt }],
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    })
+    .then((response) => {
+      const recipeObj = JSON.parse(response.data.choices[0].message.content);
+      //req.body.recipeObj = recipeObj;
       return axios
         .post(
-          "https://api.openai.com/v1/chat/completions",
+          "https://api.openai.com/v1/images/generations",
           {
-            model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: prompt }],
+            prompt: recipeObj.name,
+            n: 1,
+            size: "1024x1024",
           },
           {
             headers: {
@@ -47,21 +63,27 @@ module.exports.getRecipes = (req, res, next) => {
             },
           }
         )
-        
+        .then((dalleResponse) => {
+          if (dalleResponse.data.data.length > 0) {
+            recipeObj.urlImage = dalleResponse.data.data[0].url;
+          } else {
+            recipeObj.urlImage =
+              "https://img.europapress.es/fotoweb/fotonoticia_20181010083733_690.jpg"; // URL de imagen predeterminada en caso de que no se genere ninguna imagen
+          }
+          //return recipeObj;
+          req.body.recipeObj = recipeObj;
+          next();
+        })
     })
-    .then((response) => {
-      
-      const recipeObj = JSON.parse(response.data.choices[0].message.content)
-      //res.send(response.data.choices[0].message.content)
-      return Recipe.create(recipeObj)
-      
-    })
-    .then((createdRecipe) => {
-      
-      res.json({
-        createdRecipe
-      });
-    })
+    // .then((recipeObj) => {
+    //   return Recipe.create(recipeObj);
+    // })
+
+    // .then((createdRecipe) => {
+    //   res.json({
+    //     createdRecipe,
+    //   });
+    // })
 
     .catch((error) => {
       if (error.response && error.response.status === 429) {
