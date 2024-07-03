@@ -10,6 +10,8 @@ const {
   toggleFavorite,
   listFavorites,
 } = require("../controllers/recipe.controller");
+const { uploadImageToCloudinary } = require("../controllers/cloudinary.controller");
+const Recipe = require("../models/Recipe.model");
 //const recipeController = require("./../controllers/recipe.controller");
 
 // Auth
@@ -20,7 +22,19 @@ router.post("/register", create);
 router.get("/users/me", isAuthenticated, getCurrentUser);
 
 //Chat gpt
-router.post("/chat", isAuthenticated, getRecipes);
+router.post("/chat", isAuthenticated, getRecipes, uploadImageToCloudinary, (req, res) => {
+  const { recipeObj } = req.body;
+  Recipe.create(recipeObj)
+    .then((createdRecipe) => {
+      res.json({
+        createdRecipe,
+      });
+    })
+    .catch((error) => {
+      console.error("Error creating recipe:", error);
+      res.status(500).send({ error: "Something went wrong" });
+    });
+});
 
 //Recipe
 router.get("/recipes", listRecipes);
