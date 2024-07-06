@@ -12,7 +12,6 @@ const {
 } = require("../controllers/recipe.controller");
 const { uploadImageToCloudinary } = require("../controllers/cloudinary.controller");
 const Recipe = require("../models/Recipe.model");
-const { sendEmail } = require('./../config/nodemailer.config'); // Importar el servicio de email
 
 //const recipeController = require("./../controllers/recipe.controller");
 
@@ -24,12 +23,13 @@ router.post("/register", create);
 router.get("/users/me", isAuthenticated, getCurrentUser);
 
 //Chat gpt
+
 router.post("/chat", isAuthenticated, getRecipes, uploadImageToCloudinary, (req, res) => {
   const { recipes } = req.body;
   Recipe.insertMany(recipes)
     .then((createdRecipes) => {
 
-      const userEmail = req.user.email; // Asegúrate de que el email del usuario esté disponible
+      const userEmail = req.user.email; 
       const subject = "Tus recetas solicitadas";
       const text = "Aquí tienes las recetas que solicitaste:";
       const html = `
