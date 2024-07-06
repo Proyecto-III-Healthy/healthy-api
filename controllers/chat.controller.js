@@ -14,22 +14,30 @@ module.exports.getRecipes = (req, res, next) => {
       if (!user) {
         next(createError(402, "User not found ahora"));
       }
-      const prompt = `Quiero una receta que use estos ingredientes ${ingredients.join(
+      req.user = user;// Aquí asignamos el usuario al objeto req
+      
+      const prompt = `Quiero 5 recetas que usen estos ingredientes ${ingredients.join(
         ", "
       )}, 
-      y tenga en cuenta estos aspectos del usuario ${user?.ability},
-      y la respuesta debe venir como un JSON String que cumpla con esta estructura
-      {
-        name: "Caldo de pollo...",
-        urlImage: "http...",
-        phrase: "Rico caldo...",
-        preparationTime: 20,//minutos
-        ingredients: ["agua", "pollo"],
-        people: 4,//personas
-        steps: ["Hervir", "cortar pollo"],
-        caloricRate: 200,//kcal por plato
-        isFavorite: false
-      }`;
+      y tenga en cuenta estos aspectos del usuario , su objetivo es ${user?.objetive}, 
+      su habilidad en la cocina es ${user?.ability},
+      su tipo de dieta es ${user?.typeDiet} y es alérgico a ${user?.alergic},
+
+      y la respuesta debe venir como un JSON que contenga una lista de recetas con esta estructura
+      [
+        {
+          name: "Caldo de pollo...",
+          urlImage: "http...",
+          phrase: "Rico caldo...",
+          preparationTime: 20,//minutos
+          ingredients: ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
+          people: 4,//personas
+          steps: ["Hervir", "cortar pollo"],
+          caloricRate: 200,//kcal por plato
+          isFavorite: false//false por defecto
+        },
+        ....
+      ]`;
       console.log("PROMPT", prompt);
       return axios.post(
         "https://api.openai.com/v1/chat/completions",
@@ -46,44 +54,35 @@ module.exports.getRecipes = (req, res, next) => {
       );
     })
     .then((response) => {
-      const recipeObj = JSON.parse(response.data.choices[0].message.content);
-      //req.body.recipeObj = recipeObj;
-      return axios
-        .post(
-          "https://api.openai.com/v1/images/generations",
-          {
-            prompt: recipeObj.name,
-            n: 1,
-            size: "1024x1024",
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-              "Content-Type": "application/json",
+      const recipes = JSON.parse(response.data.choices[0].message.content);
+      const dallePpromiseAddUrlImage = recipes.recetas.map((recipe) => {
+        const dallePrompt = `Crea una imagen para una receta llamada ${recipe.name}`;
+        return axios
+          .post(
+            "https://api.openai.com/v1/images/generations",
+            {
+              prompt: dallePrompt,
+              n: 1,
+              size: "1024x1024",
             },
-          }
-        )
-        .then((dalleResponse) => {
-          if (dalleResponse.data.data.length > 0) {
-            recipeObj.urlImage = dalleResponse.data.data[0].url;
-          } else {
-            recipeObj.urlImage =
-              "https://img.europapress.es/fotoweb/fotonoticia_20181010083733_690.jpg"; // URL de imagen predeterminada en caso de que no se genere ninguna imagen
-          }
-          //return recipeObj;
-          req.body.recipeObj = recipeObj;
-          next();
-        })
+            {
+              headers: {
+                Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+                "Content-Type": "application/json",
+              },
+            }
+          )
+          .then((dalleResponse) => {
+            recipe.urlImage = dalleResponse.data.data[0].url;
+            return recipe;
+          });
+      });
+      return Promise.all(dallePpromiseAddUrlImage);
     })
-    // .then((recipeObj) => {
-    //   return Recipe.create(recipeObj);
-    // })
-
-    // .then((createdRecipe) => {
-    //   res.json({
-    //     createdRecipe,
-    //   });
-    // })
+    .then((recipesWithUrlImage) => {
+      req.body.recipes = recipesWithUrlImage;
+      next();
+    })
 
     .catch((error) => {
       if (error.response && error.response.status === 429) {
