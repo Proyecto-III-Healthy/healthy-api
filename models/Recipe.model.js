@@ -36,6 +36,10 @@ const RecipeSchema = mongoose.Schema({
   isFavorite: { 
     type: Boolean, 
     default: false,
+  },
+  type: {
+    type: String,
+    enum: ["desayuno", "comida", "cena"],
   }
 });
 

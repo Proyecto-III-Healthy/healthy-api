@@ -28,7 +28,8 @@ app.use("/", router);
 
 // Middleware to handle errors.
 app.use((err, req, res, next) => {
-  res.status(err.status).json(err);
+  console.log(err)
+  res.status(err.status || 500).json(err);
 });
 
 const port = process.env.PORT || 3000;
