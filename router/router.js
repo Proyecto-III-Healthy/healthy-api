@@ -4,7 +4,7 @@ const { create, getCurrentUser } = require("./../controllers/user.controller");
 const { login } = require("./../controllers/auth.controller");
 const { isAuthenticated } = require("./../middlewares/auth.middleware");
 const { getRecipes, saveRecipes } = require("./../controllers/chat.controller");
-const  {generateWeeklyMealPlan } = require("./../controllers/meals.controller");
+const  {generateDaylyMealPlan } = require("./../controllers/meals.controller");
 const {
   listRecipes,
   recipeDetails,
@@ -25,7 +25,7 @@ router.get("/users/me", isAuthenticated, getCurrentUser);
 
 //Chat gpt
 router.post("/chat", isAuthenticated, getRecipes, uploadImageToCloudinary, saveRecipes);
-router.post("/weeklyPlan", isAuthenticated, generateWeeklyMealPlan);
+router.post("/dayPlan", isAuthenticated, generateDaylyMealPlan);
 
 //Recipe
 router.get("/recipes", listRecipes);
