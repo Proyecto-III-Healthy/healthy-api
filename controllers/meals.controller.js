@@ -4,67 +4,65 @@ const createError = require("http-errors");
 const DayPlan = require("./../models/DayPlan.model");
 const WeeklyPlan = require("./../models/WeeklyPlan.model");
 const Meal = require("./../models/Meal.model");
-const createWeeklyMealPlan = require("../utils/createWeeklyMealPlan");
+const createDailyMealPlan = require("../utils/createDailyMealPlan");
 
-module.exports.generateWeeklyMealPlan = (req, res, next) => {
+module.exports.generateDaylyMealPlan = (req, res, next) => {
   const { startDate, userPreferences } = req.body;
   console.log(req.body);
 
   const prompt = `
-    Genera un plan semanal de comidas basado en estas preferencias del usuario:
+    Genera un plan diario de comidas teniendo en estas preferencias del usuario:
     - Objetivo: ${userPreferences.objetive}
     - Habilidad en la cocina: ${userPreferences.ability}
     - Tipo de dieta: ${userPreferences.typeDiet}
     - Alergias: ${userPreferences.alergic}
     
-    El plan debe incluir desayuno, almuerzo y cena para cada día de la semana y debe tener el siguiente formato y que sea un JSON válido sin comentarios:
-
+    El plan debe incluir desayuno, almuerzo y cena,
+    cada meal tendra su receta que tedra los campos que te indico acontinuación y debe tener el siguiente formato y que sea un JSON válido sin comentarios que no falle con un JSON.parse():
     {
       "days": [
         {
           "date": "2024-06-24",
           "meals": [
-            { "name": "Desayuno saludable", type:"desayuno", "time": "08:00", recipe:{
-              name: "Caldo de pollo...",
-              urlImage: "http...",
-              phrase: "Rico caldo...",
-              preparationTime: 20,//minutos
-              ingredients: ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
-              people: 4,//personas
-              steps: ["Hervir", "cortar pollo"],
-              caloricRate: 200,//kcal por plato
-              isFavorite: false//false por defecto,
-              type: "desayuno
-            },
-         },
-            { "name": "Almuerzo ligero", type:"comida", "time": "13:00", recipe:{
-                name: "Caldo de pollo...",
-                urlImage: "http...",
-                phrase: "Rico caldo...",
-                preparationTime: 20,//minutos
-                ingredients: ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
-                people: 4,//personas
-                steps: ["Hervir", "cortar pollo"],
-                caloricRate: 200,//kcal por plato
-                isFavorite: false//false por defecto,
-                type: "comida
-            }, 
+            { "name": "Desayuno saludable", "type":"desayuno", "time": "2024-06-24T08:00:00", recipe:{
+              "name": "Caldo de pollo...",
+              "urlImage": "http...",
+              "phrase": "Rico caldo...",
+              "preparationTime": 20,//minutos
+              "ingredients": ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
+              "people": 4,//personas
+              "steps": ["Hervir", "cortar pollo"],
+              "caloricRate": 200,//kcal por plato
+              "isFavorite": false//false por defecto,
+              "type": "desayuno"
+            }
         },
-              { "name": "Cena ligera", type:"cena", "time": "20:00", recipe:{
-                name: "Caldo de pollo...",
-                urlImage: "http...",
-                phrase: "Rico caldo...",
-                preparationTime: 20,//minutos
-                ingredients: ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
-                people: 4,//personas
-                steps: ["Hervir", "cortar pollo"],
-                caloricRate: 200,//kcal por plato
-                isFavorite: false//false por defecto,
-                type: "cena
+        { "name": "Almuerzo ligero", "type":"comida", "time": "2024-06-24T13:00:00", recipe:{
+                "name": "Caldo de pollo...",
+                "urlImage": "http...",
+                "phrase": "Rico caldo...",
+                "preparationTime": 20,//minutos
+                "ingredients": ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
+                "people": 4,//personas
+                "steps": ["Hervir", "cortar pollo"],
+                "caloricRate": 200,//kcal por plato
+                "isFavorite": false//false por defecto,
+                "type": "comida"
+            } 
+        },
+        { "name": "Cena ligera", type:"cena", "time": "2024-06-24T20:00:00", recipe:{
+                "name": "Caldo de pollo...",
+                "urlImage": "http...",
+                "phrase": "Rico caldo...",
+                "preparationTime": 20,//minutos
+                "ingredients": ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
+                "people": 4,//personas
+                "steps": ["Hervir", "cortar pollo"],
+                "caloricRate": 200,//kcal por plato
+                "isFavorite": false//false por defecto,
+                "type": "cena"
               }, 
-        }
-          ]
-        }
+        } 
       ]
     }
   `;
@@ -86,34 +84,48 @@ module.exports.generateWeeklyMealPlan = (req, res, next) => {
     )
     .then((response) => {
       console.log(response.data.choices[0].message.content);
-      const weeklyPlan = JSON.parse(
-        response.data.choices[0].message.content
-      ).days;
-      console.log(weeklyPlan);
-      const mealsByDay = weeklyPlan.map((day) =>
-        day.meals.map((meal) => ({
+      let dailyPlan;
+
+      try {
+        dailyPlan = JSON.parse(response.data.choices[0].message.content).days[0];
+      } catch (e) {
+        console.error("Error parsing JSON:", e);
+        return next(createError(500, "Invalid JSON format in response"));
+      }
+      // const dailyPlan = JSON.parse(
+      //   response.data.choices[0].message.content
+      // ).days;
+      console.log("**************dailyPlan", dailyPlan);
+      const mealsByDay = dailyPlan.meals.map((meal) => ({
           name: meal.name,
-          ingredients: meal.ingredients,
           time: meal.time,
           type: meal.type,
           recipe: {
-            //campos del recipe
-          }
+            name: meal.recipe.name,
+            urlImage: meal.recipe.urlImage,
+            phrase: meal.recipe.phrase,
+            preparationTime: meal.recipe.preparationTime,
+            ingredients: meal.recipe.ingredients,
+            people: meal.recipe.people,
+            steps: meal.recipe.steps,
+            caloricRate: meal.recipe.caloricRate,
+            isFavorite: meal.recipe.isFavorite,
+            type: meal.recipe.type,
+          },
         }))
-      );
+      
 
-      return createWeeklyMealPlan(startDate, mealsByDay);
+      return createDailyMealPlan(startDate, mealsByDay);
     })
-    .then((weeklyMealPlan) => {
-      return new WeeklyPlan(weeklyMealPlan).populate({
-        path: "days",
-        populate: { path: "meals.meal", populate: { path: 'recipe' } },
+    .then((dailyMealPlan) => {
+      return new DayPlan(dailyMealPlan).populate({
+        path: "meals.meal", populate: { path: "recipe" },
       });
     })
-    .then((weeklyMealPlan) => {
+    .then((dailyMealPlan) => {
+      console.log("***************weeklyMealPlan", dailyMealPlan);
       res.json({
-        message: "Weekly meal plan created successfully",
-        weeklyMealPlan,
+        dailyMealPlan
       });
     })
     .catch((error) => {

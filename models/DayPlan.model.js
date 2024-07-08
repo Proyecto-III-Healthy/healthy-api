@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const User = require("./../models/User.model");
 const dayPlanSchema = mongoose.Schema({
   date: {
     type: Date,
@@ -16,6 +17,11 @@ const dayPlanSchema = mongoose.Schema({
       },
     },
   ],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  }
 });
 
 const DayPlan = mongoose.model("DayPlan", dayPlanSchema);
