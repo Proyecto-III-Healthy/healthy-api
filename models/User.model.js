@@ -24,6 +24,10 @@ const UserSchema = new mongoose.Schema(
       required: [true, "required field"],
       minlength: [8, "invalid length"],
     },
+    avatar: {
+      type: String,
+      default: "https://res.cloudinary.com/plasoironhack/image/upload/v1713603564/ironhack/book-club/ywkmjbnwfy1vdhta1qwd.png",
+    },
     gender: {
       type: String,
     },

@@ -13,7 +13,7 @@ const createWeeklyMealPlan = async (startDate, mealsByDay) => {
       console.log({  meal})
 
       //antes de crear la meal, creo la receta y el id se lo paso al new Meal
-      const newMeal = new Meal({...meal, recipe: });
+      //const newMeal = new Meal({...meal, recipe: });
       return newMeal.save().then(() => ({
         meal: newMeal._id,
         time: meal.time,
