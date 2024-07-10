@@ -1,84 +1,138 @@
-const DayPlan = require("../models/DayPlan.model");
-const WeeklyMealPlan = require("../models/WeeklyPlan.model");
-const Meal = require("../models/Meal.model");
-const Recipe = require("../models/Recipe.model");
-const dayjs = require("dayjs");
-const cloudinary = require("../config/cloudinary.config");
 const axios = require("axios");
-// Function to pause execution for a specified duration (in milliseconds)
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-const createDailyMealPlan = async (startDate, mealsByDay, currentUserId) => {
-  const days = [];
-  //Crea una función que tendra como paramaetro un obj receta
-  const generateImageAndUpload = (recipe) => {
-    // Generate image using DALL-E
-    const dallePrompt = `Crea una imagen para una receta llamada ${recipe.name}`;
-    return axios
-      .post(
-        "https://api.openai.com/v1/images/generations",
+const createError = require("http-errors");
+const DayPlan = require("../models/DayPlan.model");
+const WeeklyPlan = require("../models/WeeklyPlan.model");
+const Meal = require("../models/Meal.model");
+const createDailyMealPlan = require("../utils/createDailyMealPlan");
+module.exports.generateDaylyMealPlan = (req, res, next) => {
+  const { startDate, userPreferences, currentUserId } = req.body;
+  const prompt = `
+    Genera un plan diario de comidas teniendo en estas preferencias del usuario:
+    - Objetivo: ${userPreferences.objetive}
+    - Habilidad en la cocina: ${userPreferences.ability}
+    - Tipo de dieta: ${userPreferences.typeDiet}
+    - Alergias: ${userPreferences.alergic}
+    El plan debe incluir desayuno, almuerzo y cena,
+    cada meal tendra su receta que tedra los campos que te indico acontinuación y debe tener el siguiente formato y que sea un JSON válido sin comentarios que no falle con un JSON.parse():
+    {
+      "days": [
         {
-          prompt: dallePrompt,
-          n: 1,
-          size: "512x512",
+          "date": "2024-06-24",
+          "meals": [
+            { "name": "Desayuno saludable", "type":"desayuno", "time": "2024-06-24T08:00:00", recipe:{
+              "name": "Caldo de pollo...",
+              "urlImage": "http...",
+              "phrase": "Rico caldo...",
+              "preparationTime": 20,//minutos
+              "ingredients": ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
+              "people": 4,//personas
+              "steps": ["Hervir", "cortar pollo"],
+              "caloricRate": 200,//kcal por plato
+              "isFavorite": false//false por defecto,
+              "type": "desayuno"
+            }
         },
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-            "Content-Type": "application/json",
-          },
+        { "name": "Almuerzo ligero", "type":"comida", "time": "2024-06-24T13:00:00", recipe:{
+                "name": "Caldo de pollo...",
+                "urlImage": "http...",
+                "phrase": "Rico caldo...",
+                "preparationTime": 20,//minutos
+                "ingredients": ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
+                "people": 4,//personas
+                "steps": ["Hervir", "cortar pollo"],
+                "caloricRate": 200,//kcal por plato
+                "isFavorite": false//false por defecto,
+                "type": "comida"
+            }
+        },
+        { "name": "Cena ligera", type:"cena", "time": "2024-06-24T20:00:00", recipe:{
+                "name": "Caldo de pollo...",
+                "urlImage": "http...",
+                "phrase": "Rico caldo...",
+                "preparationTime": 20,//minutos
+                "ingredients": ["1/2 litro de agua", "1kg de pollo", "3 tomates"],
+                "people": 4,//personas
+                "steps": ["Hervir", "cortar pollo"],
+                "caloricRate": 200,//kcal por plato
+                "isFavorite": false//false por defecto,
+                "type": "cena"
+              },
         }
-      )
-      .then((dalleResponse) => {
-        const imageUrl = dalleResponse.data.data[0].url;
-        // Download image to a local path or buffer
-        return axios.get(imageUrl, { responseType: "arraybuffer" });
-      })
-      .then((imageResponse) => {
-        const imageBuffer = Buffer.from(imageResponse.data, "binary");
-        // Upload image to Cloudinary
-        return new Promise((resolve, reject) => {
-          cloudinary.uploader
-            .upload_stream({ resource_type: "image" }, (error, result) => {
-              if (error) {
-                console.error("Error uploading to Cloudinary:", error);
-                reject(new Error("Error uploading to Cloudinary"));
-              } else {
-                resolve(result.secure_url);
-              }
-            })
-            .end(imageBuffer);
-        });
-      })
-      .catch((error) => {
-        console.error("Error generating or uploading image:", error);
-        if (error.response && error.response.status === 429) {
-          console.log("Rate limit exceeded, waiting before retrying...");
-          return sleep(11000).then(() => generateImageAndUpload(recipe));
-        }
-        throw error;
+      ]
+    }
+  `;
+  console.log(prompt);
+  console.log("in");
+  axios
+    .post(
+      "https://api.openai.com/v1/chat/completions",
+      {
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: prompt }],
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    .then((response) => {
+      console.log(response.data.choices[0].message.content);
+      let dailyPlan;
+      try {
+        dailyPlan = JSON.parse(response.data.choices[0].message.content)
+          .days[0];
+      } catch (e) {
+        console.error("Error parsing JSON:", e);
+        return next(createError(500, "Invalid JSON format in response"));
+      }
+      console.log("**************dailyPlan", dailyPlan);
+      const mealsByDay = dailyPlan.meals.map((meal) => ({
+        name: meal.name,
+        time: meal.time,
+        type: meal.type,
+        recipe: {
+          name: meal.recipe.name,
+          urlImage: meal.recipe.urlImage,
+          phrase: meal.recipe.phrase,
+          preparationTime: meal.recipe.preparationTime,
+          ingredients: meal.recipe.ingredients,
+          people: meal.recipe.people,
+          steps: meal.recipe.steps,
+          caloricRate: meal.recipe.caloricRate,
+          isFavorite: meal.recipe.isFavorite,
+          type: meal.recipe.type,
+        },
+      }));
+      return createDailyMealPlan(startDate, mealsByDay, currentUserId);
+    })
+    .then((dailyMealPlan) => {
+      return new DayPlan(dailyMealPlan).populate({
+        path: "meals.meal",
+        populate: { path: "recipe" },
       });
-  };
-  const date = new Date(startDate);
-  const mealsPromise = mealsByDay.map((meal) => {
-        return generateImageAndUpload(meal.recipe)
-          .then((imageUrl) => {
-            // Create the recipe with the image URL from Cloudinary
-            const recipe = new Recipe({ ...meal.recipe, urlImage: imageUrl });
-            return recipe.save();
-          })
-          .then((recipeDB) => {
-            //antes de crear la meal, creo la receta y el id se lo paso al new Meal
-            const newMeal = new Meal({ ...meal, recipe: recipeDB._id, type: meal.type});
-            return newMeal.save().then(() => ({
-              meal: newMeal._id,
-              time: meal.time,
-            }));
-          });
-      })
-  const savedMeals = await Promise.all(mealsPromise);
-  //{ date, meals: savedMeals, user: req.currentuser}
-  const dayPlan = { date, meals: savedMeals, user: currentUserId};
-  const newDayPlan = new DayPlan(dayPlan);
-  return newDayPlan.save();
+    })
+    .then((dailyMealPlan) => {
+      console.log("***************weeklyMealPlan", dailyMealPlan);
+      res.json({
+        dailyMealPlan,
+      });
+    })
+    .catch((error) => {
+      console.error("Error generating meal plan:", error);
+      next(createError(500, "Error generating meal plan"));
+    });
 };
-module.exports = createDailyMealPlan;
+module.exports.getUserDayPlans = (req, res, next) => {
+  DayPlan.find({ user: req.currentUserId })
+    .populate({
+      path: "meals.meal",
+      populate: { path: "recipe" },
+    })
+    .then((dayPlans) => {
+      console.log(dayPlans);
+      res.json(dayPlans);
+    })
+    .catch((err) => next(err));
+};
