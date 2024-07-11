@@ -1,6 +1,9 @@
 const User = require("./../models/User.model");
 const createError = require("http-errors");
-const { uploadToCloudinary } = require("./../controllers/cloudinary.controller");
+const {
+  uploadToCloudinary,
+} = require("./../controllers/cloudinary.controller");
+const { sendEmail } = require("./../config/nodemailer.config");
 
 module.exports.create = (req, res, next) => {
   const {
@@ -29,9 +32,26 @@ module.exports.create = (req, res, next) => {
     alergic,
   })
     .then((userCreated) => {
-      res.status(201).json(userCreated);
+      const userEmail = email;
+      const subject = "¡Healthy App!";
+      const text = "¡Gracias por registrarte en Healthy App!";
+      const html = `
+          <h1>Healthy App te da la bienvenida</h1>
+          <p >Gracias por registrarte en nuestra plataforma</p>
+          <p>Este es el inicio de un gran cambio</p>
+          <a href="${process.env.FRONTEND_URL}/" target="_blank" style="text-decoration: none; color: #83a580; font-weight: bold;">
+          Ir a Healthy App
+        </a>
+          <img src="https://res.cloudinary.com/dgtbm9skf/image/upload/v1720712317/marca_tpzkk0.png" alt="Healthy App" style="width: 300px; height: auto; display: block; margin-top: 30px;">
+  
+        `;
+
+      return sendEmail(userEmail, subject, text, html).then(() => {
+        res.status(204).json(userCreated);
+      });
     })
-    .catch(next);
+
+    .catch((err) => next(err));
 };
 
 module.exports.getCurrentUser = (req, res, next) => {
@@ -48,8 +68,9 @@ module.exports.getCurrentUser = (req, res, next) => {
 
 module.exports.update = (req, res, next) => {
   const updateData = { ...req.body };
+  console.log(updateData);
 
-  if (req.file) {
+ /* if (req.file) {
     uploadToCloudinary(req.file.path)
       .then((result) => {
         updateData.avatarUrl = result.secure_url;
@@ -60,12 +81,13 @@ module.exports.update = (req, res, next) => {
       })
       .catch(next);
   } else {
-    User.findByIdAndUpdate(req.params.id, updateData, { new: true })
+    
+  }*/
+  User.findByIdAndUpdate(req.params.id, updateData, { new: true })
       .then((editedUser) => {
         res.json(editedUser);
       })
       .catch(next);
-  }
 };
 
 module.exports.delete = (req, res, next) => {
@@ -76,17 +98,21 @@ module.exports.delete = (req, res, next) => {
     .catch(next);
 };
 
-module.exports.uploadAvatar = (req, res, next) => {
+/*module.exports.uploadAvatar = (req, res, next) => {
   if (!req.file) {
     return next(createError(400, "No file uploaded"));
   }
 
   uploadToCloudinary(req.file.path)
     .then((result) => {
-      return User.findByIdAndUpdate(req.currentUserId, { avatarUrl: result.secure_url }, { new: true });
+      return User.findByIdAndUpdate(
+        req.currentUserId,
+        { avatarUrl: result.secure_url },
+        { new: true }
+      );
     })
     .then((updatedUser) => {
       res.json(updatedUser);
     })
     .catch(next);
-};
+};*/
