@@ -2,6 +2,7 @@ const axios = require("axios");
 const User = require("./../models/User.model");
 const Recipe = require("./../models/Recipe.model");
 const createError = require("http-errors");
+const { sendEmail } = require("./../config/nodemailer.config");
 module.exports.getRecipes = (req, res, next) => {
   const ingredients = req.body.ingredients;
 
@@ -14,12 +15,14 @@ module.exports.getRecipes = (req, res, next) => {
       if (!user) {
         next(createError(402, "User not found ahora"));
       }
-      req.user = user;// Aquí asignamos el usuario al objeto req
-      
+      req.user = user; // Aquí asignamos el usuario al objeto req
+
       const prompt = `Quiero 5 recetas que usen estos ingredientes ${ingredients.join(
         ", "
       )}, 
-      y tenga en cuenta estos aspectos del usuario , su objetivo es ${user?.objetive}, 
+      y tenga en cuenta estos aspectos del usuario , su objetivo es ${
+        user?.objetive
+      }, 
       su habilidad en la cocina es ${user?.ability},
       su tipo de dieta es ${user?.typeDiet} y es alérgico a ${user?.alergic},
 
@@ -55,6 +58,7 @@ module.exports.getRecipes = (req, res, next) => {
     })
     .then((response) => {
       const recipes = JSON.parse(response.data.choices[0].message.content);
+      console.log(recipes);
       const dallePpromiseAddUrlImage = recipes.recetas.map((recipe) => {
         const dallePrompt = `Crea una imagen para una receta llamada ${recipe.name}`;
         return axios
@@ -103,22 +107,22 @@ module.exports.saveRecipes = (req, res) => {
   const { recipes } = req.body;
   Recipe.insertMany(recipes)
     .then((createdRecipes) => {
-
       const userEmail = req.user.email; // Asegúrate de que el email del usuario esté disponible
       const subject = "Tus recetas solicitadas";
       const text = "Aquí tienes las recetas que solicitaste:";
       const html = `
+
         <h1>Tus recetas solicitadas</h1>
-        <ul>
+      
           ${createdRecipes
             .map(
               (recipe) =>
                 `
-            <div
-            className="card mb-3 mt-5"
-            style="max-width: 540px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 16px;"
-            key="${recipe._id}"
-            >
+          <div
+          className="card mb-3 mt-5"
+          style="max-width: 540px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 30px;"
+          key="${recipe._id}"
+          >
             <div className="row g-0" style="display: flex;">
               <div className="col-md-4" style="flex: 1;">
                 <img
@@ -126,6 +130,7 @@ module.exports.saveRecipes = (req, res) => {
                   style="width: 100%; height: auto; border-radius: 8px 0 0 8px;"
                   alt="${recipe.name}"
                 />
+                 
               </div>
               <div className="col-md-8" style="flex: 2; padding: 16px;">
                 <div className="card-body">
@@ -136,24 +141,35 @@ module.exports.saveRecipes = (req, res) => {
                       ${recipe.preparationTime} min
                     </small>
                   </p>
-                  <a href="${process.env.FRONTEND_URL}/recipes/${recipe._id}" style="color: #007bff; text-decoration: none;">Ver detalles</a>
+                  <a href="${process.env.FRONTEND_URL}/recipes/${recipe._id}" style="color: #83a580; text-decoration: none;">Ver detalles</a>
                 </div>
               </div>
             </div>
           </div>
-        `).join("")}
+        `
+            )
+
+            .join("")}
+            <div className="col-md-4" style="width: 100%; flex: 1; margin: 0 auto">
+            <img
+              src="https://res.cloudinary.com/dgtbm9skf/image/upload/v1720713077/Logo-Healthy_1_aqzchm.png"
+              style="width: 150px; height: auto;"
+              alt="Healthy App"
+            />
+             
+          </div>
       `;
 
       return sendEmail(userEmail, subject, text, html).then(() => {
-        console.log("**********El email ha sido enviado")
-        
+        console.log("**********El email ha sido enviado");
+
         res.json({
           createdRecipes,
         });
-      })
+      });
     })
     .catch((error) => {
       console.error("Error creating recipe:", error);
       res.status(500).send({ error: "Something went wrong" });
     });
-}
+};
