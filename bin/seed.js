@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Recipe = require("./../models/Recipe.model");
 const recipes = require("./recipes.json")
+
 require('../config/db.config');
 
 mongoose.connection.once('open', () => {

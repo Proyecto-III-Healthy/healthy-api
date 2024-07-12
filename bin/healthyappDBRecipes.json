@@ -1,0 +1,3584 @@
+[{
+  "_id": {
+    "$oid": "6682f0985e2852f3d1a1fe47"
+  },
+  "name": "Arroz con pollo",
+  "urlImage": "https://www.midiario.com/wp-content/uploads/2018/07/arroz-con-pollo.jpg",
+  "phrase": "Delicioso plato de arroz con pollo, perfecto para una comida reconfortante.",
+  "preparationTime": 200000,
+  "ingredients": [
+    "arroz",
+    "pollo",
+    "caldo de pollo",
+    "cebolla",
+    "ajo",
+    "pimiento rojo",
+    "guisantes"
+  ],
+  "people": 4,
+  "steps": [
+    "En una olla, dorar el pollo previamente sazonado.",
+    "Agregar la cebolla, ajo y pimiento rojo picados.",
+    "Incorporar el arroz y mezclar bien.",
+    "Agregar caldo de pollo y cocinar hasta que el arroz esté tierno.",
+    "Incorporar los guisantes y cocinar por unos minutos más.",
+    "Servir caliente y disfrutar."
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6682f21b68c85189a879eeda"
+  },
+  "name": "Arroz con pollo",
+  "urlImage": "https://imageurl.com",
+  "phrase": "Delicioso arroz con pollo, ideal para una comida reconfortante.",
+  "preparationTime": 300000,
+  "ingredients": [
+    "Arroz",
+    "Pollo",
+    "Caldo de pollo",
+    "Ajo",
+    "Cebolla",
+    "Pimiento",
+    "Zanahoria",
+    "Perejil"
+  ],
+  "people": 4,
+  "steps": [
+    "En una olla, dorar el pollo previamente sazonado.",
+    "Agregar las verduras picadas y cocinar por unos minutos.",
+    "Incorporar el arroz y caldo de pollo, dejar cocinar hasta que el arroz esté listo.",
+    "Servir caliente y espolvorear perejil picado por encima."
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6682f24e68c85189a879eee1"
+  },
+  "name": "Arroz con pollo",
+  "urlImage": "https://cdn.kiwilimon.com/recetaimagen/20655/th5-640x426-20655.jpg",
+  "phrase": "Delicioso platillo de arroz con pollo",
+  "preparationTime": 3600000,
+  "ingredients": [
+    "arroz",
+    "pollo",
+    "caldo de pollo",
+    "verduras al gusto"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz en el caldo de pollo",
+    "Agregar el pollo previamente cocido y desmenuzado",
+    "Incorporar las verduras al gusto y dejar cocinar hasta que todo esté bien mezclado"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6682fac51bdfc7e08ee71fde"
+  },
+  "name": "Arroz con pollo light",
+  "urlImage": "http://example.com/arrozconpollo.jpg",
+  "phrase": "Delicioso y saludable arroz con pollo bajo en calorías",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz integral",
+    "pechuga de pollo",
+    "agua",
+    "zanahoria",
+    "cebolla",
+    "pimiento rojo",
+    "ajo",
+    "sal",
+    "pimienta"
+  ],
+  "people": 4,
+  "steps": [
+    "Lavar el arroz integral y cocinar en agua hirviendo",
+    "Cortar la pechuga de pollo en trozos y cocinar",
+    "Picar zanahoria, cebolla, pimiento rojo y ajo, y sofreír en una sartén con aceite de oliva",
+    "Agregar el pollo cocido y las verduras al arroz, sazonar con sal y pimienta",
+    "Dejar cocinar todo junto por unos minutos"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66843ece9dd9ddb0f5467784"
+  },
+  "name": "Arroz con pollo y brócoli",
+  "urlImage": "https://images.unsplash.com/photo-1524010246915-297e8bb735e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjkwNzl8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk5NDI4Njl8&ixlib=rb-4.0.3&q=80&w=1080",
+  "phrase": "Un plato delicioso y saludable",
+  "preparationTime": 30,
+  "ingredients": [
+    "Arroz",
+    "Pollo",
+    "Brócoli"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz",
+    "Saltear pollo y brócoli",
+    "Mezclar todo en sartén"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668445b29dd9ddb0f5467787"
+  },
+  "name": "Arroz frito con filetes de carne y brócoli",
+  "urlImage": "https://images.unsplash.com/photo-1570470848475-d4bd67d04c37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjkwNzl8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk5NDQ2MzN8&ixlib=rb-4.0.3&q=80&w=1080",
+  "phrase": "Delicioso plato de arroz frito con filetes de carne y brócoli, perfecto para una comida rápida y sabrosa.",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz",
+    "filetes de carne",
+    "brócoli",
+    "aceite de cocina",
+    "sal",
+    "ajo"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz según las instrucciones del paquete",
+    "Saltear los filetes de carne en una sartén con ajo y sal",
+    "Añadir el brócoli cortado en trozos pequeños y cocinar hasta que esté tierno",
+    "Mezclar el arroz cocido con los filetes de carne y brócoli",
+    "Servir caliente"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668447ed9dd9ddb0f546778a"
+  },
+  "name": "Arroz con albóndigas de carne y brócoli",
+  "urlImage": "https://images.unsplash.com/photo-1692193173830-7f489ae5200c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjkwNzl8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk5NDUyMDR8&ixlib=rb-4.0.3&q=80&w=1080",
+  "phrase": "Una deliciosa combinación de sabores para disfrutar en familia.",
+  "preparationTime": 45,
+  "ingredients": [
+    "arroz",
+    "albóndigas de carne",
+    "brócoli",
+    "agua",
+    "aceite de oliva",
+    "sal",
+    "pimienta"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz según las instrucciones del paquete.",
+    "En una sartén grande, dorar las albóndigas de carne con un poco de aceite de oliva.",
+    "Agregar el brócoli cortado en trozos pequeños y cocinar hasta que esté tierno.",
+    "Incorporar el arroz cocido a la sartén y mezclar bien.",
+    "Condimentar con sal y pimienta al gusto.",
+    "Servir caliente y disfrutar."
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66844cae9dd9ddb0f546778d"
+  },
+  "name": "Arroz frito con filetes de carne y brócoli",
+  "urlImage": "https://images.unsplash.com/photo-1631988237547-a6369eb43a97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjkwNzl8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk5NDY0MjF8&ixlib=rb-4.0.3&q=80&w=1080",
+  "phrase": "Una deliciosa combinación de sabores en un plato sencillo de preparar",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz",
+    "filetes de carne",
+    "brócoli"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz según las instrucciones del paquete",
+    "Saltear los filetes de carne con brócoli en una sartén",
+    "Mezclar el arroz cocido con la carne y el brócoli"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66844d2bea59f9a05d2b986c"
+  },
+  "name": "Arroz frito con filetes de carne y brócoli",
+  "urlImage": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-LF3D6dnq9Z8aokvoMMvJkSGe/user-mRfOZ4QUAQcQzbrt7vvkDMjQ/img-agC58tbkcwaycT38635q8flY.png?st=2024-07-02T17%3A55%3A46Z&se=2024-07-02T19%3A55%3A46Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-02T02%3A15%3A15Z&ske=2024-07-03T02%3A15%3A15Z&sks=b&skv=2023-11-03&sig=DagFegE/5DmVZ3JJOCX9K19DO9Kdm7ilKSOxhgixbKw%3D",
+  "phrase": "Una deliciosa combinación de sabores y texturas en un plato único",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz",
+    "filetes de carne",
+    "brócoli"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz",
+    "Saltear los filetes de carne con brócoli",
+    "Mezclar todo en una sartén"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66844d7fea59f9a05d2b986f"
+  },
+  "name": "Ensalada de pasta con pollo y lechuga",
+  "urlImage": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-LF3D6dnq9Z8aokvoMMvJkSGe/user-mRfOZ4QUAQcQzbrt7vvkDMjQ/img-qEokGS93ThkO6HXoz89J422E.png?st=2024-07-02T17%3A57%3A10Z&se=2024-07-02T19%3A57%3A10Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-02T02%3A40%3A20Z&ske=2024-07-03T02%3A40%3A20Z&sks=b&skv=2023-11-03&sig=9OK%2BYikgD8qjFsD2OR%2BWXzVBpkj0FIio1S3fyxqtKKo%3D",
+  "phrase": "Una deliciosa ensalada de pasta con pollo para disfrutar en cualquier momento",
+  "preparationTime": 30,
+  "ingredients": [
+    "pasta",
+    "pollo",
+    "lechuga"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar la pasta según las instrucciones del paquete",
+    "Cocinar el pollo y cortarlo en trozos pequeños",
+    "Lavar y picar la lechuga",
+    "Mezclar la pasta, el pollo y la lechuga en un tazón",
+    "Agregar tu aderezo favorito y mezclar bien"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685775112e100d3cf509d57"
+  },
+  "name": "Arroz con pollo bajo en calorías",
+  "urlImage": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-LF3D6dnq9Z8aokvoMMvJkSGe/user-mRfOZ4QUAQcQzbrt7vvkDMjQ/img-NeLb9XtyYICHev4o76LlgpxU.png?st=2024-07-03T15%3A07%3A53Z&se=2024-07-03T17%3A07%3A53Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-03T02%3A11%3A29Z&ske=2024-07-04T02%3A11%3A29Z&sks=b&skv=2023-11-03&sig=ToWjokLtXVu88y4NvDl0J3UXgMIQ4etTohofro2Izg0%3D",
+  "phrase": "Delicioso arroz con pollo ideal para una dieta baja en calorías",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz integral",
+    "pechuga de pollo",
+    "caldo de pollo bajo en sal",
+    "verduras mixtas"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz integral en el caldo de pollo",
+    "Hervir la pechuga de pollo y cortar en trozos pequeños",
+    "Agregar las verduras mixtas al arroz cocido",
+    "Incorporar los trozos de pollo",
+    "Dejar cocinar por 5 minutos más"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685a140130c368cddfeed03"
+  },
+  "name": "Caldo de pollo con arroz",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720033607/recipe_images/qcpnbobqtaxwv1fxjx68.png",
+  "phrase": "Rico caldo de pollo con arroz, perfecto para una comida reconfortante",
+  "preparationTime": 30,
+  "ingredients": [
+    "pollo",
+    "arroz",
+    "agua",
+    "sal",
+    "cebolla",
+    "ajo",
+    "zanahoria",
+    "apio"
+  ],
+  "people": 4,
+  "steps": [
+    "Lavar y cortar las verduras",
+    "En una olla grande, hervir agua y agregar el pollo, cebolla, ajo, zanahoria y apio",
+    "Cocinar a fuego medio por 30 minutos",
+    "Agregar el arroz y cocinar por 20 minutos más"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685a57579f86fcf595c3b20"
+  },
+  "name": "Ensalada de cerdo y atún",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720034684/recipe_images/acf5tvaduuszcyninfb6.png",
+  "phrase": "Una deliciosa ensalada de cerdo y atún para disfrutar en cualquier momento",
+  "preparationTime": 30,
+  "ingredients": [
+    "cerdo",
+    "atún",
+    "lechuga"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar el cerdo a la plancha",
+    "Mezclar el atún en lata con la lechuga picada",
+    "Agregar el cerdo a la ensalada",
+    "Aliñar al gusto"
+  ],
+  "caloricRate": 300,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686df3f51e914dc49e12cd8"
+  },
+  "name": "Sopa de pescado con zanahoria",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115014/recipe_images/zc9drc8sfemj99itjm4q.png",
+  "phrase": "Una deliciosa sopa llena de sabor y nutrientes",
+  "preparationTime": 30,
+  "ingredients": [
+    "filete de pescado",
+    "zanahoria",
+    "caldo de pescado",
+    "cebolla",
+    "ajo",
+    "tomate"
+  ],
+  "people": 4,
+  "steps": [
+    "Dorar la cebolla y el ajo en una olla",
+    "Agregar el caldo de pescado y el tomate",
+    "Añadir el pescado y las zanahorias cortadas en trozos",
+    "Dejar cocinar por 20 minutos",
+    "Servir caliente"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686df3f51e914dc49e12cd9"
+  },
+  "name": "Ensalada de pescado y zanahoria",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115014/recipe_images/jl02zxkg7hdjbwngfdsh.png",
+  "phrase": "Una ensalada fresca y saludable para disfrutar en cualquier momento",
+  "preparationTime": 15,
+  "ingredients": [
+    "filete de pescado",
+    "zanahoria",
+    "limón",
+    "aceite de oliva",
+    "sal",
+    "pimienta"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar el pescado a la plancha y desmenuzarlo",
+    "Cortar la zanahoria en juliana",
+    "Mezclar el pescado con la zanahoria",
+    "Aliñar con limón, aceite de oliva, sal y pimienta",
+    "Refrigerar antes de servir"
+  ],
+  "caloricRate": 180,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686df3f51e914dc49e12cda"
+  },
+  "name": "Tortitas de pescado y zanahoria",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115013/recipe_images/rzudyoroihikajqpkaz9.png",
+  "phrase": "Un platillo diferente y delicioso que encantará a toda la familia",
+  "preparationTime": 40,
+  "ingredients": [
+    "filete de pescado",
+    "zanahoria",
+    "huevo",
+    "harina de trigo",
+    "cebolla",
+    "perejil"
+  ],
+  "people": 6,
+  "steps": [
+    "Cocinar el pescado al vapor y desmenuzarlo",
+    "Rallar la zanahoria y la cebolla",
+    "Mezclar el pescado con la zanahoria, cebolla, huevo, harina y perejil",
+    "Formar las tortitas y cocinar en la sartén hasta dorar",
+    "Servir caliente"
+  ],
+  "caloricRate": 220,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686df3f51e914dc49e12cdb"
+  },
+  "name": "Arroz con pescado y zanahoria",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115014/recipe_images/x2edryvvxwch4piwbseu.png",
+  "phrase": "Una combinación perfecta de sabores en un plato completo y nutritivo",
+  "preparationTime": 50,
+  "ingredients": [
+    "filete de pescado",
+    "zanahoria",
+    "arroz",
+    "cebolla",
+    "pimiento rojo",
+    "caldo de pescado"
+  ],
+  "people": 4,
+  "steps": [
+    "Dorar la cebolla y el pimiento en una olla",
+    "Agregar el arroz y rehogar",
+    "Añadir el caldo de pescado, el pescado cortado en trozos y las zanahorias en rodajas",
+    "Cocinar hasta que el arroz esté listo",
+    "Servir caliente"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686df3f51e914dc49e12cdc"
+  },
+  "name": "Sándwich de pescado y zanahoria",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115013/recipe_images/s2gozzzjflfg3bqp2ojc.png",
+  "phrase": "Un sándwich original y lleno de sabor para disfrutar en cualquier momento",
+  "preparationTime": 10,
+  "ingredients": [
+    "atún en lata",
+    "zanahoria rallada",
+    "mayonesa",
+    "pan de molde",
+    "lechuga",
+    "tomate"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar el atún con la zanahoria rallada y la mayonesa",
+    "Armar el sándwich con el pan, la mezcla de atún, la lechuga y el tomate",
+    "Servir frío"
+  ],
+  "caloricRate": 180,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e24951e914dc49e12ce8"
+  },
+  "name": "Ensalada de pasta con carne",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/beddloyefhhbwl5qsx1a.png",
+  "phrase": "Una deliciosa ensalada perfecta para una comida ligera",
+  "preparationTime": 30,
+  "ingredients": [
+    "pasta",
+    "carne",
+    "lechuga"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocer la pasta",
+    "Asar la carne",
+    "Cortar la lechuga",
+    "Mezclar todos los ingredientes"
+  ],
+  "caloricRate": 350,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e24951e914dc49e12ce9"
+  },
+  "name": "Spaghetti a la bolognesa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/i9uxaulpfufaiky7llv7.png",
+  "phrase": "Un clásico de la cocina italiana con una deliciosa salsa de carne",
+  "preparationTime": 45,
+  "ingredients": [
+    "pasta",
+    "carne",
+    "lechuga"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocer la pasta",
+    "Preparar la salsa bolognesa",
+    "Mezclar la pasta con la salsa"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e24951e914dc49e12cea"
+  },
+  "name": "Wrap de carne y ensalada",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/yxcrzv6voy8xmxkrtjt8.png",
+  "phrase": "Una opción rápida y deliciosa para comer carne y vegetales",
+  "preparationTime": 15,
+  "ingredients": [
+    "pasta",
+    "carne",
+    "lechuga"
+  ],
+  "people": 2,
+  "steps": [
+    "Calentar la carne",
+    "Calentar la pasta",
+    "Armar los wraps con la carne, la pasta y la ensalada"
+  ],
+  "caloricRate": 300,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e24951e914dc49e12ceb"
+  },
+  "name": "Lasaña de carne y lechuga",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/ir4oukqurjdjxpn7u4qx.png",
+  "phrase": "Una lasaña deliciosa y jugosa con una capa de lechuga fresca",
+  "preparationTime": 60,
+  "ingredients": [
+    "pasta",
+    "carne",
+    "lechuga"
+  ],
+  "people": 6,
+  "steps": [
+    "Preparar la carne",
+    "Cocer la pasta",
+    "Armar las capas de la lasaña intercalando carne, pasta y lechuga",
+    "Hornear"
+  ],
+  "caloricRate": 500,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e24951e914dc49e12cec"
+  },
+  "name": "Ensalada de carne a la parrilla",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/jblph2rgraduuch2ovxe.png",
+  "phrase": "Una ensalada fresca y completa con carne a la parrilla",
+  "preparationTime": 25,
+  "ingredients": [
+    "pasta",
+    "carne",
+    "lechuga"
+  ],
+  "people": 3,
+  "steps": [
+    "Asar la carne a la parrilla",
+    "Cortar la lechuga",
+    "Mezclar todos los ingredientes en un bol"
+  ],
+  "caloricRate": 320,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e2f751e914dc49e12cf4"
+  },
+  "name": "Huevos rotos con aguacate y cerdo",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115961/recipe_images/bfzplfxtmbsxaqdakamc.png",
+  "phrase": "Una deliciosa combinación de sabores",
+  "preparationTime": 30,
+  "ingredients": [
+    "aguacate",
+    "cerdo",
+    "huevo",
+    "patata"
+  ],
+  "people": 4,
+  "steps": [
+    "Freír las patatas cortadas en rodajas",
+    "Cocinar el cerdo en tiras",
+    "Sofreír los huevos",
+    "Servir con aguacate en cubos"
+  ],
+  "caloricRate": 350,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e2f751e914dc49e12cf5"
+  },
+  "name": "Enchiladas de cerdo con salsa de aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115963/recipe_images/wiapivewfbuv79mcwydm.png",
+  "phrase": "Una receta mexicana con un toque especial",
+  "preparationTime": 40,
+  "ingredients": [
+    "cerdo",
+    "aguacate",
+    "huevo"
+  ],
+  "people": 6,
+  "steps": [
+    "Cocinar el cerdo con especias",
+    "Armar las enchiladas y hornear",
+    "Preparar la salsa de aguacate",
+    "Servir las enchiladas bañadas en la salsa"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e2f751e914dc49e12cf6"
+  },
+  "name": "Tortilla de patata con aguacate y cerdo",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115962/recipe_images/dw8rujszj01pbeemwk1t.png",
+  "phrase": "Una versión diferente de la clásica tortilla española",
+  "preparationTime": 45,
+  "ingredients": [
+    "patata",
+    "huevo",
+    "cerdo",
+    "aguacate"
+  ],
+  "people": 4,
+  "steps": [
+    "Freír las patatas y el cerdo",
+    "Batir los huevos y mezclar con las patatas y cerdo",
+    "Cocinar la tortilla en sartén",
+    "Servir con aguacate en rodajas"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e2f751e914dc49e12cf7"
+  },
+  "name": "Ensalada de aguacate, cerdo y patata",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115964/recipe_images/ywrfvf5olhf8ucg8gzjj.png",
+  "phrase": "Una opción fresca y saludable",
+  "preparationTime": 20,
+  "ingredients": [
+    "aguacate",
+    "cerdo",
+    "patata"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocer las patatas y cortar en cubos",
+    "Saltear el cerdo con especias",
+    "Mezclar todos los ingredientes en un bol",
+    "Aderezar con vinagreta de aguacate"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e2f751e914dc49e12cf8"
+  },
+  "name": "Tacos de cerdo con guacamole",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115967/recipe_images/m3pghpv3gi67irgkyygh.png",
+  "phrase": "Una deliciosa combinación en forma de tacos",
+  "preparationTime": 35,
+  "ingredients": [
+    "cerdo",
+    "aguacate",
+    "huevo"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el cerdo con especias mexicanas",
+    "Preparar el guacamole",
+    "Armard los tacos con la carne y guacamole",
+    "Servir con limón y cilantro"
+  ],
+  "caloricRate": 320,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e3be51e914dc49e12d05"
+  },
+  "name": "Ensalada de arroz con berenjena y zanahoria",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116165/recipe_images/bodpunc3adpc7j37jvjd.png",
+  "phrase": "Una ensalada fresca y saludable para el verano",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz",
+    "berenjena",
+    "zanahoria",
+    "pepino"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz",
+    "Asar la berenjena y zanahoria",
+    "Picar el pepino",
+    "Mezclar todo con aderezo"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e3be51e914dc49e12d06"
+  },
+  "name": "Tortilla de berenjena, zanahoria y atún",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116165/recipe_images/gtjevhbpws6v5exaf6lp.png",
+  "phrase": "Una tortilla nutritiva y sabrosa",
+  "preparationTime": 40,
+  "ingredients": [
+    "berenjena",
+    "zanahoria",
+    "atún"
+  ],
+  "people": 6,
+  "steps": [
+    "Cocinar y mezclar los ingredientes",
+    "Hacer la tortilla en sartén"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e3be51e914dc49e12d07"
+  },
+  "name": "Arroz con zanahoria y pepino al curry",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116164/recipe_images/hg1oxkleihoydhvkg2ip.png",
+  "phrase": "Un plato aromático y especiado",
+  "preparationTime": 45,
+  "ingredients": [
+    "arroz",
+    "zanahoria",
+    "pepino"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz con curry",
+    "Saltear las zanahorias y pepino en especias"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e3be51e914dc49e12d08"
+  },
+  "name": "Ensalada de pepino con atún",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116164/recipe_images/f6yraqw59k16goaoqu2o.png",
+  "phrase": "Una ensalada rápida y ligera",
+  "preparationTime": 15,
+  "ingredients": [
+    "pepino",
+    "atún"
+  ],
+  "people": 2,
+  "steps": [
+    "Picar el pepino",
+    "Agregar el atún y aderezo"
+  ],
+  "caloricRate": 180,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686e3be51e914dc49e12d09"
+  },
+  "name": "Arroz con berenjena a la parmigiana",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116164/recipe_images/evazasavdw0ygmyaaw9s.png",
+  "phrase": "Un plato reconfortante y sabroso",
+  "preparationTime": 50,
+  "ingredients": [
+    "arroz",
+    "berenjena"
+  ],
+  "people": 4,
+  "steps": [
+    "Hacer una capa de arroz y berenjena en horno",
+    "Agregar queso y hornear"
+  ],
+  "caloricRate": 320,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f1e2305c2111895c539d"
+  },
+  "name": "Ensalada de arroz y lechuga",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250856/recipe_images/df1gqfylgvervjpgqfrv.png",
+  "phrase": "Una deliciosa y fresca ensalada perfecta para perder peso",
+  "preparationTime": 25,
+  "ingredients": [
+    "arroz",
+    "lechuga",
+    "tomate",
+    "aceitunas"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar el arroz",
+    "Picar la lechuga y el tomate",
+    "Mezclar todos los ingredientes en un bowl",
+    "Añadir las aceitunas como topping"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f1e2305c2111895c539e"
+  },
+  "name": "Arroz con tomate y aceitunas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250857/recipe_images/uwnrfbvmf9ucvxwqsa7i.png",
+  "phrase": "Una opción fácil y sabrosa para mantener tu dieta flexitariana",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz",
+    "tomate",
+    "aceitunas"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz con tomate",
+    "Agregar las aceitunas al final",
+    "Dejar reposar antes de servir"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f1e2305c2111895c539f"
+  },
+  "name": "Wraps de lechuga con arroz y tomate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250858/recipe_images/jw6vsu65maxlphcwdudy.png",
+  "phrase": "Una versión ligera y deliciosa de los wraps tradicionales",
+  "preparationTime": 40,
+  "ingredients": [
+    "lechuga",
+    "arroz",
+    "tomate",
+    "aceitunas"
+  ],
+  "people": 3,
+  "steps": [
+    "Cocinar el arroz",
+    "Preparar las hojas de lechuga como base",
+    "Agregar el arroz y tomate",
+    "Incorporar las aceitunas picadas"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f1e2305c2111895c53a0"
+  },
+  "name": "Ensalada griega de arroz",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250857/recipe_images/p6iqnq7cgulqj71fvdca.png",
+  "phrase": "Una ensalada fresca y saludable inspirada en la cocina mediterránea",
+  "preparationTime": 35,
+  "ingredients": [
+    "arroz",
+    "tomate",
+    "aceitunas"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz",
+    "Picar el tomate y las aceitunas",
+    "Mezclar todos los ingredientes con una vinagreta ligera"
+  ],
+  "caloricRate": 270,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f1e2305c2111895c53a1"
+  },
+  "name": "Arroz con vegetales al wok",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250857/recipe_images/kbsqqhrwqdcnvrnob5ps.png",
+  "phrase": "Una opción colorida y llena de sabor para tu dieta flexitariana",
+  "preparationTime": 45,
+  "ingredients": [
+    "arroz",
+    "tomate",
+    "aceitunas"
+  ],
+  "people": 3,
+  "steps": [
+    "Saltear los vegetales en un wok",
+    "Agregar el arroz ya cocido",
+    "Añadir tomate y aceitunas al gusto"
+  ],
+  "caloricRate": 320,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f4e78a9131ace9c1df0b"
+  },
+  "name": "Ensalada de pescado y verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720251630/recipe_images/ybifnsdt57ndcnetjgae.png",
+  "phrase": "Una deliciosa ensalada para cuidar tu figura",
+  "preparationTime": 30,
+  "ingredients": [
+    "pescado",
+    "zanahoria",
+    "berenjena",
+    "patata"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar el pescado a la plancha",
+    "Cocer las patatas y cortar en cubos",
+    "Cortar la zanahoria y la berenjena en tiras",
+    "Mezclar todo en un bol y aliñar al gusto"
+  ],
+  "caloricRate": 250,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f4e78a9131ace9c1df0c"
+  },
+  "name": "Sopa de pescado y verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720251628/recipe_images/msz2fc60be79e2z6wrfe.png",
+  "phrase": "Una sopa reconfortante y baja en calorías",
+  "preparationTime": 40,
+  "ingredients": [
+    "pescado",
+    "zanahoria",
+    "patata"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el pescado en caldo de verduras",
+    "Agregar la zanahoria y la patata cortadas en cubos",
+    "Dejar cocinar hasta que las verduras estén tiernas"
+  ],
+  "caloricRate": 180,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f4e78a9131ace9c1df0d"
+  },
+  "name": "Berenjenas rellenas de pescado",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720251628/recipe_images/dba5o9g5xen7af5fkivc.png",
+  "phrase": "Una opción diferente y saludable para la cena",
+  "preparationTime": 45,
+  "ingredients": [
+    "pescado",
+    "berenjena",
+    "zanahoria"
+  ],
+  "people": 3,
+  "steps": [
+    "Cocinar el pescado a la plancha y desmenuzar",
+    "Hornear las berenjenas previamente cocidas y vaciadas",
+    "Rellenar las berenjenas con el pescado desmenuzado y la zanahoria rallada",
+    "Gratinar en el horno"
+  ],
+  "caloricRate": 220,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f4e78a9131ace9c1df0e"
+  },
+  "name": "Tortilla de patata con pescado",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720251627/recipe_images/cpsro49to3p1goublvuj.png",
+  "phrase": "Una forma distinta de combinar pescado y patata",
+  "preparationTime": 35,
+  "ingredients": [
+    "pescado",
+    "patata"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el pescado al vapor y desmenuzar",
+    "Cocer las patatas y cortar en rodajas",
+    "Batir los huevos y mezclar con el pescado desmenuzado y las patatas en rodajas",
+    "Cocinar la tortilla en una sartén hasta que esté dorada por ambos lados"
+  ],
+  "caloricRate": 190,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f4e78a9131ace9c1df0f"
+  },
+  "name": "Estofado de pescado con verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720251629/recipe_images/eabo8mscwninq9esibzm.png",
+  "phrase": "Un plato reconfortante y saludable",
+  "preparationTime": 50,
+  "ingredients": [
+    "pescado",
+    "zanahoria",
+    "patata"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el pescado en caldo de verduras con las zanahorias y las patatas cortadas en trozos",
+    "Dejar cocinar a fuego lento hasta que las verduras estén tiernas"
+  ],
+  "caloricRate": 230,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8402470416a511375a8"
+  },
+  "name": "Ensalada de patata y pepino con queso feta y almendras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252486/recipe_images/ihj8kvys6jk3isbwyywi.png",
+  "phrase": "Una ensalada fresca y ligera perfecta para perder peso",
+  "preparationTime": 15,
+  "ingredients": [
+    "patata",
+    "pepino",
+    "queso feta",
+    "almendras"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocer las patatas y cortar en rodajas",
+    "Cortar el pepino en rodajas",
+    "Mezclar todos los ingredientes en un bol",
+    "Añadir sal, pimienta y aceite de oliva al gusto"
+  ],
+  "caloricRate": 300,
+  "isFavorite": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8402470416a511375a9"
+  },
+  "name": "Tortilla de patata y queso",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252487/recipe_images/wnuwqzg4n2sugh23mvnk.png",
+  "phrase": "Una versión más ligera de la clásica tortilla de patata con queso",
+  "preparationTime": 25,
+  "ingredients": [
+    "patata",
+    "queso",
+    "huevo"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocer las patatas y cortar en trozos",
+    "Batir los huevos y añadir el queso rallado",
+    "Mezclar las patatas con la mezcla de huevo y queso",
+    "Cocinar en una sartén hasta que esté dorada por ambos lados"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8402470416a511375aa"
+  },
+  "name": "Ensalada de pepino y queso de cabra con almendras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252487/recipe_images/n1onmmjncoiqly3tbkpz.png",
+  "phrase": "Una ensalada rica en proteínas y baja en calorías",
+  "preparationTime": 20,
+  "ingredients": [
+    "pepino",
+    "queso de cabra",
+    "almendras"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar el pepino en rodajas",
+    "Desmenuzar el queso de cabra y tostar las almendras",
+    "Mezclar todos los ingredientes en un bol",
+    "Aliñar con aceite de oliva y vinagre balsámico"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8402470416a511375ab"
+  },
+  "name": "Revuelto de huevo con patatas y almendras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252489/recipe_images/mnynits3ekamhy4an8q9.png",
+  "phrase": "Un desayuno nutritivo y saciante para empezar el día",
+  "preparationTime": 15,
+  "ingredients": [
+    "huevo",
+    "patata",
+    "almendras"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocer las patatas y cortar en trozos",
+    "Batir los huevos y añadir las almendras tostadas",
+    "Cocinar en una sartén junto con las patatas hasta que esté cuajado"
+  ],
+  "caloricRate": 220,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8402470416a511375ac"
+  },
+  "name": "Ensalada de huevo duro con queso y almendras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252487/recipe_images/wm8bgstz0j51kxcansal.png",
+  "phrase": "Una opción ligera y deliciosa para una cena rápida",
+  "preparationTime": 10,
+  "ingredients": [
+    "huevo duro",
+    "queso",
+    "almendras"
+  ],
+  "people": 1,
+  "steps": [
+    "Picar el huevo duro y el queso en trozos pequeños",
+    "Tostar las almendras ligeramente",
+    "Mezclar todos los ingredientes en un bol y aliñar al gusto"
+  ],
+  "caloricRate": 180,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8f808217d46dee25dc5"
+  },
+  "name": "Ensalada de arroz y berenjena",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252672/recipe_images/lub4b98amjozxtlicvlq.png",
+  "phrase": "Una deliciosa y ligera ensalada para perder peso",
+  "preparationTime": 30,
+  "ingredients": [
+    "arroz",
+    "berenjena",
+    "tomate",
+    "lechuga"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar el arroz",
+    "Asar la berenjena",
+    "Picar el tomate y la lechuga",
+    "Mezclar todo en un bol"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8f808217d46dee25dc6"
+  },
+  "name": "Arroz integral con verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252673/recipe_images/yv8p7dpih3lz351ya3nv.png",
+  "phrase": "Plato completo y saludable para tu dieta flexitariana",
+  "preparationTime": 45,
+  "ingredients": [
+    "arroz",
+    "tomate",
+    "berenjena",
+    "lechuga"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz integral",
+    "Saltear las verduras",
+    "Mezclar todo en una sartén"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8f808217d46dee25dc7"
+  },
+  "name": "Rollitos de lechuga con arroz y berenjena",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252672/recipe_images/z7njgqfizarfbwpbpj98.png",
+  "phrase": "Una opción baja en calorías y deliciosa",
+  "preparationTime": 40,
+  "ingredients": [
+    "arroz",
+    "berenjena",
+    "lechuga",
+    "tomate"
+  ],
+  "people": 3,
+  "steps": [
+    "Preparar el arroz",
+    "Saltear la berenjena",
+    "Rellenar las hojas de lechuga con el arroz y berenjena",
+    "Servir con salsa de tomate"
+  ],
+  "caloricRate": 180,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8f808217d46dee25dc8"
+  },
+  "name": "Salteado de arroz con berenjena y tomate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252673/recipe_images/u0nusbdla2o70kq9yhwb.png",
+  "phrase": "Plato rápido y ligero para perder peso",
+  "preparationTime": 25,
+  "ingredients": [
+    "arroz",
+    "berenjena",
+    "tomate",
+    "lechuga"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar el arroz",
+    "Saltear las verduras",
+    "Mezclar todo en la sartén"
+  ],
+  "caloricRate": 220,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6688f8f808217d46dee25dc9"
+  },
+  "name": "Ensalada de arroz con berenjena asada",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720252673/recipe_images/qtdcbitogyn1e7xorwjn.png",
+  "phrase": "Una ensalada diferente y sabrosa para tu dieta",
+  "preparationTime": 35,
+  "ingredients": [
+    "arroz",
+    "berenjena",
+    "tomate",
+    "lechuga"
+  ],
+  "people": 4,
+  "steps": [
+    "Cocinar el arroz",
+    "Asar la berenjena",
+    "Mezclar con el tomate y la lechuga",
+    "Aliñar al gusto"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ad0e8b3a09cc78a443392"
+  },
+  "name": "Smoothie verde",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720373479/ekv2hiwsgegw4d6vpqu8.png",
+  "phrase": "Batido refrescante con espinacas, piña y plátano.",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 taza de espinacas",
+    "1/2 piña",
+    "1 plátano",
+    "1 vaso de agua"
+  ],
+  "people": 2,
+  "steps": [
+    "Licuar todos los ingredientes hasta obtener una consistencia suave"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ad0e8b3a09cc78a443396"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720373479/s2aqv7zvzumt5m71503z.png",
+  "phrase": "Deliciosa avena con trozos de frutas frescas.",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendras",
+    "1 plátano",
+    "1 manzana"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la avena en la leche",
+    "Agregar las frutas troceadas"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ad0e8b3a09cc78a44339a"
+  },
+  "name": "Sopa de lentejas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720373480/bric29bckdyzqzb2rjrj.png",
+  "phrase": "Sopa reconfortante con lentejas, zanahoria y apio.",
+  "preparationTime": 40,
+  "ingredients": [
+    "1 taza de lentejas",
+    "zanahoria",
+    "apio",
+    "cebolla",
+    "caldo de verduras"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar las lentejas con las verduras",
+    "Sazonar al gusto"
+  ],
+  "caloricRate": 320,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ad0e8b3a09cc78a44339e"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720373480/imj2kxz9tcq7qckkcp2n.png",
+  "phrase": "Ensalada fresca y ligera con quinoa y vegetales.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa",
+    "tomate cherry",
+    "pepino",
+    "pimiento",
+    "zanahoria"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar los vegetales y mezclar todo"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ad0e8b3a09cc78a4433a2"
+  },
+  "name": "Tacos de coliflor",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720373480/x1mwuodqiq3hbjaz2bm9.png",
+  "phrase": "Sabrosos tacos vegetarianos con coliflor y guacamole.",
+  "preparationTime": 45,
+  "ingredients": [
+    "1 cabeza de coliflor",
+    "tortillas de maíz",
+    "aguacate",
+    "limón",
+    "cilantro"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la coliflor al horno",
+    "Preparar el guacamole y armar los tacos"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668adf7144fd733c4c24dc35"
+  },
+  "name": "Tostadas de aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377200/odifk81sf6eeqam0cuig.png",
+  "phrase": "Deliciosas tostadas de aguacate para empezar el día con energía.",
+  "preparationTime": 15,
+  "ingredients": [
+    "2 rebanadas de pan integral",
+    "1 aguacate maduro",
+    "limón",
+    "sal",
+    "pimienta"
+  ],
+  "people": 2,
+  "steps": [
+    "Tostar el pan",
+    "Machacar el aguacate con limón, sal y pimienta",
+    "Untar sobre las tostadas"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668adf7144fd733c4c24dc39"
+  },
+  "name": "Ensalada de quinoa y verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377200/aurwkjubxbhicrymm6ns.png",
+  "phrase": "Una deliciosa ensalada fresca y ligera para el almuerzo.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa",
+    "tomate",
+    "pepino",
+    "pimiento",
+    "cebolla morada",
+    "limón",
+    "aceite de oliva"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar todas las verduras",
+    "Mezclar todo con limón y aceite de oliva"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668adf7144fd733c4c24dc3d"
+  },
+  "name": "Sopa de lentejas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377201/m1bpdmmeqxzoogpmahzv.png",
+  "phrase": "Una reconfortante sopa de lentejas para terminar el día.",
+  "preparationTime": 40,
+  "ingredients": [
+    "1 taza de lentejas",
+    "zanahoria",
+    "apio",
+    "cebolla",
+    "ajo",
+    "caldo de verduras"
+  ],
+  "people": 4,
+  "steps": [
+    "Sofreír las verduras",
+    "Agregar las lentejas y el caldo",
+    "Cocinar hasta que las lentejas estén tiernas"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ae1d0fbf86972fff8680f"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377808/b2j9wrp7bbns8uqvgrrh.png",
+  "phrase": "Energético desayuno...",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena cocida",
+    "1 plátano en rodajas",
+    "Puñado de arándanos",
+    "1 cucharada de miel"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar la avena con las frutas en un bol",
+    "Agregar la miel antes de servir"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ae1d1fbf86972fff86812"
+  },
+  "name": "Ensalada de quinoa con aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377808/oyui2nd98vhsazzucqkn.png",
+  "phrase": "Refrescante ensalada...",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 aguacate cortado en cubos",
+    "1/2 taza de tomates cherry",
+    "Zumo de limón, sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar la quinoa con el aguacate y los tomates",
+    "Aliñar con limón, sal y pimienta",
+    "Refrigerar antes de servir"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ae1d1fbf86972fff86815"
+  },
+  "name": "Sopa de lentejas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377808/w30javcbcu7dsugju3v1.png",
+  "phrase": "Nutritiva y reconfortante...",
+  "preparationTime": 45,
+  "ingredients": [
+    "1 taza de lentejas cocidas",
+    "1 zanahoria en cubos",
+    "1 tallo de apio picado",
+    "Caldo de verduras"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear las verduras en una olla",
+    "Agregar las lentejas y el caldo",
+    "Cocinar a fuego lento hasta que todo esté tierno"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ae1d2fbf86972fff86818"
+  },
+  "name": "Batido de frutas y avena",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377809/ptkei0ydfbqpmsdfzwiz.png",
+  "phrase": "Delicioso batido...",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 plátano",
+    "1 taza de fresas",
+    "1/2 taza de avena",
+    "1 taza de leche de almendra"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar todos los ingredientes en la licuadora",
+    "Servir en un vaso y disfrutar"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ae1d2fbf86972fff8681b"
+  },
+  "name": "Tacos de coliflor",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377810/qu3fy2z7v1418a3o1szx.png",
+  "phrase": "Alternativa saludable...",
+  "preparationTime": 40,
+  "ingredients": [
+    "1 coliflor en floretes",
+    "1 cucharadita de comino",
+    "1 cucharadita de pimentón",
+    "Tortillas de maíz"
+  ],
+  "people": 2,
+  "steps": [
+    "Triturar la coliflor en un procesador de alimentos",
+    "Cocinar con las especias hasta que esté tierna",
+    "Rellenar las tortillas y servir"
+  ],
+  "caloricRate": 320,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ae1dffbf86972fff8681e"
+  },
+  "name": "Tortilla de vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720377823/nz0m4puotpnnjyyompsw.png",
+  "phrase": "Sabrosa tortilla...",
+  "preparationTime": 25,
+  "ingredients": [
+    "1 zanahoria rallada",
+    "1/2 pimiento rojo cortado en tiras",
+    "2 huevos batidos",
+    "Sal y especias al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear las verduras en una sartén con un poco de aceite",
+    "Agregar los huevos batidos y cocinar hasta que cuaje",
+    "Servir caliente"
+  ],
+  "caloricRate": 220,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c15d8ab168a8091ae742b"
+  },
+  "name": "Tostadas de aguacate y huevo",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720456664/z2y1ri1d01aatlhabkwn.png",
+  "phrase": "Deliciosas tostadas con aguacate y huevo, perfectas para empezar el día",
+  "preparationTime": 15,
+  "ingredients": [
+    "2 rebanadas de pan integral",
+    "1 aguacate",
+    "2 huevos",
+    "tomates cherry",
+    "sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Tostar el pan",
+    "Hacer puré de aguacate",
+    "Cocinar los huevos",
+    "Armar las tostadas con todos los ingredientes"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c15d8ab168a8091ae742f"
+  },
+  "name": "Salteado de tofu y verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720456664/aom4o3u4j8jk5i0tpwwz.png",
+  "phrase": "Una opción ligera y sabrosa para la cena",
+  "preparationTime": 25,
+  "ingredients": [
+    "200g de tofu",
+    "brócoli",
+    "pimientos",
+    "cebolla",
+    "salsa de soja",
+    "aceite de sésamo",
+    "ajo"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar el tofu en dados",
+    "Saltear las verduras con aceite de sésamo y ajo",
+    "Agregar el tofu y la salsa de soja",
+    "Cocinar hasta que esté todo bien integrado"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c15d8ab168a8091ae7433"
+  },
+  "name": "Ensalada de quinoa y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720456665/az1e1zkjv9wkfz57t7sr.png",
+  "phrase": "Una ensalada fresca y nutritiva para el almuerzo",
+  "preparationTime": 20,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "tomate",
+    "pepino",
+    "zanahoria",
+    "espinacas",
+    "vinagre balsámico",
+    "aceite de oliva",
+    "sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar los vegetales",
+    "Preparar el aderezo con vinagre balsámico y aceite de oliva",
+    "Mezclar todos los ingredientes"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c1830e41e0c1fee2de04e"
+  },
+  "name": "Sopa de lentejas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720457264/gwbquiuurfikuvtgtthd.png",
+  "phrase": "Una cena reconfortante y baja en calorías.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de lentejas cocidas",
+    "1 zanahoria",
+    "1 cebolla",
+    "2 dientes de ajo",
+    "Caldo de verduras",
+    "Especias al gusto"
+  ],
+  "people": 4,
+  "steps": [
+    "Rehogar la cebolla, la zanahoria y el ajo en una olla",
+    "Agregar las lentejas, el caldo de verduras y cocinar a fuego lento hasta que estén tiernas"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c1831e41e0c1fee2de052"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720457265/zoblcxnk7f0dsca5thdb.png",
+  "phrase": "Una deliciosa forma de comenzar el día con energía.",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1/2 taza de fresas"
+  ],
+  "people": 1,
+  "steps": [
+    "Mezclar la avena con la leche de almendra y refrigerar durante la noche",
+    "Agregar las frutas cortadas encima antes de servir"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c1831e41e0c1fee2de056"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720457265/qaqgryxj4spq5yrwiund.png",
+  "phrase": "Una opción saludable y saciante para el almuerzo.",
+  "preparationTime": 25,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 pepino",
+    "1 tomate",
+    "1/2 aguacate",
+    "Zumo de limón",
+    "Aceite de oliva",
+    "Sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar las verduras en trozos pequeños",
+    "Mezclar la quinoa con las verduras y aliñar con limón, aceite, sal y pimienta"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c23c9450536a7d82b1ce3"
+  },
+  "name": "Ensalada de quinoa y aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460233/j7tsbhi8unnlk8fif83v.png",
+  "phrase": "Fresca ensalada con quinoa, aguacate y vegetales para una comida ligera y nutritiva.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 aguacate",
+    "1/2 pepino",
+    "tomates cherry",
+    "zanahoria rallada",
+    "vinagreta de limón"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar los vegetales y el aguacate",
+    "Mezclar todos los ingredientes con la vinagreta"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c23c9450536a7d82b1ce7"
+  },
+  "name": "Tacos de frijoles y aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460234/vs83gaxptj5vgx6m9sc5.png",
+  "phrase": "Sabrosos tacos vegetarianos con frijoles, aguacate y salsa de tomate.",
+  "preparationTime": 25,
+  "ingredients": [
+    "1 lata de frijoles negros",
+    "1 aguacate",
+    "tortillas de maíz",
+    "salsa de tomate",
+    "cilantro fresco"
+  ],
+  "people": 2,
+  "steps": [
+    "Calentar los frijoles y las tortillas",
+    "Armar los tacos con los ingredientes",
+    "Añadir la salsa de tomate y cilantro"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c23ca450536a7d82b1ceb"
+  },
+  "name": "Smoothie de frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460234/tscvcukhd90xmtol519i.png",
+  "phrase": "Delicioso smoothie de frutas para empezar el día con energía.",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 plátano",
+    "1 taza de fresas",
+    "1/2 taza de yogur natural",
+    "1 cucharada de miel"
+  ],
+  "people": 2,
+  "steps": [
+    "Licuar todos los ingredientes",
+    "Servir en un vaso"
+  ],
+  "caloricRate": 150,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c24b47059c1c27d35fb70"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460468/vbcohlpbakccjbweimfn.png",
+  "phrase": "Una ensalada fresca y ligera para disfrutar en el almuerzo.",
+  "preparationTime": 20,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1/2 pepino cortado en cubos",
+    "1/4 de pimiento rojo cortado"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar todos los ingredientes en un bowl",
+    "Aliñar con limón y aceite de oliva"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c24b47059c1c27d35fb74"
+  },
+  "name": "Tortilla de espinacas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460468/qxmktq8bahj7hthihbww.png",
+  "phrase": "Una deliciosa tortilla de espinacas para empezar el día con energía.",
+  "preparationTime": 30,
+  "ingredients": [
+    "3 huevos",
+    "1 taza de espinacas frescas",
+    "1/4 de cebolla picada"
+  ],
+  "people": 2,
+  "steps": [
+    "Batir los huevos",
+    "Saltear las espinacas y la cebolla",
+    "Agregar los huevos batidos y cocinar a fuego lento"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c24b47059c1c27d35fb78"
+  },
+  "name": "Salteado de verduras con tofu",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460469/ro33oyep4rghc4gzjlch.png",
+  "phrase": "Un plato vegano y saludable para terminar el día de forma ligera.",
+  "preparationTime": 25,
+  "ingredients": [
+    "1 bloque de tofu cortado en cubos",
+    "1 zanahoria en rodajas",
+    "1 pimiento verde en tiras"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear las verduras en una sartén con un poco de aceite",
+    "Agregar el tofu y cocinar por unos minutos",
+    "Aliñar al gusto"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c262f7059c1c27d35fb87"
+  },
+  "name": "Ensalada de quinoa y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460848/vcowxozq3vrfxd7hxlg7.png",
+  "phrase": "Una comida fresca y baja en calorías para mantenerse lleno todo el día.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "vegetales al gusto (pepino, tomate, pimiento)",
+    "vinagreta de limón",
+    "semillas de girasol"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa según las instrucciones del paquete",
+    "cortar los vegetales en trozos pequeños",
+    "preparar la vinagreta de limón",
+    "mezclar todo en un bol grande y añadir las semillas de girasol"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c262f7059c1c27d35fb8b"
+  },
+  "name": "Tostadas de aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460848/zd2bi44ezvrxsuegbexn.png",
+  "phrase": "Un desayuno ligero y nutritivo para empezar el día.",
+  "preparationTime": 15,
+  "ingredients": [
+    "2 rebanadas de pan integral",
+    "1 aguacate maduro",
+    "tomates cherry",
+    "sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Tostar el pan",
+    "machacar el aguacate y untarlo en las tostadas",
+    "colocar los tomates cherry encima",
+    "añadir sal y pimienta al gusto"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c26317059c1c27d35fb8f"
+  },
+  "name": "Wrap de tofu y verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460849/k4mkuzrne8zlb8sikjq9.png",
+  "phrase": "Una cena rápida y saludable para cerrar el día.",
+  "preparationTime": 25,
+  "ingredients": [
+    "1 tortilla de maíz",
+    "tofu marinado",
+    "vegetales al gusto (cebolla, pimiento, espinacas)",
+    "salsa de soja"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear las verduras en una sartén con un poco de aceite",
+    "añadir el tofu marinado y cocinar unos minutos más",
+    "calentar la tortilla y rellenar con las verduras y tofu",
+    "añadir un chorrito de salsa de soja antes de enrollar"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c27f67059c1c27d35fba2"
+  },
+  "name": "Wrap de falafel con salsa de yogurt",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720461302/cxxzogmc9aydgobe82qy.png",
+  "phrase": "Un wrap vegetariano con sabores mediterráneos para la cena.",
+  "preparationTime": 40,
+  "ingredients": [
+    "Falafel (puedes comprarlo o hacerlo casero)",
+    "Tortillas de harina integrales",
+    "Vegetales (pepino, tomate, cebolla)",
+    "Yogurt natural",
+    "Hierbas frescas (menta, cilantro)"
+  ],
+  "people": 2,
+  "steps": [
+    "Calentar el falafel y las tortillas",
+    "Armar el wrap con los vegetales y el falafel",
+    "Agregar la salsa de yogurt y las hierbas frescas"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c27f67059c1c27d35fba6"
+  },
+  "name": "Ensalada de quinoa y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720461302/akr9hj6ktxpubm14ms6o.png",
+  "phrase": "Una ensalada fresca y nutritiva para el almuerzo.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "Tomate",
+    "Pepino",
+    "Zanahoria",
+    "Lechuga",
+    "Aceite de oliva",
+    "Limón"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar los vegetales en trozos pequeños",
+    "Mezclar con la quinoa cocida",
+    "Aliñar con aceite de oliva y limón"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c27f67059c1c27d35fbaa"
+  },
+  "name": "Tostadas integrales con aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720461303/mqzmgpndsv3lmqnufzjx.png",
+  "phrase": "Deliciosas tostadas con aguacate, ideales para comenzar el día.",
+  "preparationTime": 15,
+  "ingredients": [
+    "2 rebanadas de pan integral",
+    "1 aguacate",
+    "Tomate cherry",
+    "Espinacas"
+  ],
+  "people": 1,
+  "steps": [
+    "Tostar el pan integral",
+    "Hacer puré de aguacate y untar en el pan",
+    "Agregar tomate cherry y espinacas encima"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2a217059c1c27d35fbbb"
+  },
+  "name": "Tacos de camote y frijoles",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720461858/gqgsvgust25q6rvdizzn.png",
+  "phrase": "Un platillo vegetariano lleno de sabor y texturas",
+  "preparationTime": 40,
+  "ingredients": [
+    "2 camotes medianos",
+    "1 lata de frijoles negros",
+    "tortillas de maíz",
+    "salsa verde y aguacate para acompañar"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar y machacar el camote",
+    "Calentar los frijoles",
+    "Armara los tacos con todos los ingredientes"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2a227059c1c27d35fbbf"
+  },
+  "name": "Tostadas con aguacate y huevo",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720461858/exzmz07tvbatdcnpkb0l.png",
+  "phrase": "Deliciosas tostadas con aguacate y huevo para empezar el día con energía",
+  "preparationTime": 15,
+  "ingredients": [
+    "2 rebanadas de pan integral",
+    "1 aguacate",
+    "2 huevos",
+    "sal y pimienta al gusto"
+  ],
+  "people": 1,
+  "steps": [
+    "Tostar el pan",
+    "Hacer puré de aguacate",
+    "Cocinar los huevos",
+    "Armar las tostadas"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2a227059c1c27d35fbc3"
+  },
+  "name": "Ensalada de quinoa y verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720461858/ykvfs77gkyuyk8wrfzqv.png",
+  "phrase": "Una fresca ensalada que te llenará de nutrientes y sabor",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "tomate, pepino, pimiento y cebolla al gusto",
+    "vinagreta de limón y cilantro"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Cortar las verduras",
+    "Preparar la vinagreta",
+    "Mezclar todo en un bol"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2b01dd16dec111f60070"
+  },
+  "name": "Berenjenas rellenas de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462082/v38otefmtqximhzqj4il.png",
+  "phrase": "Plato vegetariano y saciante",
+  "preparationTime": 40,
+  "ingredients": [
+    "2 berenjenas grandes",
+    "1 taza de quinoa cocida",
+    "1 pimiento rojo picado",
+    "1/2 cebolla picada",
+    "queso rallado"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar las berenjenas por la mitad y vaciar la pulpa. Mezclar la pulpa con la quinoa, el pimiento y la cebolla. Rellenar las berenjenas con la mezcla y espolvorear queso rallado. Hornear durante 30 minutos."
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2b02dd16dec111f60074"
+  },
+  "name": "Ensalada de quinoa y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462083/a1bwhwy8jzncjoj8nufh.png",
+  "phrase": "Sabrosa ensalada llena de proteínas",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 taza de brócoli",
+    "1 zanahoria rallada",
+    "1/2 taza de garbanzos cocidos",
+    "vinagreta de limón"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar todos los ingredientes en un bol y aliñar con la vinagreta de limón"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2b02dd16dec111f60078"
+  },
+  "name": "Smoothie verde",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462082/jfd8iylqo0pifxzonngc.png",
+  "phrase": "Delicioso smoothie lleno de nutrientes",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 taza de espinacas",
+    "1 plátano",
+    "1/2 taza de piña",
+    "1 taza de agua"
+  ],
+  "people": 1,
+  "steps": [
+    "Licuar todos los ingredientes hasta obtener una mezcla homogénea"
+  ],
+  "caloricRate": 150,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2bfb980bda9d16db34fa"
+  },
+  "name": "Ensalada de quinoa y verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462332/guiuzky7epdskq2qvexm.png",
+  "phrase": "Una ensalada fresca y nutritiva para saciar el hambre sin sumar calorías extras.",
+  "preparationTime": 25,
+  "ingredients": [
+    "Quinoa",
+    "Pimiento rojo",
+    "Pepino",
+    "Cebolla morada",
+    "Aceite de oliva",
+    "Vinagre balsámico"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar las verduras",
+    "Preparar el aliño",
+    "Mezclar todo en un bol"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2bfb980bda9d16db34fe"
+  },
+  "name": "Tortilla de espinacas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462332/lq7qczqurz4j79fjsjfm.png",
+  "phrase": "Una deliciosa tortilla de espinacas para empezar el día con energía.",
+  "preparationTime": 30,
+  "ingredients": [
+    "Espinacas frescas",
+    "Huevos",
+    "Queso feta",
+    "Tomates cherry"
+  ],
+  "people": 2,
+  "steps": [
+    "Batir los huevos",
+    "Saltear las espinacas",
+    "Agregar el queso y los tomates",
+    "Cocinar a fuego lento"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2bfc980bda9d16db3502"
+  },
+  "name": "Pechuga de pollo a la plancha con vegetales al vapor",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462332/hp9kfpk21wt1hqgdjntn.png",
+  "phrase": "Una cena sana y baja en calorías, ideal para mantener la línea.",
+  "preparationTime": 30,
+  "ingredients": [
+    "Pechuga de pollo",
+    "Calabacín",
+    "Zanahoria",
+    "Brócoli",
+    "Limón",
+    "Especias al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Marinar el pollo",
+    "Cocinar a la plancha",
+    "Preparar los vegetales al vapor",
+    "Servir con limón y especias"
+  ],
+  "caloricRate": 280,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2d4c980bda9d16db3511"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462668/bdnyjib7buwvyk0gpauz.png",
+  "phrase": "Refrescante ensalada de quinoa",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa",
+    "1 pepino",
+    "1 pimiento rojo",
+    "1 aguacate",
+    "limón"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Cortar las verduras y mezclar con la quinoa",
+    "Exprimir limón por encima"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2d4c980bda9d16db3515"
+  },
+  "name": "Tacos de lentejas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462669/pdnats94lmwnijuh7qfq.png",
+  "phrase": "Sabrosos tacos de lentejas",
+  "preparationTime": 45,
+  "ingredients": [
+    "1 taza de lentejas cocidas",
+    "tortillas de maíz",
+    "cebolla",
+    "tomate",
+    "aguacate"
+  ],
+  "people": 2,
+  "steps": [
+    "Sofreír la cebolla y el tomate",
+    "Agregar las lentejas y cocinar unos minutos",
+    "Armar los tacos con las tortillas y los ingredientes"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2d4d980bda9d16db3519"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462669/ysbhiv0nhimnqmqxbyah.png",
+  "phrase": "Deliciosa y saludable avena con frutas",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 manzana"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la avena en la leche",
+    "Cortar las frutas y añadir a la avena"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2fde980bda9d16db352a"
+  },
+  "name": "Ensalada de quinoa y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720463326/bx9flszk5l8h1p5lbycw.png",
+  "phrase": "Una ensalada refrescante y ligera para el almuerzo",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "Tomates cherry",
+    "Pepino",
+    "Pimiento rojo",
+    "Aceitunas",
+    "Vinagre balsámico"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar todos los ingredientes en un bowl",
+    "Aliñar con vinagre balsámico"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c2fde980bda9d16db352e"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720463326/fb9fee8pqylwty2fm4de.png",
+  "phrase": "Deliciosa y saludable combinación de avena y frutas",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendras",
+    "1 plátano",
+    "Arándanos frescos"
+  ],
+  "people": 1,
+  "steps": [
+    "Cocinar la avena con la leche de almendras",
+    "Cortar las frutas y agregarlas a la avena"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+
+{
+  "_id": {
+    "$oid": "668c2fde980bda9d16db3532"
+  },
+  "name": "Tofu salteado con verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720463327/vdd89cns5tl030bffglk.png",
+  "phrase": "Plato vegetariano y ligero para la cena",
+  "preparationTime": 25,
+  "ingredients": [
+    "200g de tofu",
+    "Brócoli",
+    "Zanahoria",
+    "Pimiento amarillo",
+    "Salsa de soja"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear el tofu y las verduras en una sartén con un poco de aceite",
+    "Agregar salsa de soja"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c353c980bda9d16db3547"
+  },
+  "name": "Ensalada de quinoa y aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720464701/okn6xwgdbqhy24qltlss.png",
+  "phrase": "Una deliciosa y saludable ensalada para mantenerse ligero",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa",
+    "1 aguacate",
+    "tomates cherry",
+    "espinacas",
+    "vinagre balsámico"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar el aguacate y los tomates",
+    "Mezclar todos los ingredientes en un bol"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c353d980bda9d16db354b"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720464701/yynwa4yfwh5nu75u3z6b.png",
+  "phrase": "Un desayuno lleno de energía para empezar el día",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 manzana"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la avena con la leche",
+    "Cortar las frutas",
+    "Servir la avena en un tazón y añadir las frutas encima"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c360a0bd9387edfcdd289"
+  },
+  "name": "Tofu salteado con verduras",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720464906/yqxl8l68xlwyoay1qi1j.png",
+  "phrase": "Sabroso tofu...",
+  "preparationTime": 25,
+  "ingredients": [
+    "200g de tofu",
+    "1 zanahoria",
+    "1 pimiento verde",
+    "1 cebolla",
+    "Aceite de oliva, salsa de soja, sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar el tofu en cubos y las verduras en tiras",
+    "Saltear en una sartén con aceite de oliva",
+    "Añadir salsa de soja, sal y pimienta al gusto"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c360a0bd9387edfcdd28d"
+  },
+  "name": "Batido de frutas y semillas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720464907/jcrsigmxkrcczvhyckca.png",
+  "phrase": "Delicioso batido...",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 plátano",
+    "1 taza de fresas",
+    "1 cucharada de semillas de chía",
+    "1/2 taza de leche de almendra"
+  ],
+  "people": 1,
+  "steps": [
+    "Licuar todos los ingredientes hasta obtener una mezcla homogénea",
+    "Servir en un vaso y disfrutar"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c3695baeafe68d7eb3d9d"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465046/anizm40u8zr2mscdjvgy.png",
+  "phrase": "Deliciosa combinación de avena y frutas para comenzar el día con energía",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche vegetal",
+    "1 plátano",
+    "1 puñado de arándanos"
+  ],
+  "people": 1,
+  "steps": [
+    "Mezclar la avena con la leche en un recipiente",
+    "Agregar las frutas en trozos",
+    "Disfrutar"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c3696baeafe68d7eb3da2"
+  },
+  "name": "Wrap de tofu y aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465046/qadc4lt9d0wtere6upid.png",
+  "phrase": "Una opción rápida y saludable para cenar sin excesos",
+  "preparationTime": 15,
+  "ingredients": [
+    "2 tortillas de maíz",
+    "100g de tofu marinado",
+    "1 aguacate maduro",
+    "Rodajas de tomate",
+    "Lechuga fresca"
+  ],
+  "people": 1,
+  "steps": [
+    "Calentar las tortillas en una sartén",
+    "Agregar el tofu, aguacate, tomate y lechuga",
+    "Enrollar y servir"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c36fe7af93c2e682fac39"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465151/szo7tpga2qvacowsjc21.png",
+  "phrase": "Fresca y nutritiva ensalada de quinoa con vegetales",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "tomates cherry",
+    "pepino",
+    "zanahoria rallada",
+    "aguacate",
+    "vinagreta de limón"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar todos los ingredientes en un bol",
+    "Aliñar con la vinagreta de limón",
+    "Servir"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c36ff7af93c2e682fac3d"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465151/cnkshqj04f62ngcextnw.png",
+  "phrase": "Deliciosa avena con frutas frescas para empezar el día",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendras",
+    "1 plátano",
+    "1 puñado de arándanos",
+    "nueces picadas"
+  ],
+  "people": 1,
+  "steps": [
+    "Cocinar la avena con la leche de almendras",
+    "Agregar las frutas y nueces encima",
+    "Disfrutar"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c36ff7af93c2e682fac41"
+  },
+  "name": "Salmón a la plancha con vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465152/corcerbh4bf6llbv0iux.png",
+  "phrase": "Delicioso salmón a la plancha con vegetales asados",
+  "preparationTime": 25,
+  "ingredients": [
+    "filete de salmón",
+    "pimiento rojo",
+    "calabacín",
+    "cebolla",
+    "limón",
+    "aceite de oliva"
+  ],
+  "people": 2,
+  "steps": [
+    "Sazonar el salmón con sal, pimienta y limón",
+    "Cocinar el salmón a la plancha",
+    "Asar los vegetales con aceite de oliva",
+    "Servir todo junto"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c37967af93c2e682fac5c"
+  },
+  "name": "Batido de frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465302/rxj6kvwrbi46l2z4yixx.png",
+  "phrase": "Delicioso y nutritivo batido de frutas para comenzar el día con energía.",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 plátano",
+    "1 taza de fresas",
+    "1/2 taza de yogurt natural",
+    "1 cucharada de miel"
+  ],
+  "people": 2,
+  "steps": [
+    "Pelar y cortar las frutas.",
+    "Agregar todos los ingredientes a la licuadora y mezclar hasta obtener una consistencia homogénea."
+  ],
+  "caloricRate": 150,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c37967af93c2e682fac60"
+  },
+  "name": "Tacos de coliflor con guacamole",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465302/mugkaicykhl9t1p9saml.png",
+  "phrase": "Una opción baja en calorías pero llena de sabor para disfrutar en la cena.",
+  "preparationTime": 40,
+  "ingredients": [
+    "1 cabeza de coliflor",
+    "1 aguacate",
+    "1 tomate",
+    "limón, cilantro, sal y pimienta al gusto",
+    "tortillas de maíz"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar la coliflor en floretes y hornearla hasta que esté tierna.",
+    "Preparar el guacamole mezclando el aguacate, tomate, limón, cilantro, sal y pimienta.",
+    "Armar los tacos con la coliflor asada y el guacamole, servir con tortillas de maíz."
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c37967af93c2e682fac64"
+  },
+  "name": "Ensalada de quinoa y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465303/a7mrdiut7bqghhc4n2lc.png",
+  "phrase": "Una ensalada refrescante y saciante, perfecta para mantener la línea.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 pepino",
+    "1 pimiento rojo",
+    "1 zanahoria",
+    "1/4 de taza de aceitunas negras",
+    "vinagreta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar los vegetales en trozos pequeños.",
+    "Mezclar la quinoa con los vegetales y las aceitunas.",
+    "Aliñar con la vinagreta antes de servir."
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c38027af93c2e682fac73"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465411/e2uzkxqejzwakf1rlz5n.png",
+  "phrase": "Una deliciosa ensalada para tu almuerzo",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 taza de pepino en cubos",
+    "1 taza de tomate cherry",
+    "1/2 aguacate en rodajas",
+    "Aderezo a gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar todos los ingredientes en un bowl",
+    "Agregar el aderezo y mezclar bien"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c38027af93c2e682fac77"
+  },
+  "name": "Tacos de frijoles",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465411/ckiusgseoffvyko7rbr8.png",
+  "phrase": "Una opción vegetariana y deliciosa para la cena",
+  "preparationTime": 20,
+  "ingredients": [
+    "1 lata de frijoles negros cocidos",
+    "1/2 cebolla picada",
+    "1 diente de ajo picado",
+    "Tortillas de maíz",
+    "Guarniciones a gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear la cebolla y el ajo en un sartén",
+    "Agregar los frijoles y calentar bien",
+    "Calentar las tortillas y armar los tacos con los frijoles",
+    "Agregar guarniciones"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c38037af93c2e682fac7b"
+  },
+  "name": "Smoothie de espinacas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465411/grpvzibrfc9xxxrulcae.png",
+  "phrase": "Delicioso smoothie verde para comenzar el día",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 taza de espinacas",
+    "1 plátano",
+    "1 taza de leche de almendra",
+    "1 cucharada de miel"
+  ],
+  "people": 1,
+  "steps": [
+    "Mezclar todos los ingredientes en la licuadora",
+    "Servir en un vaso y disfrutar"
+  ],
+  "caloricRate": 150,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c38bf7af93c2e682fac8a"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465599/qteip6otfhnxsy0wzsqa.png",
+  "phrase": "Deliciosa y saludable avena con frutas para empezar el día.",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 kiwi",
+    "1 cucharada de miel"
+  ],
+  "people": 1,
+  "steps": [
+    "Cocinar la avena en la leche",
+    "Cortar las frutas en trozos",
+    "Agregar las frutas y la miel a la avena"
+  ],
+  "caloricRate": 300,
+  "isFavorite": true,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c38bf7af93c2e682fac8e"
+  },
+  "name": "Champiñones rellenos",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465600/odsvd70wjf52g8o9b1ip.png",
+  "phrase": "Sabrosos champiñones rellenos de vegetales, una cena ligera y deliciosa.",
+  "preparationTime": 45,
+  "ingredients": [
+    "6 champiñones grandes",
+    "1 pimiento verde",
+    "1 cebolla",
+    "2 dientes de ajo",
+    "queso parmesano rallado",
+    "sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Limpiar los champiñones y quitar los tallos",
+    "Picar finamente el pimiento, la cebolla y el ajo",
+    "Saltear las verduras en una sartén con aceite de oliva",
+    "Rellenar los champiñones con la mezcla de verduras",
+    "Espolvorear queso parmesano rallado por encima",
+    "Hornear por 20 minutos"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c38bf7af93c2e682fac92"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465600/ljtpj68d9ma8lt7gauag.png",
+  "phrase": "Refrescante ensalada de quinoa, perfecta para un almuerzo ligero.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa",
+    "1 pepino",
+    "1 pimiento rojo",
+    "1 aguacate",
+    "zumo de limón",
+    "sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa según las instrucciones del paquete",
+    "Cortar las verduras en trozos",
+    "Mezclar todos los ingredientes en un tazón",
+    "Aliñar con limón, sal y pimienta"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c39807af93c2e682faca7"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465793/tih5wdzpgvpp1j6lpzvr.png",
+  "phrase": "Deliciosa avena con frutas para empezar el día con energía",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 manzana",
+    "1 cucharada de miel"
+  ],
+  "people": 1,
+  "steps": [
+    "Cocinar la avena con la leche de almendra",
+    "Cortar las frutas en trozos",
+    "Servir la avena en un bowl y decorar con las frutas y la miel"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c39817af93c2e682facab"
+  },
+  "name": "Ensalada de quinoa y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465793/u2bj0wv0uzk1qhtmjmxs.png",
+  "phrase": "Una ensalada fresca y nutritiva para el almuerzo",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 taza de tomates cherry",
+    "1 pepino",
+    "1 aguacate",
+    "1/4 taza de cilantro picado",
+    "Zumo de limón",
+    "Aceite de oliva"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar la quinoa con los vegetales",
+    "Aliñar con limón y aceite de oliva",
+    "Servir en un plato"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668c39817af93c2e682facaf"
+  },
+  "name": "Berenjenas rellenas de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465794/pvauyng9cknjzgvxxusd.png",
+  "phrase": "Una cena vegetariana y saludable para terminar el día",
+  "preparationTime": 45,
+  "ingredients": [
+    "2 berenjenas",
+    "1 taza de quinoa cocida",
+    "1 pimiento rojo",
+    "1 cebolla",
+    "2 dientes de ajo",
+    "Especias al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar las berenjenas al horno",
+    "Preparar el relleno con la quinoa y las verduras",
+    "Rellenar las berenjenas y hornear"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d06f50b5b40a0c363473a"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720518390/ebbtppcdoqth3drfjh1e.png",
+  "phrase": "Deliciosa y saludable opción para comenzar el día",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 manzana"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la avena con la leche de almendra",
+    "Agregar las frutas cortadas encima"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d06f50b5b40a0c363473e"
+  },
+  "name": "Berenjenas rellenas de lentejas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720518390/m1uumpzxxarjoxxk1w9v.png",
+  "phrase": "Una cena sabrosa y balanceada para terminar el día",
+  "preparationTime": 45,
+  "ingredients": [
+    "2 berenjenas",
+    "1 taza de lentejas cocidas",
+    "tomate",
+    "cebolla",
+    "ajo",
+    "queso rallado"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar las berenjenas por la mitad",
+    "Cocinar las lentejas y preparar el relleno",
+    "Rellenar las berenjenas y hornear"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d06f50b5b40a0c3634740"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720518390/ttvmvi894l0acwu14qww.png",
+  "phrase": "Una opción saludable y saciante para el almuerzo",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa",
+    "1 pepino",
+    "1 pimiento rojo",
+    "1 aguacate",
+    "limón",
+    "aceite de oliva"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Cortar las verduras y mezclar todo"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d0df77c2ad5204526825c"
+  },
+  "name": "Tacos de lentejas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720520184/lllieieweawvnz5khhud.png",
+  "phrase": "Deliciosos tacos vegetarianos de lentejas para una cena ligera y nutritiva",
+  "preparationTime": 40,
+  "ingredients": [
+    "1 taza de lentejas cocidas",
+    "1/2 cebolla",
+    "1 pimiento rojo",
+    "4 tortillas de maíz"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear las verduras",
+    "Agregar las lentejas",
+    "Rellenar las tortillas"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d0df87c2ad52045268260"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720520185/e178lwdlqmhzu8swhgna.png",
+  "phrase": "Refrescante ensalada de quinoa, perfecta para un almuerzo ligero",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 pepino",
+    "1 tomate",
+    "1/2 aguacate"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar las verduras",
+    "Mezclar todo en un bol"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d0df97c2ad52045268264"
+  },
+  "name": "Batido de frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720520186/qrhb07m4qjys9holcvmf.png",
+  "phrase": "Delicioso batido de frutas para empezar el día con energía",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 plátano",
+    "1 taza de fresas",
+    "1/2 taza de leche de almendra"
+  ],
+  "people": 1,
+  "steps": [
+    "Pelar y cortar las frutas",
+    "Licuar todo junto"
+  ],
+  "caloricRate": 150,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d141e2f0d094dde8b5b04"
+  },
+  "name": "Smoothie de frutas y espinacas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720521760/x8nhejmd6ivibbgtrxll.png",
+  "phrase": "Delicioso smoothie cargado de vitaminas y minerales.",
+  "preparationTime": 10,
+  "ingredients": [
+    "1 plátano maduro",
+    "1 taza de espinacas frescas",
+    "1/2 taza de fresas",
+    "1 vaso de leche de almendras"
+  ],
+  "people": 1,
+  "steps": [
+    "Licuar todos los ingredientes hasta obtener una mezcla homogénea."
+  ],
+  "caloricRate": 150,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d141f2f0d094dde8b5b08"
+  },
+  "name": "Ensalada de quinoa y aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720521760/ipk4bdh8sngzaokipqqa.png",
+  "phrase": "Una ensalada refrescante y saciante que te ayudará a mantenerte en forma.",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 aguacate maduro",
+    "1 tomate",
+    "1/2 pepino",
+    "Zumo de limón",
+    "Aceite de oliva",
+    "Sal y pimienta al gusto"
+  ],
+  "people": 2,
+  "steps": [
+    "Picar los vegetales en trozos pequeños",
+    "Mezclar con la quinoa y aliñar con limón, aceite, sal y pimienta."
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d141f2f0d094dde8b5b0c"
+  },
+  "name": "Tacos de champiñones y frijoles",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720521761/tmueqszdkcomdfiu7yu0.png",
+  "phrase": "Una opción vegetariana y deliciosa para disfrutar en la cena.",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 lata de frijoles negros",
+    "200g de champiñones",
+    "1 cebolla",
+    "1 pimiento rojo",
+    "Especias mexicanas",
+    "Tortillas de maíz",
+    "Aguacate y cilantro para decorar"
+  ],
+  "people": 2,
+  "steps": [
+    "Saltear la cebolla, pimiento y champiñones con las especias",
+    "Calentar las tortillas y rellenar con los frijoles y la mezcla de champiñones",
+    "Decorar con aguacate y cilantro."
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d15312f0d094dde8b5b71"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720522035/yhzzaqvxr8g4tpsax59e.png",
+  "phrase": "Deliciosa combinación de avena con frutas frescas",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 manzana"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la avena en leche",
+    "Agregar las frutas cortadas"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d15322f0d094dde8b5b75"
+  },
+  "name": "Buddha bowl",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720522035/kjyzawy1xzhxsori4vnq.png",
+  "phrase": "Colorido cuenco con base de arroz integral y variedad de vegetales",
+  "preparationTime": 40,
+  "ingredients": [
+    "1 taza de arroz integral cocido",
+    "zanahoria",
+    "brócoli",
+    "garbanzos",
+    "aguacate"
+  ],
+  "people": 2,
+  "steps": [
+    "Colocar el arroz como base en un bol",
+    "Agregar los vegetales y garbanzos"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d15322f0d094dde8b5b79"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720522035/iym49kztbnz0mghot0h5.png",
+  "phrase": "Refrescante ensalada con quinoa, vegetales y aderezo de limón",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "tomate",
+    "pepino",
+    "cebolla",
+    "limón"
+  ],
+  "people": 2,
+  "steps": [
+    "Mezclar los ingredientes en un tazón",
+    "Agregar el aderezo de limón"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d163a2f0d094dde8b5b98"
+  },
+  "name": "Wrap de tofu y vegetales",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720522300/futclmklnytqrw5cdyh8.png",
+  "phrase": "Delicioso wrap de tofu y vegetales para una cena ligera y saludable",
+  "preparationTime": 25,
+  "ingredients": [
+    "1 tortilla de trigo integral",
+    "150g de tofu",
+    "Verduras variadas (zanahoria, pepino, lechuga)"
+  ],
+  "people": 1,
+  "steps": [
+    "Saltear el tofu con las verduras",
+    "Colocar la mezcla en la tortilla y enrollar"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d163b2f0d094dde8b5b9c"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720522300/oqizdkloairtvsqplt0h.png",
+  "phrase": "Deliciosa y nutritiva avena con frutas para comenzar el día",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 puñado de arándanos"
+  ],
+  "people": 1,
+  "steps": [
+    "Cocinar la avena con la leche de almendra",
+    "Agregar las frutas cortadas por encima"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d163b2f0d094dde8b5ba0"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720522301/i6svpv96wcmjkrzpenkb.png",
+  "phrase": "Refrescante ensalada de quinoa para un almuerzo ligero",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa",
+    "1 pepino",
+    "1 pimiento rojo",
+    "1 aguacate",
+    "Semillas de girasol"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa",
+    "Picar las verduras y el aguacate",
+    "Mezclar todo con las semillas de girasol"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d7cf92ce4b05d1a765d0a"
+  },
+  "name": "Avena con frutas",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720548603/fo8xnoynhsy0qpyzttqv.png",
+  "phrase": "Deliciosa avena con trozos de frutas frescas",
+  "preparationTime": 15,
+  "ingredients": [
+    "1 taza de avena",
+    "1 taza de leche de almendra",
+    "1 plátano",
+    "1 puñado de arándanos"
+  ],
+  "people": 1,
+  "steps": [
+    "Cocinar la avena con la leche",
+    "Agregar las frutas troceadas",
+    "Revolver bien y servir"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "desayuno",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d7cfa2ce4b05d1a765d0e"
+  },
+  "name": "Ensalada de quinoa",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720548603/fsmlorubmh6ct0a9vqd1.png",
+  "phrase": "Colorida ensalada con quinoa y vegetales frescos",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 taza de pepino picado",
+    "1 taza de tomate cherry",
+    "1/2 taza de pimiento rojo picado"
+  ],
+  "people": 1,
+  "steps": [
+    "Mezclar todos los ingredientes en un bol",
+    "Aliñar con limón y aceite de oliva",
+    "Refrigerar antes de servir"
+  ],
+  "caloricRate": 400,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d7cfb2ce4b05d1a765d12"
+  },
+  "name": "Tacos de champiñones",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720548604/edhwnhv1xmdz3snenqzp.png",
+  "phrase": "Tacos saludables con champiñones y guacamole",
+  "preparationTime": 25,
+  "ingredients": [
+    "200g de champiñones",
+    "1 aguacate",
+    "1 limón",
+    "1/2 cebolla",
+    "tortillas de maíz"
+  ],
+  "people": 2,
+  "steps": [
+    "Cortar los champiñones en tiras",
+    "Saltear con cebolla en una sartén",
+    "Preparar el guacamole con aguacate y limón",
+    "Armar los tacos con los ingredientes"
+  ],
+  "caloricRate": 350,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d87d54ad8cb5fab5042f9"
+  },
+  "name": "Ensalada de quinoa con aguacate",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720551382/coet4zm2ggjqeichzqlj.png",
+  "phrase": "Refrescante ensalada...",
+  "preparationTime": 20,
+  "ingredients": [
+    "1 taza de quinoa cocida",
+    "1 aguacate maduro",
+    "tomate cherry, pepino, hojas verdes"
+  ],
+  "people": 2,
+  "steps": [
+    "Cocinar la quinoa según las instrucciones del paquete",
+    "Cortar los vegetales y el aguacate en trozos",
+    "Mezclar todo en un bowl y aliñar al gusto"
+  ],
+  "caloricRate": 300,
+  "isFavorite": false,
+  "type": "comida",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d87d54ad8cb5fab5042fd"
+  },
+  "name": "Tortillas de coliflor con guacamole",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720551382/ciidqgfmgr9tlsl94is2.png",
+  "phrase": "Sustituto saludable de las tortillas...",
+  "preparationTime": 30,
+  "ingredients": [
+    "1 coliflor mediana",
+    "aguacate maduro",
+    "limón, cilantro, sal y pimienta"
+  ],
+  "people": 2,
+  "steps": [
+    "Rallar la coliflor y cocinar en una sartén hasta que esté tierna",
+    "Preparar el guacamole con los ingredientes restantes",
+    "Formar las tortillas con la coliflor y acompañar con el guacamole"
+  ],
+  "caloricRate": 250,
+  "isFavorite": false,
+  "type": "cena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d87d54ad8cb5fab504301"
+  },
+  "name": "Smoothie de espinacas y plátano",
+  "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720551383/ckxawapyvzn9zxpnhr3r.png",
+  "phrase": "Delicioso smoothie...",
+  "preparationTime": 10,
+  "ingredients": [
+    "2 tazas de espinacas frescas",
+    "1 plátano maduro",
+    "1 taza de leche de almendra"
+  ],
+  "people": 1,
+  "steps": [
+    "Mezclar todos los ingredientes en la licuadora hasta obtener una mezcla homogénea"
+  ],
+  "caloricRate": 150,
+  "isFavorite": true,
+  "type": "desayuno",
+  "__v": 0
+}]

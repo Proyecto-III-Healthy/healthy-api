@@ -1,336 +1,953 @@
 [
-    {
-      "name": "Spaghetti Carbonara",
-      "urlImage": "https://example.com/spaghetti-carbonara.jpg",
-      "phrase": "Un clásico italiano fácil y delicioso",
-      "preparationTime": 20,
-      "ingredients": ["Spaghetti", "Huevo", "Queso Pecorino", "Panceta", "Pimienta negra"],
-      "people": 4,
-      "steps": [
-        "Cocinar el spaghetti en agua con sal.",
-        "Freír la panceta hasta que esté crujiente.",
-        "Mezclar los huevos con el queso rallado.",
-        "Combinar el spaghetti con la mezcla de huevo y queso y la panceta.",
-        "Servir con pimienta negra recién molida."
-      ],
-      "caloricRate": 600
-    },
-    {
-      "name": "Tacos de Pollo",
-      "urlImage": "https://example.com/tacos-de-pollo.jpg",
-      "phrase": "Tacos llenos de sabor y frescura",
-      "preparationTime": 30,
-      "ingredients": ["Tortillas de maíz", "Pollo", "Cebolla", "Cilantro", "Lima", "Salsa"],
-      "people": 4,
-      "steps": [
-        "Cocinar el pollo y desmenuzarlo.",
-        "Calentar las tortillas.",
-        "Picar la cebolla y el cilantro.",
-        "Armar los tacos con pollo, cebolla, cilantro y salsa.",
-        "Exprimir jugo de lima por encima y servir."
-      ],
-      "caloricRate": 400
-    },
-    {
-      "name": "Ensalada César",
-      "urlImage": "https://example.com/ensalada-cesar.jpg",
-      "phrase": "Una ensalada fresca y clásica",
-      "preparationTime": 15,
-      "ingredients": ["Lechuga romana", "Queso parmesano", "Crutones", "Pechuga de pollo", "Aderezo César"],
-      "people": 2,
-      "steps": [
-        "Cortar la lechuga y el pollo en trozos.",
-        "Freír el pollo hasta que esté dorado.",
-        "Mezclar la lechuga con el pollo, el queso parmesano y los crutones.",
-        "Agregar el aderezo César y mezclar bien.",
-        "Servir inmediatamente."
-      ],
-      "caloricRate": 350
-    },
-    {
-      "name": "Pizza Margarita",
-      "urlImage": "https://example.com/pizza-margarita.jpg",
-      "phrase": "La pizza más simple y deliciosa",
-      "preparationTime": 25,
-      "ingredients": ["Masa de pizza", "Salsa de tomate", "Mozzarella", "Albahaca fresca", "Aceite de oliva"],
-      "people": 4,
-      "steps": [
-        "Precalentar el horno a 250°C.",
-        "Extender la masa de pizza en una bandeja para hornear.",
-        "Cubrir con salsa de tomate y mozzarella.",
-        "Hornear por 10-15 minutos hasta que esté dorada.",
-        "Añadir hojas de albahaca y un chorrito de aceite de oliva antes de servir."
-      ],
-      "caloricRate": 500
-    },
-    {
-      "name": "Sopa de Tomate",
-      "urlImage": "https://example.com/sopa-de-tomate.jpg",
-      "phrase": "Una sopa reconfortante y nutritiva",
-      "preparationTime": 40,
-      "ingredients": ["Tomates", "Cebolla", "Ajo", "Caldo de verduras", "Albahaca", "Crema"],
-      "people": 4,
-      "steps": [
-        "Sofreír la cebolla y el ajo hasta que estén tiernos.",
-        "Agregar los tomates picados y cocinar por 10 minutos.",
-        "Añadir el caldo de verduras y llevar a ebullición.",
-        "Cocinar a fuego lento por 20 minutos.",
-        "Mezclar con una batidora hasta obtener una consistencia suave.",
-        "Servir con crema y albahaca fresca."
-      ],
-      "caloricRate": 300
-    },
-    {
-      "name": "Curry de Garbanzos",
-      "urlImage": "https://example.com/curry-de-garbanzos.jpg",
-      "phrase": "Un plato vegano lleno de sabor",
-      "preparationTime": 35,
-      "ingredients": ["Garbanzos", "Cebolla", "Ajo", "Tomate", "Leche de coco", "Especias (cúrcuma, comino, cilantro)"],
-      "people": 4,
-      "steps": [
-        "Sofreír la cebolla y el ajo hasta que estén dorados.",
-        "Agregar las especias y cocinar por 1 minuto.",
-        "Añadir los tomates y cocinar por 5 minutos.",
-        "Incorporar los garbanzos y la leche de coco.",
-        "Cocinar a fuego lento por 20 minutos.",
-        "Servir con arroz o pan naan."
-      ],
-      "caloricRate": 450
-    },
-    {
-      "name": "Paella de Mariscos",
-      "urlImage": "https://example.com/paella-de-mariscos.jpg",
-      "phrase": "Un clásico español lleno de mariscos",
-      "preparationTime": 60,
-      "ingredients": ["Arroz", "Calamares", "Gambas", "Mejillones", "Pimiento rojo", "Guisantes", "Caldo de pescado", "Azafrán"],
-      "people": 6,
-      "steps": [
-        "Sofreír el pimiento rojo y los calamares.",
-        "Añadir el arroz y el azafrán, y mezclar bien.",
-        "Agregar el caldo de pescado y cocinar por 15 minutos.",
-        "Incorporar las gambas y los mejillones.",
-        "Cocinar a fuego lento hasta que el arroz esté tierno.",
-        "Servir con guisantes frescos por encima."
-      ],
-      "caloricRate": 700
-    },
-    {
-      "name": "Hamburguesa Clásica",
-      "urlImage": "https://example.com/hamburguesa-clasica.jpg",
-      "phrase": "La hamburguesa perfecta para cualquier ocasión",
-      "preparationTime": 20,
-      "ingredients": ["Carne molida", "Pan de hamburguesa", "Queso", "Lechuga", "Tomate", "Cebolla", "Ketchup", "Mostaza"],
-      "people": 4,
-      "steps": [
-        "Formar las hamburguesas con la carne molida.",
-        "Cocinar las hamburguesas a la parrilla o sartén hasta el punto deseado.",
-        "Tostar ligeramente los panes de hamburguesa.",
-        "Armar las hamburguesas con queso, lechuga, tomate y cebolla.",
-        "Añadir ketchup y mostaza al gusto.",
-        "Servir inmediatamente."
-      ],
-      "caloricRate": 550
-    },
-    {
-      "name": "Sushi de Salmón",
-      "urlImage": "https://example.com/sushi-de-salmon.jpg",
-      "phrase": "Deliciosos rollos de sushi hechos en casa",
-      "preparationTime": 50,
-      "ingredients": ["Arroz para sushi", "Vinagre de arroz", "Salmón", "Alga nori", "Pepino", "Aguacate", "Salsa de soja", "Wasabi"],
-      "people": 4,
-      "steps": [
-        "Cocinar el arroz y mezclar con vinagre de arroz.",
-        "Cortar el salmón, pepino y aguacate en tiras.",
-        "Colocar una hoja de nori sobre la esterilla de sushi.",
-        "Extender el arroz sobre la nori y colocar el relleno en el centro.",
-        "Enrollar con cuidado y cortar en porciones.",
-        "Servir con salsa de soja y wasabi."
-      ],
-      "caloricRate": 300
-    },
-    {
-      "name": "Brownies de Chocolate",
-      "urlImage": "https://example.com/brownies-de-chocolate.jpg",
-      "phrase": "Deliciosos y esponjosos brownies",
-      "preparationTime": 45,
-      "ingredients": ["Chocolate", "Mantequilla", "Azúcar", "Huevos", "Harina", "Cacao en polvo", "Vainilla"],
-      "people": 8,
-      "steps": [
-        "Precalentar el horno a 180°C.",
-        "Derretir el chocolate y la mantequilla juntos.",
-        "Batir los huevos con el azúcar y la vainilla.",
-        "Añadir la mezcla de chocolate y mantequilla.",
-        "Incorporar la harina y el cacao en polvo.",
-        "Verter la mezcla en un molde y hornear por 25-30 minutos.",
-        "Dejar enfriar antes de cortar y servir."
-      ],
-      "caloricRate": 400
-    },
-    {
-      "name": "Ceviche de Pescado",
-      "urlImage": "https://example.com/ceviche-de-pescado.jpg",
-      "phrase": "Un refrescante plato de pescado marinado",
-      "preparationTime": 20,
-      "ingredients": ["Pescado blanco", "Lima", "Cebolla morada", "Cilantro", "Ají", "Sal"],
-      "people": 4,
-      "steps": [
-        "Cortar el pescado en cubos pequeños.",
-        "Marinar el pescado en jugo de lima por 15 minutos.",
-        "Picar la cebolla morada, el cilantro y el ají.",
-        "Mezclar todos los ingredientes y sazonar con sal.",
-        "Servir inmediatamente."
-      ],
-      "caloricRate": 200
-    },
-    {
-      "name": "Panqueques",
-      "urlImage": "https://example.com/panqueques.jpg",
-      "phrase": "Panqueques esponjosos perfectos para el desayuno",
-      "preparationTime": 20,
-      "ingredients": ["Harina", "Leche", "Huevos", "Azúcar", "Mantequilla", "Polvo de hornear", "Sal"],
-      "people": 4,
-      "steps": [
-        "Mezclar la harina, el azúcar, el polvo de hornear y la sal.",
-        "Añadir la leche, los huevos y la mantequilla derretida.",
-        "Batir hasta obtener una mezcla homogénea.",
-        "Cocinar los panqueques en una sartén caliente.",
-        "Servir con jarabe de arce o frutas frescas."
-      ],
-      "caloricRate": 350
-    },
-    {
-      "name": "Guacamole",
-      "urlImage": "https://example.com/guacamole.jpg",
-      "phrase": "Una deliciosa salsa de aguacate",
-      "preparationTime": 10,
-      "ingredients": ["Aguacate", "Tomate", "Cebolla", "Lima", "Cilantro", "Sal"],
-      "people": 4,
-      "steps": [
-        "Aplastar los aguacates en un tazón.",
-        "Picar el tomate, la cebolla y el cilantro.",
-        "Mezclar todos los ingredientes y exprimir jugo de lima.",
-        "Sazonar con sal al gusto.",
-        "Servir con totopos o como acompañamiento."
-      ],
-      "caloricRate": 250
-    },
-    {
-      "name": "Pollo al Horno",
-      "urlImage": "https://example.com/pollo-al-horno.jpg",
-      "phrase": "Pollo jugoso y dorado al horno",
-      "preparationTime": 90,
-      "ingredients": ["Pollo entero", "Ajo", "Limón", "Tomillo", "Romero", "Sal", "Pimienta", "Aceite de oliva"],
-      "people": 6,
-      "steps": [
-        "Precalentar el horno a 200°C.",
-        "Rellenar el pollo con ajo y limón.",
-        "Untar el pollo con aceite de oliva y sazonar con sal, pimienta, tomillo y romero.",
-        "Hornear por 1 hora y 15 minutos.",
-        "Dejar reposar 10 minutos antes de cortar y servir."
-      ],
-      "caloricRate": 450
-    },
-    {
-      "name": "Gazpacho",
-      "urlImage": "https://example.com/gazpacho.jpg",
-      "phrase": "Una sopa fría de tomate refrescante",
-      "preparationTime": 15,
-      "ingredients": ["Tomate", "Pepino", "Pimiento verde", "Cebolla", "Ajo", "Vinagre de vino", "Aceite de oliva", "Sal"],
-      "people": 4,
-      "steps": [
-        "Picar los tomates, el pepino, el pimiento y la cebolla.",
-        "Mezclar todos los ingredientes en una licuadora.",
-        "Agregar vinagre de vino, aceite de oliva y sal al gusto.",
-        "Licuar hasta obtener una consistencia suave.",
-        "Refrigerar antes de servir."
-      ],
-      "caloricRate": 150
-    },
-    {
-      "name": "Pollo al Curry",
-      "urlImage": "https://example.com/pollo-al-curry.jpg",
-      "phrase": "Un plato exótico y lleno de sabor",
-      "preparationTime": 40,
-      "ingredients": ["Pechuga de pollo", "Cebolla", "Ajo", "Tomate", "Leche de coco", "Curry en polvo", "Aceite", "Sal"],
-      "people": 4,
-      "steps": [
-        "Sofreír la cebolla y el ajo en aceite.",
-        "Añadir el pollo y cocinar hasta que esté dorado.",
-        "Agregar el tomate y cocinar por 5 minutos.",
-        "Incorporar la leche de coco y el curry en polvo.",
-        "Cocinar a fuego lento por 20 minutos.",
-        "Servir con arroz."
-      ],
-      "caloricRate": 500
-    },
-    {
-      "name": "Crema de Calabaza",
-      "urlImage": "https://example.com/crema-de-calabaza.jpg",
-      "phrase": "Una sopa cremosa y reconfortante",
-      "preparationTime": 30,
-      "ingredients": ["Calabaza", "Cebolla", "Ajo", "Caldo de pollo", "Crema", "Sal", "Pimienta"],
-      "people": 4,
-      "steps": [
-        "Sofreír la cebolla y el ajo hasta que estén tiernos.",
-        "Agregar la calabaza picada y el caldo de pollo.",
-        "Cocinar a fuego lento por 20 minutos.",
-        "Mezclar con una batidora hasta obtener una consistencia suave.",
-        "Añadir crema y sazonar con sal y pimienta.",
-        "Servir caliente."
-      ],
-      "caloricRate": 300
-    },
-    {
-      "name": "Lasaña de Carne",
-      "urlImage": "https://example.com/lasagna-de-carne.jpg",
-      "phrase": "Una lasaña clásica y deliciosa",
-      "preparationTime": 60,
-      "ingredients": ["Láminas de lasaña", "Carne molida", "Tomate", "Cebolla", "Ajo", "Queso ricotta", "Queso mozzarella", "Parmesano", "Albahaca", "Orégano"],
-      "people": 6,
-      "steps": [
-        "Precalentar el horno a 180°C.",
-        "Cocinar la carne molida con cebolla y ajo.",
-        "Agregar tomate, albahaca y orégano, y cocinar por 10 minutos.",
-        "En una bandeja, alternar capas de láminas de lasaña, carne y quesos.",
-        "Hornear por 30-40 minutos hasta que esté dorado.",
-        "Dejar reposar 10 minutos antes de servir."
-      ],
-      "caloricRate": 600
-    },
-    {
-      "name": "Ratatouille",
-      "urlImage": "https://example.com/ratatouille.jpg",
-      "phrase": "Un plato colorido y saludable",
-      "preparationTime": 50,
-      "ingredients": ["Berenjena", "Calabacín", "Pimiento rojo", "Pimiento amarillo", "Tomate", "Cebolla", "Ajo", "Aceite de oliva", "Hierbas provenzales"],
-      "people": 4,
-      "steps": [
-        "Precalentar el horno a 200°C.",
-        "Cortar las verduras en rodajas finas.",
-        "Sofreír la cebolla y el ajo en aceite de oliva.",
-        "Agregar las verduras y sazonar con hierbas provenzales.",
-        "Hornear por 30-40 minutos hasta que las verduras estén tiernas.",
-        "Servir caliente."
-      ],
-      "caloricRate": 250
-    },
-    {
-      "name": "Quiche Lorraine",
-      "urlImage": "https://example.com/quiche-lorraine.jpg",
-      "phrase": "Un quiche clásico y delicioso",
-      "preparationTime": 45,
-      "ingredients": ["Masa de hojaldre", "Bacon", "Queso Gruyere", "Huevos", "Crema", "Leche", "Sal", "Pimienta", "Nuez moscada"],
-      "people": 6,
-      "steps": [
-        "Precalentar el horno a 180°C.",
-        "Extender la masa de hojaldre en un molde para quiche.",
-        "Cocinar el bacon hasta que esté crujiente.",
-        "Batir los huevos con la crema, la leche y los condimentos.",
-        "Añadir el queso rallado y el bacon.",
-        "Verter la mezcla en el molde y hornear por 30-35 minutos.",
-        "Dejar enfriar un poco antes de cortar y servir."
-      ],
-      "caloricRate": 450
-    }
-  ]
+  {
+    "name": "Ensalada de pollo",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720719875/il1epmzkw0xlctosjst5.png",
+    "phrase": "Ensalada fresca con trozos de pollo a la parrilla y vegetales variados.",
+    "preparationTime": 20,
+    "ingredients": [
+      "200g de pechuga de pollo",
+      "lechuga",
+      "tomate",
+      "pepino",
+      "zanahoria"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar el pollo a la parrilla",
+      "Cortar y mezclar los vegetales",
+      "Agregar el pollo troceado"
+    ],
+    "caloricRate": 350,
+    "isFavorite": false,
+    "type": "comida"
+  },
+  {
+    "name": "Avena con frutas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720719875/wx6uqj8y346yzoxbxevp.png",
+    "phrase": "Deliciosa y nutritiva avena con trozos de frutas frescas.",
+    "preparationTime": 15,
+    "ingredients": [
+      "1 taza de avena",
+      "1 taza de leche",
+      "1 banana",
+      "1 manzana"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar la avena en leche",
+      "Agregar las frutas cortadas en trozos",
+      "Mezclar bien"
+    ],
+    "caloricRate": 300,
+    "isFavorite": true,
+    "type": "desayuno"
+  },
+  {
+    "name": "Sopa de vegetales",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720719892/ofmcsgteolynaauhocdj.png",
+    "phrase": "Una sopa reconfortante para terminar el día de forma ligera.",
+    "preparationTime": 25,
+    "ingredients": [
+      "caldo de verduras",
+      "zanahoria",
+      "apio",
+      "papa",
+      "chícharos",
+      "maíz",
+      "perejil"
+    ],
+    "people": 4,
+    "steps": [
+      "Cortar las verduras",
+      "Cocinar en el caldo de verduras",
+      "Espolvorear perejil antes de servir"
+    ],
+    "caloricRate": 150,
+    "isFavorite": false,
+    "type": "cena"
+  },
+
+  {
+    "name": "Avena con frutas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720719892/jb89flgznwhxvzfgtzy4.png",
+    "phrase": "Una deliciosa forma de comenzar el día con energía.",
+    "preparationTime": 15,
+    "ingredients": [
+      "1 taza de avena",
+      "1 taza de leche",
+      "1 banana",
+      "1 manzana",
+      "miel al gusto"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar la avena con leche",
+      "Agregar las frutas cortadas",
+      "Endulzar con miel"
+    ],
+    "caloricRate": 300,
+    "isFavorite": true,
+    "type": "desayuno"
+  },
+  {
+    "name": "Ensalada de quinoa",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720719937/fbzma5nrvn1k8kztpnv7.png",
+    "phrase": "Una opción saludable y ligera para el almuerzo.",
+    "preparationTime": 30,
+    "ingredients": [
+      "1 taza de quinoa",
+      "tomate cherry",
+      "pepino",
+      "pimiento",
+      "cebolla morada",
+      "perejil",
+      "limón",
+      "aceite de oliva"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar la quinoa",
+      "Picar los vegetales",
+      "Preparar el aliño con limón y aceite de oliva"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false,
+    "type": "comida"
+  },
+  {
+    "name": "Ensalada de queso de cabra y almendras",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720720239/recipe_images/kybhdgorfhrsw5vdhko6.png",
+    "phrase": "Una deliciosa combinación de sabores",
+    "preparationTime": 15,
+    "ingredients": [
+      "Lechuga",
+      "Queso de cabra",
+      "Almendras",
+      "Tomate cherry",
+      "Vinagre balsámico"
+    ],
+    "people": 2,
+    "steps": [
+      "Lavar y cortar la lechuga",
+      "Tostar las almendras",
+      "Mezclar todos los ingredientes en un bol",
+      "Aliñar con vinagre balsámico"
+    ],
+    "caloricRate": 300,
+    ",isFavorite": true
+  },
+  {
+    "name": "Sopa de almendras y queso",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720720238/recipe_images/qk2hhqrdizudbsugqskt.png",
+    "phrase": "Una sopa reconfortante y deliciosa",
+    "preparationTime": 30,
+    "ingredients": [
+      "Almendras",
+      "Queso parmesano",
+      "Caldo de pollo",
+      "Cebolla",
+      "Ajo"
+    ],
+    "people": 4,
+    "steps": [
+      "Triturar las almendras",
+      "Sofreír la cebolla y el ajo",
+      "Añadir el caldo de pollo y las almendras trituradas",
+      "Cocer durante 20 minutos",
+      "Agregar el queso parmesano rallado"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false
+  },
+  {
+    "name": "Almendras rellenas de queso azul",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720720238/recipe_images/aldpdwc37sqtpdmazb7s.png",
+    "phrase": "Un aperitivo elegante y delicioso",
+    "preparationTime": 20,
+    "ingredients": ["Almendras", "Queso azul", "Miel"],
+    "people": 6,
+    "steps": [
+      "Abrir las almendras y rellenar con queso azul",
+      "Bañar con un poco de miel",
+      "Hornear durante 10 minutos"
+    ],
+    "caloricRate": 180,
+    "isFavorite": false
+  },
+  {
+    "name": "Queso frito con salsa de almendras",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720720238/recipe_images/q32ffa9elezrjpupf1ro.png",
+    "phrase": "Un plato crujiente y sabroso",
+    "preparationTime": 25,
+    "ingredients": [
+      "Queso mozzarella",
+      "Almendras picadas",
+      "Pan rallado",
+      "Huevo",
+      "Aceite"
+    ],
+    "people": 4,
+    "steps": [
+      "Cortar el queso en palitos",
+      "Rebozar en huevo batido y pan rallado",
+      "Freír en aceite caliente hasta que estén dorados",
+      "Preparar una salsa de almendras triturando almendras y mezclando con aceite"
+    ],
+    "caloricRate": 350,
+    "isFavorite": false
+  },
+  {
+    "name": "Tarta de queso con base de almendras",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720720239/recipe_images/bvcscl7xtjxtyyvsfsq6.png",
+    "phrase": "Un postre cremoso y delicioso",
+    "preparationTime": 45,
+    "ingredients": [
+      "Almendras molidas",
+      "Queso crema",
+      "Azúcar",
+      "Huevos",
+      "Vainilla"
+    ],
+    "people": 8,
+    "steps": [
+      "Mezclar almendras molidas con mantequilla derretida para hacer la base",
+      "Batir queso crema, azúcar, huevos y vainilla",
+      "Verter sobre la base de almendras",
+      "Hornear durante 30 minutos"
+    ],
+    "caloricRate": 400,
+    "isFavorite": true
+  },
+  {
+    "name": "Ensalada de quinoa",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720721150/fxjft1sbx9c72j0vn0kk.png",
+    "phrase": "Plato fresco y nutritivo",
+    "preparationTime": 30,
+    "ingredients": [
+      "1 taza de quinoa",
+      "1 pepino",
+      "1 pimiento rojo",
+      "Aceite de oliva"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar la quinoa",
+      "cortar las verduras en trozos",
+      "mezclar todo en un bowl y aderezar con aceite de oliva"
+    ],
+    "caloricRate": 400,
+    "isFavorite": true,
+    "type": "comida"
+  },
+  {
+    "name": "Avena con frutas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720721150/n93qet2fuldfwwuukf7t.png",
+    "phrase": "Desayuno nutritivo y delicioso",
+    "preparationTime": 15,
+    "ingredients": [
+      "1 taza de avena",
+      "1 taza de leche",
+      "1 plátano",
+      "1 manzana"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar la avena con leche",
+      "cortar las frutas en trozos",
+      "servir la avena y colocar encima las frutas"
+    ],
+    "caloricRate": 300,
+    "isFavorite": true,
+    "type": "desayuno"
+  },
+  {
+    "name": "Sopa de verduras",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720721151/ofxkpliud1wlrghulfq2.png",
+    "phrase": "Plato reconfortante y saludable",
+    "preparationTime": 40,
+    "ingredients": ["1 zanahoria", "1 puerro", "1 calabacín", "1 patata"],
+    "people": 4,
+    "steps": [
+      "Cortar las verduras en trozos",
+      "cocinar en caldo de verduras hasta que estén tiernas"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false,
+    "type": "cena"
+  },
+
   
+  
+  {
+    "name": "Caldo de pollo con arroz",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720033607/recipe_images/qcpnbobqtaxwv1fxjx68.png",
+    "phrase": "Rico caldo de pollo con arroz, perfecto para una comida reconfortante",
+    "preparationTime": 30,
+    "ingredients": [
+      "pollo",
+      "arroz",
+      "agua",
+      "sal",
+      "cebolla",
+      "ajo",
+      "zanahoria",
+      "apio"
+    ],
+    "people": 4,
+    "steps": [
+      "Lavar y cortar las verduras",
+      "En una olla grande, hervir agua y agregar el pollo, cebolla, ajo, zanahoria y apio",
+      "Cocinar a fuego medio por 30 minutos",
+      "Agregar el arroz y cocinar por 20 minutos más"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false
+  },
+  {
+    "name": "Berenjenas rellenas de lentejas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720518390/m1uumpzxxarjoxxk1w9v.png",
+    "phrase": "Una cena sabrosa y balanceada para terminar el día",
+    "preparationTime": 45,
+    "ingredients": [
+      "2 berenjenas",
+      "1 taza de lentejas cocidas",
+      "tomate",
+      "cebolla",
+      "ajo",
+      "queso rallado"
+    ],
+    "people": 2,
+    "steps": [
+      "Cortar las berenjenas por la mitad",
+      "Cocinar las lentejas y preparar el relleno",
+      "Rellenar las berenjenas y hornear"
+    ],
+    "caloricRate": 350,
+    "isFavorite": false,
+    "type": "cena"
+  },
+  {
+    "name": "Ensalada de cerdo y atún",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720034684/recipe_images/acf5tvaduuszcyninfb6.png",
+    "phrase": "Una deliciosa ensalada de cerdo y atún para disfrutar en cualquier momento",
+    "preparationTime": 30,
+    "ingredients": ["cerdo", "atún", "lechuga"],
+    "people": 2,
+    "steps": [
+      "Cocinar el cerdo a la plancha",
+      "Mezclar el atún en lata con la lechuga picada",
+      "Agregar el cerdo a la ensalada",
+      "Aliñar al gusto"
+    ],
+    "caloricRate": 300,
+    "isFavorite": true
+  },
+  {
+    "name": "Tofu salteado con verduras",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720463327/vdd89cns5tl030bffglk.png",
+    "phrase": "Plato vegetariano y ligero para la cena",
+    "preparationTime": 25,
+    "ingredients": [
+      "200g de tofu",
+      "Brócoli",
+      "Zanahoria",
+      "Pimiento amarillo",
+      "Salsa de soja"
+    ],
+    "people": 2,
+    "steps": [
+      "Saltear el tofu y las verduras en una sartén con un poco de aceite",
+      "Agregar salsa de soja"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false,
+    "type": "cena"
+  },
+  {
+    "name": "Tacos de coliflor con guacamole",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465302/mugkaicykhl9t1p9saml.png",
+    "phrase": "Una opción baja en calorías pero llena de sabor para disfrutar en la cena.",
+    "preparationTime": 40,
+    "ingredients": [
+      "1 cabeza de coliflor",
+      "1 aguacate",
+      "1 tomate",
+      "limón, cilantro, sal y pimienta al gusto",
+      "tortillas de maíz"
+    ],
+    "people": 2,
+    "steps": [
+      "Cortar la coliflor en floretes y hornearla hasta que esté tierna.",
+      "Preparar el guacamole mezclando el aguacate, tomate, limón, cilantro, sal y pimienta.",
+      "Armar los tacos con la coliflor asada y el guacamole, servir con tortillas de maíz."
+    ],
+    "caloricRate": 300,
+    "isFavorite": false,
+    "type": "cena"
+  },
+  {
+    "name": "Sopa de pescado con zanahoria",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115014/recipe_images/zc9drc8sfemj99itjm4q.png",
+    "phrase": "Una deliciosa sopa llena de sabor y nutrientes",
+    "preparationTime": 30,
+    "ingredients": [
+      "filete de pescado",
+      "zanahoria",
+      "caldo de pescado",
+      "cebolla",
+      "ajo",
+      "tomate"
+    ],
+    "people": 4,
+    "steps": [
+      "Dorar la cebolla y el ajo en una olla",
+      "Agregar el caldo de pescado y el tomate",
+      "Añadir el pescado y las zanahorias cortadas en trozos",
+      "Dejar cocinar por 20 minutos",
+      "Servir caliente"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false
+  },
+  {
+  
+    "name": "Avena con frutas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720464701/yynwa4yfwh5nu75u3z6b.png",
+    "phrase": "Un desayuno lleno de energía para empezar el día",
+    "preparationTime": 15,
+    "ingredients": [
+      "1 taza de avena",
+      "1 taza de leche de almendra",
+      "1 plátano",
+      "1 manzana"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar la avena con la leche",
+      "Cortar las frutas",
+      "Servir la avena en un tazón y añadir las frutas encima"
+    ],
+    "caloricRate": 300,
+    "isFavorite": false,
+    "type": "desayuno"
+  },
+  {
+    "name": "Ensalada de pescado y zanahoria",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115014/recipe_images/jl02zxkg7hdjbwngfdsh.png",
+    "phrase": "Una ensalada fresca y saludable para disfrutar en cualquier momento",
+    "preparationTime": 15,
+    "ingredients": [
+      "filete de pescado",
+      "zanahoria",
+      "limón",
+      "aceite de oliva",
+      "sal",
+      "pimienta"
+    ],
+    "people": 2,
+    "steps": [
+      "Cocinar el pescado a la plancha y desmenuzarlo",
+      "Cortar la zanahoria en juliana",
+      "Mezclar el pescado con la zanahoria",
+      "Aliñar con limón, aceite de oliva, sal y pimienta",
+      "Refrigerar antes de servir"
+    ],
+    "caloricRate": 180,
+    "isFavorite": false
+  },
+  {
+    "name": "Tortitas de pescado y zanahoria",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115013/recipe_images/rzudyoroihikajqpkaz9.png",
+    "phrase": "Un platillo diferente y delicioso que encantará a toda la familia",
+    "preparationTime": 40,
+    "ingredients": [
+      "filete de pescado",
+      "zanahoria",
+      "huevo",
+      "harina de trigo",
+      "cebolla",
+      "perejil"
+    ],
+    "people": 6,
+    "steps": [
+      "Cocinar el pescado al vapor y desmenuzarlo",
+      "Rallar la zanahoria y la cebolla",
+      "Mezclar el pescado con la zanahoria, cebolla, huevo, harina y perejil",
+      "Formar las tortitas y cocinar en la sartén hasta dorar",
+      "Servir caliente"
+    ],
+    "caloricRate": 220,
+    "isFavorite": false
+  },
+  {
+    "name": "Arroz con pescado y zanahoria",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115014/recipe_images/x2edryvvxwch4piwbseu.png",
+    "phrase": "Una combinación perfecta de sabores en un plato completo y nutritivo",
+    "preparationTime": 50,
+    "ingredients": [
+      "filete de pescado",
+      "zanahoria",
+      "arroz",
+      "cebolla",
+      "pimiento rojo",
+      "caldo de pescado"
+    ],
+    "people": 4,
+    "steps": [
+      "Dorar la cebolla y el pimiento en una olla",
+      "Agregar el arroz y rehogar",
+      "Añadir el caldo de pescado, el pescado cortado en trozos y las zanahorias en rodajas",
+      "Cocinar hasta que el arroz esté listo",
+      "Servir caliente"
+    ],
+    "caloricRate": 300,
+    "isFavorite": false
+  },
+  {
+    "name": "Sándwich de pescado y zanahoria",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115013/recipe_images/s2gozzzjflfg3bqp2ojc.png",
+    "phrase": "Un sándwich original y lleno de sabor para disfrutar en cualquier momento",
+    "preparationTime": 10,
+    "ingredients": [
+      "atún en lata",
+      "zanahoria rallada",
+      "mayonesa",
+      "pan de molde",
+      "lechuga",
+      "tomate"
+    ],
+    "people": 2,
+    "steps": [
+      "Mezclar el atún con la zanahoria rallada y la mayonesa",
+      "Armar el sándwich con el pan, la mezcla de atún, la lechuga y el tomate",
+      "Servir frío"
+    ],
+    "caloricRate": 180,
+    "isFavorite": false
+  },
+  {
+    "name": "Ensalada de pasta con carne",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/beddloyefhhbwl5qsx1a.png",
+    "phrase": "Una deliciosa ensalada perfecta para una comida ligera",
+    "preparationTime": 30,
+    "ingredients": ["pasta", "carne", "lechuga"],
+    "people": 4,
+    "steps": [
+      "Cocer la pasta",
+      "Asar la carne",
+      "Cortar la lechuga",
+      "Mezclar todos los ingredientes"
+    ],
+    "caloricRate": 350,
+    "isFavorite": true
+  },
+  {
+    "name": "Spaghetti a la bolognesa",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/i9uxaulpfufaiky7llv7.png",
+    "phrase": "Un clásico de la cocina italiana con una deliciosa salsa de carne",
+    "preparationTime": 45,
+    "ingredients": ["pasta", "carne", "lechuga"],
+    "people": 4,
+    "steps": [
+      "Cocer la pasta",
+      "Preparar la salsa bolognesa",
+      "Mezclar la pasta con la salsa"
+    ],
+    "caloricRate": 400,
+    "isFavorite": false
+  },
+  {
+    "name": "Wrap de carne y ensalada",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/yxcrzv6voy8xmxkrtjt8.png",
+    "phrase": "Una opción rápida y deliciosa para comer carne y vegetales",
+    "preparationTime": 15,
+    "ingredients": ["pasta", "carne", "lechuga"],
+    "people": 2,
+    "steps": [
+      "Calentar la carne",
+      "Calentar la pasta",
+      "Armar los wraps con la carne, la pasta y la ensalada"
+    ],
+    "caloricRate": 300,
+    "isFavorite": true
+  },
+  {
+    "name": "Lasaña de carne y lechuga",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/ir4oukqurjdjxpn7u4qx.png",
+    "phrase": "Una lasaña deliciosa y jugosa con una capa de lechuga fresca",
+    "preparationTime": 60,
+    "ingredients": ["pasta", "carne", "lechuga"],
+    "people": 6,
+    "steps": [
+      "Preparar la carne",
+      "Cocer la pasta",
+      "Armar las capas de la lasaña intercalando carne, pasta y lechuga",
+      "Hornear"
+    ],
+    "caloricRate": 500,
+    "isFavorite": false
+  },
+  {
+    "name": "Ensalada de carne a la parrilla",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115792/recipe_images/jblph2rgraduuch2ovxe.png",
+    "phrase": "Una ensalada fresca y completa con carne a la parrilla",
+    "preparationTime": 25,
+    "ingredients": ["pasta", "carne", "lechuga"],
+    "people": 3,
+    "steps": [
+      "Asar la carne a la parrilla",
+      "Cortar la lechuga",
+      "Mezclar todos los ingredientes en un bol"
+    ],
+    "caloricRate": 320,
+    "isFavorite": true
+  },
+  {
+    "name": "Huevos rotos con aguacate y cerdo",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115961/recipe_images/bfzplfxtmbsxaqdakamc.png",
+    "phrase": "Una deliciosa combinación de sabores",
+    "preparationTime": 30,
+    "ingredients": ["aguacate", "cerdo", "huevo", "patata"],
+    "people": 4,
+    "steps": [
+      "Freír las patatas cortadas en rodajas",
+      "Cocinar el cerdo en tiras",
+      "Sofreír los huevos",
+      "Servir con aguacate en cubos"
+    ],
+    "caloricRate": 350,
+    "isFavorite": true
+  },
+  {
+    "name": "Enchiladas de cerdo con salsa de aguacate",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115963/recipe_images/wiapivewfbuv79mcwydm.png",
+    "phrase": "Una receta mexicana con un toque especial",
+    "preparationTime": 40,
+    "ingredients": ["cerdo", "aguacate", "huevo"],
+    "people": 6,
+    "steps": [
+      "Cocinar el cerdo con especias",
+      "Armar las enchiladas y hornear",
+      "Preparar la salsa de aguacate",
+      "Servir las enchiladas bañadas en la salsa"
+    ],
+    "caloricRate": 400,
+    "isFavorite": false
+  },
+  {
+    "name": "Tortilla de patata con aguacate y cerdo",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115962/recipe_images/dw8rujszj01pbeemwk1t.png",
+    "phrase": "Una versión diferente de la clásica tortilla española",
+    "preparationTime": 45,
+    "ingredients": ["patata", "huevo", "cerdo", "aguacate"],
+    "people": 4,
+    "steps": [
+      "Freír las patatas y el cerdo",
+      "Batir los huevos y mezclar con las patatas y cerdo",
+      "Cocinar la tortilla en sartén",
+      "Servir con aguacate en rodajas"
+    ],
+    "caloricRate": 300,
+    "isFavorite": false
+  },
+  {
+    "name": "Ensalada de aguacate, cerdo y patata",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115964/recipe_images/ywrfvf5olhf8ucg8gzjj.png",
+    "phrase": "Una opción fresca y saludable",
+    "preparationTime": 20,
+    "ingredients": ["aguacate", "cerdo", "patata"],
+    "people": 2,
+    "steps": [
+      "Cocer las patatas y cortar en cubos",
+      "Saltear el cerdo con especias",
+      "Mezclar todos los ingredientes en un bol",
+      "Aderezar con vinagreta de aguacate"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false
+  },
+  {
+    "name": "Tacos de cerdo con guacamole",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720115967/recipe_images/m3pghpv3gi67irgkyygh.png",
+    "phrase": "Una deliciosa combinación en forma de tacos",
+    "preparationTime": 35,
+    "ingredients": ["cerdo", "aguacate", "huevo"],
+    "people": 4,
+    "steps": [
+      "Cocinar el cerdo con especias mexicanas",
+      "Preparar el guacamole",
+      "Armard los tacos con la carne y guacamole",
+      "Servir con limón y cilantro"
+    ],
+    "caloricRate": 320,
+    "isFavorite": true
+  },
+  {
+    "name": "Ensalada de arroz con berenjena y zanahoria",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116165/recipe_images/bodpunc3adpc7j37jvjd.png",
+    "phrase": "Una ensalada fresca y saludable para el verano",
+    "preparationTime": 30,
+    "ingredients": ["arroz", "berenjena", "zanahoria", "pepino"],
+    "people": 4,
+    "steps": [
+      "Cocinar el arroz",
+      "Asar la berenjena y zanahoria",
+      "Picar el pepino",
+      "Mezclar todo con aderezo"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false
+  },
+  {
+    "name": "Tortilla de berenjena, zanahoria y atún",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116165/recipe_images/gtjevhbpws6v5exaf6lp.png",
+    "phrase": "Una tortilla nutritiva y sabrosa",
+    "preparationTime": 40,
+    "ingredients": ["berenjena", "zanahoria", "atún"],
+    "people": 6,
+    "steps": [
+      "Cocinar y mezclar los ingredientes",
+      "Hacer la tortilla en sartén"
+    ],
+    "caloricRate": 300,
+    "isFavorite": false
+  },
+  {
+    "name": "Arroz con zanahoria y pepino al curry",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116164/recipe_images/hg1oxkleihoydhvkg2ip.png",
+    "phrase": "Un plato aromático y especiado",
+    "preparationTime": 45,
+    "ingredients": ["arroz", "zanahoria", "pepino"],
+    "people": 4,
+    "steps": [
+      "Cocinar el arroz con curry",
+      "Saltear las zanahorias y pepino en especias"
+    ],
+    "caloricRate": 280,
+    "isFavorite": false
+  },
+  {
+    "name": "Ensalada de pepino con atún",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116164/recipe_images/f6yraqw59k16goaoqu2o.png",
+    "phrase": "Una ensalada rápida y ligera",
+    "preparationTime": 15,
+    "ingredients": ["pepino", "atún"],
+    "people": 2,
+    "steps": ["Picar el pepino", "Agregar el atún y aderezo"],
+    "caloricRate": 180,
+    "isFavorite": false
+  },
+  {
+    "name": "Arroz con berenjena a la parmigiana",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720116164/recipe_images/evazasavdw0ygmyaaw9s.png",
+    "phrase": "Un plato reconfortante y sabroso",
+    "preparationTime": 50,
+    "ingredients": ["arroz", "berenjena"],
+    "people": 4,
+    "steps": [
+      "Hacer una capa de arroz y berenjena en horno",
+      "Agregar queso y hornear"
+    ],
+    "caloricRate": 320,
+    "isFavorite": false
+  },
+  {
+    "name": "Ensalada de arroz y lechuga",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250856/recipe_images/df1gqfylgvervjpgqfrv.png",
+    "phrase": "Una deliciosa y fresca ensalada perfecta para perder peso",
+    "preparationTime": 25,
+    "ingredients": ["arroz", "lechuga", "tomate", "aceitunas"],
+    "people": 2,
+    "steps": [
+      "Cocinar el arroz",
+      "Picar la lechuga y el tomate",
+      "Mezclar todos los ingredientes en un bowl",
+      "Añadir las aceitunas como topping"
+    ],
+    "caloricRate": 250,
+    "isFavorite": false
+  },
+  {
+    "name": "Arroz con tomate y aceitunas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250857/recipe_images/uwnrfbvmf9ucvxwqsa7i.png",
+    "phrase": "Una opción fácil y sabrosa para mantener tu dieta flexitariana",
+    "preparationTime": 30,
+    "ingredients": ["arroz", "tomate", "aceitunas"],
+    "people": 4,
+    "steps": [
+      "Cocinar el arroz con tomate",
+      "Agregar las aceitunas al final",
+      "Dejar reposar antes de servir"
+    ],
+    "caloricRate": 300,
+    "isFavorite": false
+  },
+  {
+    "name": "Wraps de lechuga con arroz y tomate",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720250858/recipe_images/jw6vsu65maxlphcwdudy.png",
+    "phrase": "Una versión ligera y deliciosa de los wraps tradicionales",
+    "preparationTime": 40,
+    "ingredients": ["lechuga", "arroz", "tomate", "aceitunas"],
+    "people": 3,
+    "steps": [
+      "Cocinar el arroz",
+      "Preparar las hojas de lechuga como base",
+      "Agregar el arroz y tomate",
+      "Incorporar las aceitunas picadas"
+    ],
+    "caloricRate": 280,
+    "isFavorite": false
+  },
+  {
+    "name": "Wrap de tofu y verduras",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720460849/k4mkuzrne8zlb8sikjq9.png",
+    "phrase": "Una cena rápida y saludable para cerrar el día.",
+    "preparationTime": 25,
+    "ingredients": [
+      "1 tortilla de maíz",
+      "tofu marinado",
+      "vegetales al gusto (cebolla, pimiento, espinacas)",
+      "salsa de soja"
+    ],
+    "people": 2,
+    "steps": [
+      "Saltear las verduras en una sartén con un poco de aceite",
+      "añadir el tofu marinado y cocinar unos minutos más",
+      "calentar la tortilla y rellenar con las verduras y tofu",
+      "añadir un chorrito de salsa de soja antes de enrollar"
+    ],
+    "caloricRate": 280,
+    "isFavorite": false,
+    "type": "cena"
+  },
+  {
+    "name": "Tortilla de espinacas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720462332/lq7qczqurz4j79fjsjfm.png",
+    "phrase": "Una deliciosa tortilla de espinacas para empezar el día con energía.",
+    "preparationTime": 30,
+    "ingredients": [
+      "Espinacas frescas",
+      "Huevos",
+      "Queso feta",
+      "Tomates cherry"
+    ],
+    "people": 2,
+    "steps": [
+      "Batir los huevos",
+      "Saltear las espinacas",
+      "Agregar el queso y los tomates",
+      "Cocinar a fuego lento"
+    ],
+    "caloricRate": 300,
+    "isFavorite": false,
+    "type": "desayuno"
+  },
+  {
+    "name": "Salmón a la plancha con vegetales",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465152/corcerbh4bf6llbv0iux.png",
+    "phrase": "Delicioso salmón a la plancha con vegetales asados",
+    "preparationTime": 25,
+    "ingredients": [
+      "filete de salmón",
+      "pimiento rojo",
+      "calabacín",
+      "cebolla",
+      "limón",
+      "aceite de oliva"
+    ],
+    "people": 2,
+    "steps": [
+      "Sazonar el salmón con sal, pimienta y limón",
+      "Cocinar el salmón a la plancha",
+      "Asar los vegetales con aceite de oliva",
+      "Servir todo junto"
+    ],
+    "caloricRate": 400,
+    "isFavorite": false,
+    "type": "cena"
+  },
+  {
+    "name": "Champiñones rellenos",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720465600/odsvd70wjf52g8o9b1ip.png",
+    "phrase": "Sabrosos champiñones rellenos de vegetales, una cena ligera y deliciosa.",
+    "preparationTime": 45,
+    "ingredients": [
+      "6 champiñones grandes",
+      "1 pimiento verde",
+      "1 cebolla",
+      "2 dientes de ajo",
+      "queso parmesano rallado",
+      "sal y pimienta al gusto"
+    ],
+    "people": 2,
+    "steps": [
+      "Limpiar los champiñones y quitar los tallos",
+      "Picar finamente el pimiento, la cebolla y el ajo",
+      "Saltear las verduras en una sartén con aceite de oliva",
+      "Rellenar los champiñones con la mezcla de verduras",
+      "Espolvorear queso parmesano rallado por encima",
+      "Hornear por 20 minutos"
+    ],
+    "caloricRate": 350,
+    "isFavorite": false,
+    "type": "cena"
+  },
+  {
+    "name": "Batido de frutas",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720520186/qrhb07m4qjys9holcvmf.png",
+    "phrase": "Delicioso batido de frutas para empezar el día con energía",
+    "preparationTime": 10,
+    "ingredients": [
+      "1 plátano",
+      "1 taza de fresas",
+      "1/2 taza de leche de almendra"
+    ],
+    "people": 1,
+    "steps": ["Pelar y cortar las frutas", "Licuar todo junto"],
+    "caloricRate": 150,
+    "isFavorite": false,
+    "type": "desayuno"
+  },
+  {
+    "name": "Smoothie de espinacas y plátano",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720551383/ckxawapyvzn9zxpnhr3r.png",
+    "phrase": "Delicioso smoothie...",
+    "preparationTime": 10,
+    "ingredients": [
+      "2 tazas de espinacas frescas",
+      "1 plátano maduro",
+      "1 taza de leche de almendra"
+    ],
+    "people": 1,
+    "steps": [
+      "Mezclar todos los ingredientes en la licuadora hasta obtener una mezcla homogénea"
+    ],
+    "caloricRate": 150,
+    "isFavorite": true,
+    "type": "desayuno"
+  },
+  {
+    "name": "Tacos de champiñones y frijoles",
+    "urlImage": "https://res.cloudinary.com/dgtbm9skf/image/upload/v1720521761/tmueqszdkcomdfiu7yu0.png",
+    "phrase": "Una opción vegetariana y deliciosa para disfrutar en la cena.",
+    "preparationTime": 30,
+    "ingredients": [
+      "1 lata de frijoles negros",
+      "200g de champiñones",
+      "1 cebolla",
+      "1 pimiento rojo",
+      "Especias mexicanas",
+      "Tortillas de maíz",
+      "Aguacate y cilantro para decorar"
+    ],
+    "people": 2,
+    "steps": [
+      "Saltear la cebolla, pimiento y champiñones con las especias",
+      "Calentar las tortillas y rellenar con los frijoles y la mezcla de champiñones",
+      "Decorar con aguacate y cilantro."
+    ],
+    "caloricRate": 250,
+    "isFavorite": false,
+    "type": "cena"
+  }
+]
