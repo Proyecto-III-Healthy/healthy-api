@@ -51,7 +51,15 @@ module.exports.create = (req, res, next) => {
       });
     })
 
-    .catch((err) => next(err));
+    .catch((err) => {
+      if (err.name === "ValidationError") {
+        next(createError(400, err.message)); // Bad Request for validation errors
+      } else if (err.code === 11000) {
+        next(createError(409, "Email already exists")); // Conflict for duplicate email
+      } else {
+        next(createError(500, "Internal Server Error")); // General server error
+      }
+    });
 };
 
 module.exports.getCurrentUser = (req, res, next) => {
@@ -70,7 +78,7 @@ module.exports.update = (req, res, next) => {
   const updateData = { ...req.body };
   console.log(updateData);
 
- /* if (req.file) {
+  /* if (req.file) {
     uploadToCloudinary(req.file.path)
       .then((result) => {
         updateData.avatarUrl = result.secure_url;
@@ -84,10 +92,10 @@ module.exports.update = (req, res, next) => {
     
   }*/
   User.findByIdAndUpdate(req.params.id, updateData, { new: true })
-      .then((editedUser) => {
-        res.json(editedUser);
-      })
-      .catch(next);
+    .then((editedUser) => {
+      res.json(editedUser);
+    })
+    .catch(next);
 };
 
 module.exports.delete = (req, res, next) => {
