@@ -38,5 +38,13 @@ module.exports.login = (req, res, next) => {
         res.json(token);
       });
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === "ValidationError") {
+        next(createError(400, err.message)); // Bad Request for validation errors
+      } else if (err.code === 11000) {
+        next(createError(409, "Email already exists")); // Conflict for duplicate email
+      } else {
+        next(createError(500, "Internal Server Error")); // General server error
+      }
+    });
 };
