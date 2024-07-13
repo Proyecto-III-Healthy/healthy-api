@@ -5,7 +5,7 @@ const WeeklyPlan = require("../models/WeeklyPlan.model");
 const Meal = require("../models/Meal.model");
 const createDailyMealPlan = require("../utils/createDailyMealPlan");
 module.exports.generateDaylyMealPlan = (req, res, next) => {
-  const { startDate, userPreferences, currentUserId } = req.body;
+  const { startDate, userPreferences, userId } = req.body;
   const prompt = `
     Genera un plan diario de comidas teniendo en estas preferencias del usuario:
     - Objetivo: ${userPreferences.objetive}
@@ -105,9 +105,10 @@ module.exports.generateDaylyMealPlan = (req, res, next) => {
           type: meal.recipe.type,
         },
       }));
-      return createDailyMealPlan(startDate, mealsByDay, currentUserId);
+      return createDailyMealPlan(startDate, mealsByDay, userId);
     })
     .then((dailyMealPlan) => {
+      dailyMealPlan.user = userId;
       return new DayPlan(dailyMealPlan).populate({
         path: "meals.meal",
         populate: { path: "recipe" },
@@ -125,7 +126,7 @@ module.exports.generateDaylyMealPlan = (req, res, next) => {
     });
 };
 module.exports.getUserDayPlans = (req, res, next) => {
-  DayPlan.find({ user: req.currentUserId })
+  DayPlan.find({ user: req.userId })
     .populate({
       path: "meals.meal",
       populate: { path: "recipe" },
