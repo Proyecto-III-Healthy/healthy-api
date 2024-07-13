@@ -9,14 +9,7 @@ require("./config/db.config"); // database initial setup
 
 const app = express();
 
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
-    // methods: ["GET", "POST"],
-    // allowedHeaders: ["Content-Type"],
-    // credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -29,7 +22,10 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, "public", "uploads")); // Ruta donde se guardarán los archivos subidos
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
   },
 });
 
@@ -41,7 +37,9 @@ app.post("/user/upload-avatar", upload.single("avatar"), (req, res, next) => {
     return res.status(400).json({ message: "No file uploaded" });
   }
   // Aquí puedes procesar la información de req.file y guardarla en la base de datos o hacer lo necesario
-  res.status(200).json({ message: "File uploaded successfully", url: req.file.path });
+  res
+    .status(200)
+    .json({ message: "File uploaded successfully", url: req.file.path });
 });
 
 const router = require("./router/router");

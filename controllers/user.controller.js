@@ -53,7 +53,7 @@ module.exports.create = (req, res, next) => {
 
     .catch((err) => {
       if (err.name === "ValidationError") {
-        next(createError(400, err.message)); // Bad Request for validation errors
+        next(createError(400, err.message)); // Bad Request for validation
       } else if (err.code === 11000) {
         next(createError(409, "Email already exists")); // Conflict for duplicate email
       } else {
