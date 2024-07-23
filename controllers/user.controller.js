@@ -78,19 +78,6 @@ module.exports.update = (req, res, next) => {
   const updateData = { ...req.body };
   console.log(updateData);
 
-  /* if (req.file) {
-    uploadToCloudinary(req.file.path)
-      .then((result) => {
-        updateData.avatarUrl = result.secure_url;
-        return User.findByIdAndUpdate(req.params.id, updateData, { new: true });
-      })
-      .then((editedUser) => {
-        res.json(editedUser);
-      })
-      .catch(next);
-  } else {
-    
-  }*/
   User.findByIdAndUpdate(req.params.id, updateData, { new: true })
     .then((editedUser) => {
       res.json(editedUser);
@@ -106,21 +93,3 @@ module.exports.delete = (req, res, next) => {
     .catch(next);
 };
 
-/*module.exports.uploadAvatar = (req, res, next) => {
-  if (!req.file) {
-    return next(createError(400, "No file uploaded"));
-  }
-
-  uploadToCloudinary(req.file.path)
-    .then((result) => {
-      return User.findByIdAndUpdate(
-        req.currentUserId,
-        { avatarUrl: result.secure_url },
-        { new: true }
-      );
-    })
-    .then((updatedUser) => {
-      res.json(updatedUser);
-    })
-    .catch(next);
-};*/
