@@ -58,7 +58,7 @@ module.exports.getRecipes = (req, res, next) => {
     })
     .then((response) => {
       const recipes = JSON.parse(response.data.choices[0].message.content);
-      console.log("*******************",recipes);
+      console.log("*******************", recipes);
       const dallePpromiseAddUrlImage = recipes.recetas.map((recipe) => {
         const dallePrompt = `Crea una imagen para una receta llamada ${recipe.name}`;
         return axios
@@ -98,7 +98,7 @@ module.exports.getRecipes = (req, res, next) => {
       } else {
         // Handle other errors
         console.error("Error:", error);
-        //res.status(500).send({ error: "Something went wrong" });
+        res.status(500).send({ error: "Something went wrong" });
       }
     });
 };
