@@ -141,7 +141,7 @@ module.exports.saveRecipes = (req, res) => {
                       ${recipe.preparationTime} min
                     </small>
                   </p>
-                  <a href="${process.env.FRONTEND_URL}/recipes/${recipe._id}" style="color: #83a580; text-decoration: none;">Ver detalles</a>
+                  <a href="${process.env.FRONTEND_URL}/recipes/${recipe._id}" target="_blank" style="color: #83a580; text-decoration: none;">Ver detalles</a>
                 </div>
               </div>
             </div>
