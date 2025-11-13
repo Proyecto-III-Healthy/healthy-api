@@ -1,45 +1,47 @@
-const Recipe = require("../models/Recipe.model");
+const recipeService = require("../services/recipe.service");
 
-module.exports.listRecipes = (req, res, next) => {
-  Recipe.find()
-    .then((recipes) => {
-      res.json(recipes);
-    })
-    .catch(next);
-};
-
-module.exports.recipeDetails = (req, res, next) => {
-  const { id } = req.params;
-
-
-  Recipe.findById(id)
-    .then((recipe) => {
-      res.json(recipe);
-    })
-    .catch(next);
-};
-module.exports.toggleFavorite = async (req, res, next) => {
-  const { id } = req.params;
-
+/**
+ * Controlador de Recetas - Refactorizado siguiendo arquitectura limpia
+ * 
+ * Principios aplicados:
+ * - SRP: Solo maneja HTTP
+ * - DRY: Reutiliza servicio de recetas
+ * - KISS: Código simple y directo
+ */
+module.exports.listRecipes = async (req, res, next) => {
   try {
-    const recipe = await Recipe.findById(id);
-    if (!recipe) {
-      return res.status(404).json({ error: 'Receta no encontrada' });
-    }
-
-    recipe.isFavorite = !recipe.isFavorite;
-    await recipe.save();
-
-    res.json(recipe);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Error del servidor');
+    const recipes = await recipeService.getAllRecipes();
+    res.json(recipes);
+  } catch (error) {
+    next(error);
   }
 };
-module.exports.listFavorites = (req, res, next) => {
-  Recipe.find({isFavorite: true})
-    .then((recipes) => {
-      res.json(recipes);
-    })
-    .catch(next);
+
+module.exports.recipeDetails = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const recipe = await recipeService.getRecipeById(id);
+    res.json(recipe);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports.toggleFavorite = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const recipe = await recipeService.toggleFavorite(id);
+    res.json(recipe);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports.listFavorites = async (req, res, next) => {
+  try {
+    const recipes = await recipeService.getFavoriteRecipes();
+    res.json(recipes);
+  } catch (error) {
+    next(error);
+  }
 };

@@ -1,0 +1,76 @@
+### Healthy API - Test Requests
+### Usa la extensión REST Client de VS Code o copia estos requests a Postman
+
+@baseUrl = http://localhost:3000
+@token = TU_TOKEN_AQUI
+
+### 1. REGISTRO - Crear usuario
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+  "name": "Diego",
+  "email": "diego@test.com",
+  "password": "12345678",
+  "gender": "masculino",
+  "weight": 75,
+  "height": 175,
+  "objetive": "perder peso",
+  "ability": "principiante",
+  "typeDiet": "vegetariana",
+  "alergic": "ninguna"
+}
+
+### 2. LOGIN - Obtener token
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "email": "diego@test.com",
+  "password": "12345678"
+}
+
+### 3. OBTENER USUARIO ACTUAL - Requiere autenticación
+GET {{baseUrl}}/users/me
+Authorization: Bearer {{token}}
+
+### 4. LISTAR TODAS LAS RECETAS - Público
+GET {{baseUrl}}/recipes
+
+### 5. LISTAR RECETAS FAVORITAS - Público
+GET {{baseUrl}}/recipes/favorites
+
+### 6. GENERAR RECETAS CON IA - Requiere autenticación + API Key
+POST {{baseUrl}}/chat
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "ingredients": ["pollo", "tomate", "cebolla", "ajo", "aceite de oliva"]
+}
+
+### 7. GENERAR PLAN DIARIO DE COMIDAS - Requiere autenticación + API Key
+POST {{baseUrl}}/dayPlan
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "startDate": "2024-12-20",
+  "userPreferences": {
+    "objetive": "perder peso",
+    "ability": "principiante",
+    "typeDiet": "vegetariana",
+    "alergic": "ninguna"
+  }
+}
+
+### 8. OBTENER PLANES DEL USUARIO - Requiere autenticación
+GET {{baseUrl}}/userDayPlans
+Authorization: Bearer {{token}}
+
+### 9. OBTENER DETALLES DE RECETA - Público (reemplaza ID)
+GET {{baseUrl}}/recipes/RECETA_ID_AQUI
+
+### 10. MARCAR/DESMARCAR FAVORITO - Público (reemplaza ID)
+PUT {{baseUrl}}/recipes/RECETA_ID_AQUI/favorite
+
