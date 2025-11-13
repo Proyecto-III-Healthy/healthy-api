@@ -99,7 +99,11 @@ class MealPlanService {
         try {
           imageUrl = await imageService.generateAndUploadImage(
             mealData.recipe.name,
-            { fallbackToPlaceholder: true }
+            {
+              ingredients: mealData.recipe.ingredients || [],
+              fallbackToPlaceholder: true,
+              strategy: options.imageStrategy || process.env.IMAGE_STRATEGY || "stock",
+            }
           );
         } catch (error) {
           console.error(`Error generando imagen para ${mealData.recipe.name}:`, error);

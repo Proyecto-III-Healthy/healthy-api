@@ -2,6 +2,7 @@ const Recipe = require("../models/Recipe.model");
 const User = require("../models/User.model");
 const aiService = require("./ai.service");
 const imageService = require("./image.service");
+const stockImageService = require("./stock-image.service");
 const { generateRecipesPrompt } = require("../templates/prompts.template");
 const { normalizeRecipes } = require("../utils/recipe-normalizer");
 const createError = require("http-errors");
@@ -76,9 +77,12 @@ class RecipeService {
 
     // Generar imágenes si está habilitado
     if (options.generateImages !== false) {
-      recipes = await this.addImagesToRecipes(recipes, options);
+      recipes = await this.addImagesToRecipes(recipes, {
+        ...options,
+        ingredients: ingredients, // Pasar ingredientes para búsqueda mejorada
+      });
     } else {
-      // Usar placeholders si no se generan imágenes
+      // Usar placeholders mejorados si no se generan imágenes
       recipes = recipes.map((recipe) => ({
         ...recipe,
         urlImage: imageService.getPlaceholderImage(),
@@ -103,25 +107,34 @@ class RecipeService {
    * 
    * @param {Array} recipes - Array de recetas sin imágenes
    * @param {Object} options - Opciones para generación de imágenes
+   * @param {Array<string>} options.ingredients - Ingredientes para búsqueda mejorada
    * @returns {Promise<Array>} Recetas con URLs de imágenes
    */
   async addImagesToRecipes(recipes, options = {}) {
     try {
-      const imageUrls = await imageService.generateMultipleImages(recipes, {
+      // Preparar recetas con ingredientes para búsqueda mejorada
+      const recipesWithIngredients = recipes.map((recipe) => ({
+        name: recipe.name,
+        ingredients: recipe.ingredients || options.ingredients || [],
+      }));
+
+      const imageUrls = await imageService.generateMultipleImages(recipesWithIngredients, {
         skipGeneration: options.skipImageGeneration || false,
-        delayBetweenRequests: options.imageDelay || 1000,
+        delayBetweenRequests: options.imageDelay || 200, // Más rápido con stock images
+        strategy: options.imageStrategy || process.env.IMAGE_STRATEGY || "stock",
+        uploadToCloudinary: options.uploadToCloudinary !== false, // Por defecto subir a Cloudinary
       });
 
       return recipes.map((recipe, index) => ({
         ...recipe,
-        urlImage: imageUrls[index],
+        urlImage: imageUrls[index] || imageService.getPlaceholderImage(),
       }));
     } catch (error) {
       console.error("Error generando imágenes, usando placeholders:", error);
-      // Fallback a placeholders si falla la generación
+      // Fallback a placeholders mejorados si falla la generación
       return recipes.map((recipe) => ({
         ...recipe,
-        urlImage: imageService.getPlaceholderImage(),
+        urlImage: stockImageService.getImprovedPlaceholder(recipe.name),
       }));
     }
   }

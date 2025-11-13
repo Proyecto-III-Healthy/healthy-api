@@ -24,12 +24,17 @@ module.exports.isAuthenticated = (req, res, next) => {
 
   jwt.verify(token, secret, (err, decodedToken) => {
     if (err) {
-      return next(err);
+      // Manejar errores específicos de JWT
+      if (err.name === "TokenExpiredError") {
+        return next(createError(401, "Token expirado. Por favor, inicia sesión nuevamente."));
+      }
+      if (err.name === "JsonWebTokenError") {
+        return next(createError(401, "Token inválido. Por favor, inicia sesión nuevamente."));
+      }
+      return next(createError(401, "Error de autenticación"));
     }
 
     req.currentUserId = decodedToken.id; //Extrae y guarda el ID del usuario: Si el token es válido, extrae el ID del usuario y lo guarda en req.currentUserId.
-    console.log("token dado ahora");
-
     next();
   });
 };
