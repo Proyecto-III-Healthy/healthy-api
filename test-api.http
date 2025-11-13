@@ -68,6 +68,14 @@ Content-Type: application/json
 GET {{baseUrl}}/userDayPlans
 Authorization: Bearer {{token}}
 
+### 8.1. OBTENER RECETAS GENERADAS POR EL USUARIO - Requiere autenticación
+GET {{baseUrl}}/recipes/user/generated
+Authorization: Bearer {{token}}
+
+### 8.2. OBTENER RECETAS GENERADAS CON PAGINACIÓN
+GET {{baseUrl}}/recipes/user/generated?limit=10&offset=0&sort=-createdAt
+Authorization: Bearer {{token}}
+
 ### 9. OBTENER DETALLES DE RECETA - Público (reemplaza ID)
 GET {{baseUrl}}/recipes/RECETA_ID_AQUI
 

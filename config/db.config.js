@@ -18,11 +18,9 @@ const connectDB = () => {
     : `${MONGO_URI}/${DB_NAME}`;
 
   mongoose
-    .connect(connectionString, {
-      // Opciones recomendadas para MongoDB
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+    .connect(connectionString)
+    // Nota: useNewUrlParser y useUnifiedTopology fueron removidos porque
+    // están deprecados en MongoDB Driver 4.0.0+ y ya no son necesarios
     .then(() => {
       console.log(`✅ Connected to MongoDB: ${DB_NAME}`);
       console.log(`📍 URI: ${MONGO_URI.replace(/\/\/.*@/, "//***:***@")}`); // Oculta credenciales en log

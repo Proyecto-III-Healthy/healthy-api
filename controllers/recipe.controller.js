@@ -45,3 +45,27 @@ module.exports.listFavorites = async (req, res, next) => {
     next(error);
   }
 };
+
+/**
+ * Obtiene las recetas generadas por el usuario autenticado
+ * 
+ * Endpoint: GET /recipes/user/generated
+ * Requiere autenticación
+ */
+module.exports.getUserGeneratedRecipes = async (req, res, next) => {
+  try {
+    const userId = req.currentUserId;
+    const { limit, offset, sort } = req.query;
+
+    const recipes = await recipeService.getGeneratedRecipesByUser(userId, {
+      limit,
+      offset,
+      sort,
+    });
+
+    // Asegurar que siempre devolvemos un array (requisito del frontend)
+    res.status(200).json(Array.isArray(recipes) ? recipes : []);
+  } catch (error) {
+    next(error);
+  }
+};

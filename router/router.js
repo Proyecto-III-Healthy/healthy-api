@@ -12,6 +12,7 @@ const {
   recipeDetails,
   toggleFavorite,
   listFavorites,
+  getUserGeneratedRecipes,
 } = require("../controllers/recipe.controller");
 const {
   uploadImageToCloudinary,
@@ -35,6 +36,7 @@ router.get("/userDayPlans", isAuthenticated, getUserDayPlans);
 //Recipe
 router.get("/recipes", listRecipes);
 router.get("/recipes/favorites", listFavorites);
+router.get("/recipes/user/generated", isAuthenticated, getUserGeneratedRecipes);
 router.get("/recipes/:id", recipeDetails);
 router.put("/recipes/:id/favorite", toggleFavorite);
 module.exports = router;

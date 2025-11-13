@@ -85,8 +85,15 @@ class RecipeService {
       }));
     }
 
+    // Agregar userId a cada receta antes de guardar
+    const recipesWithUserId = recipes.map((recipe) => ({
+      ...recipe,
+      userId: userId,
+      isGenerated: true, // Marcar como generada por IA
+    }));
+
     // Guardar recetas en base de datos
-    const savedRecipes = await Recipe.insertMany(recipes);
+    const savedRecipes = await Recipe.insertMany(recipesWithUserId);
 
     return savedRecipes;
   }
@@ -175,6 +182,57 @@ class RecipeService {
       throw createError(400, "No hay recetas para guardar");
     }
     return Recipe.insertMany(recipes);
+  }
+
+  /**
+   * Obtiene todas las recetas generadas por un usuario
+   * 
+   * @param {string} userId - ID del usuario
+   * @param {Object} options - Opciones de consulta (limit, offset, sort)
+   * @returns {Promise<Array>} Array de recetas generadas por el usuario
+   * 
+   * Explicación para entrevistas:
+   * "Este método filtra las recetas por userId e isGenerated=true.
+   * Esto permite que cada usuario vea solo sus propias recetas generadas,
+   * siguiendo el principio de seguridad de datos por usuario."
+   */
+  async getGeneratedRecipesByUser(userId, options = {}) {
+    const {
+      limit = 50,
+      offset = 0,
+      sort = "-createdAt", // Más recientes primero por defecto
+    } = options;
+
+    // Construir query
+    const query = {
+      userId: userId,
+      isGenerated: true, // Solo recetas generadas por IA
+    };
+
+    // Parsear sort
+    let sortOption = { createdAt: -1 }; // Por defecto: más recientes primero
+    if (sort) {
+      if (sort.startsWith("-")) {
+        const field = sort.substring(1);
+        sortOption = { [field]: -1 };
+      } else {
+        sortOption = { [sort]: 1 };
+      }
+    }
+
+    try {
+      const recipes = await Recipe.find(query)
+        .sort(sortOption)
+        .limit(parseInt(limit))
+        .skip(parseInt(offset))
+        .lean(); // Usar lean() para mejor performance
+
+      // Asegurar que siempre devolvemos un array
+      return Array.isArray(recipes) ? recipes : [];
+    } catch (error) {
+      console.error("Error obteniendo recetas generadas:", error);
+      throw createError(500, `Error al obtener recetas generadas: ${error.message}`);
+    }
   }
 }
 

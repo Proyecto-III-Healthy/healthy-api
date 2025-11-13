@@ -112,8 +112,15 @@ class MealPlanService {
         urlImage: imageUrl,
       });
 
+      // Agregar userId e isGenerated a la receta
+      const recipeData = {
+        ...normalizedRecipeData,
+        userId: userId,
+        isGenerated: true, // Marcar como generada por IA
+      };
+
       // Crear receta
-      const recipe = new Recipe(normalizedRecipeData);
+      const recipe = new Recipe(recipeData);
       const savedRecipe = await recipe.save();
 
       // Normalizar tipo de comida (Meal también tiene enum)

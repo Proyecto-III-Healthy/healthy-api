@@ -40,7 +40,18 @@ const RecipeSchema = mongoose.Schema({
   type: {
     type: String,
     enum: ["desayuno", "comida", "cena"],
+  },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: false, // Opcional para mantener compatibilidad con recetas existentes
+  },
+  isGenerated: {
+    type: Boolean,
+    default: false, // Indica si la receta fue generada por IA
   }
+}, {
+  timestamps: true // Agrega createdAt y updatedAt automáticamente
 });
 
 const Recipe = mongoose.model("Recipe", RecipeSchema);
