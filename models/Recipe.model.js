@@ -49,6 +49,11 @@ const RecipeSchema = mongoose.Schema({
   isGenerated: {
     type: Boolean,
     default: false, // Indica si la receta fue generada por IA
+  },
+  imageStatus: {
+    type: String,
+    enum: ["pending", "processing", "completed", "failed"],
+    default: "completed", // Por defecto completado (para stock images y recetas existentes)
   }
 }, {
   timestamps: true // Agrega createdAt y updatedAt automáticamente

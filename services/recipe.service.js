@@ -75,7 +75,33 @@ class RecipeService {
       throw createError(500, `Error procesando recetas: ${error.message}`);
     }
 
-    // Generar imágenes si está habilitado
+    // Determinar estrategia de imágenes
+    const imageStrategy = options.imageStrategy || process.env.IMAGE_STRATEGY || "stock";
+    
+    // Flujo ASÍNCRONO para generación con IA (lenta, ~30-60 seg por imagen)
+    if (options.generateImages !== false && imageStrategy === "ai") {
+      // Guardar recetas con placeholder primero (respuesta rápida)
+      const recipesWithPlaceholder = recipes.map((recipe) => ({
+        ...recipe,
+        urlImage: stockImageService.getImprovedPlaceholder(recipe.name),
+        userId: userId,
+        isGenerated: true,
+        imageStatus: "pending", // Marcar como pendiente de generación
+      }));
+
+      const savedRecipes = await Recipe.insertMany(recipesWithPlaceholder);
+
+      // Generar imágenes en background (no bloquea la respuesta)
+      this.generateImagesInBackground(savedRecipes, ingredients, options)
+        .catch((err) => {
+          console.error("Error generando imágenes en background:", err);
+          // No falla la petición si el background falla
+        });
+
+      return savedRecipes;
+    }
+
+    // Flujo SÍNCRONO para stock images (rápido, ~2-5 seg)
     if (options.generateImages !== false) {
       recipes = await this.addImagesToRecipes(recipes, {
         ...options,
@@ -85,7 +111,7 @@ class RecipeService {
       // Usar placeholders mejorados si no se generan imágenes
       recipes = recipes.map((recipe) => ({
         ...recipe,
-        urlImage: imageService.getPlaceholderImage(),
+        urlImage: stockImageService.getImprovedPlaceholder(recipe.name),
       }));
     }
 
@@ -94,6 +120,7 @@ class RecipeService {
       ...recipe,
       userId: userId,
       isGenerated: true, // Marcar como generada por IA
+      imageStatus: "completed", // Stock images se completan inmediatamente
     }));
 
     // Guardar recetas en base de datos
@@ -103,7 +130,73 @@ class RecipeService {
   }
 
   /**
-   * Agrega imágenes a las recetas generadas
+   * Genera imágenes en background para recetas ya guardadas
+   * 
+   * Este método se ejecuta de forma asíncrona después de guardar las recetas.
+   * No bloquea la respuesta al usuario. Procesa cada imagen con delay para evitar rate limits.
+   * 
+   * @param {Array} savedRecipes - Array de recetas ya guardadas en la BD
+   * @param {Array<string>} ingredients - Ingredientes para búsqueda mejorada
+   * @param {Object} options - Opciones adicionales
+   * @returns {Promise<void>}
+   * 
+   * Explicación para entrevistas:
+   * "Implementé generación asíncrona de imágenes para IA porque DALL-E es lento (~30-60 seg).
+   * En lugar de hacer esperar al usuario, guardo las recetas con placeholder y genero las imágenes
+   * en background. Esto mejora la UX de ~60 segundos a ~2 segundos de respuesta inicial."
+   */
+  async generateImagesInBackground(savedRecipes, ingredients, options = {}) {
+    const delayBetweenImages = options.aiImageDelay || 2000; // 2 segundos entre imágenes para evitar rate limits
+
+    for (const recipe of savedRecipes) {
+      try {
+        // Marcar como procesando
+        await Recipe.findByIdAndUpdate(recipe._id, {
+          imageStatus: "processing",
+        });
+
+        // Generar imagen con IA
+        const imageUrl = await imageService.generateAndUploadImage(recipe.name, {
+          ingredients: ingredients,
+          strategy: "ai",
+          uploadToCloudinary: options.uploadToCloudinary !== false,
+        });
+
+        // Actualizar receta con imagen final
+        await Recipe.findByIdAndUpdate(recipe._id, {
+          urlImage: imageUrl,
+          imageStatus: "completed",
+        });
+
+        console.log(`✅ Imagen generada para receta: ${recipe.name}`);
+      } catch (error) {
+        console.error(`❌ Error generando imagen para ${recipe.name}:`, error);
+        
+        // Marcar como fallido pero mantener placeholder
+        await Recipe.findByIdAndUpdate(recipe._id, {
+          imageStatus: "failed",
+        });
+      }
+
+      // Delay entre imágenes para evitar rate limits de OpenAI
+      if (savedRecipes.indexOf(recipe) < savedRecipes.length - 1) {
+        await this.sleep(delayBetweenImages);
+      }
+    }
+  }
+
+  /**
+   * Utilidad para pausar ejecución
+   * 
+   * @param {number} ms - Milisegundos a esperar
+   * @returns {Promise<void>}
+   */
+  sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  /**
+   * Agrega imágenes a las recetas generadas (flujo síncrono para stock images)
    * 
    * @param {Array} recipes - Array de recetas sin imágenes
    * @param {Object} options - Opciones para generación de imágenes
