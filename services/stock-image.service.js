@@ -180,9 +180,13 @@ class StockImageService {
       const variation = this.getSearchVariation(recipeName);
       const variedQuery = this.addSearchVariation(searchQuery, variation);
 
-      // Pixabay requiere API key pero tiene una key demo (limitada)
-      // Alternativamente, podemos usar su endpoint público con limitaciones
-      const pixabayKey = process.env.PIXABAY_API_KEY || "9656065-a4094594c34c9b8b8dd309603"; // Demo key
+      // Pixabay requiere API key (gratuita)
+      // Si no hay key, saltar Pixabay
+      const pixabayKey = process.env.PIXABAY_API_KEY;
+      
+      if (!pixabayKey) {
+        return null; // Saltar si no hay API key
+      }
       
       const response = await axios.get("https://pixabay.com/api/", {
         params: {
@@ -195,7 +199,14 @@ class StockImageService {
           per_page: 20,
         },
         timeout: 5000,
+        validateStatus: (status) => status < 500, // Aceptar 4xx pero no 5xx
       });
+
+      // Verificar errores de API
+      if (response.status === 400 || response.status === 401 || response.status === 403) {
+        console.warn(`Pixabay API error ${response.status}: ${response.data?.error || "Invalid API key or request"}`);
+        return null;
+      }
 
       if (response.data?.hits?.length > 0) {
         // Seleccionar imagen basada en hash del nombre

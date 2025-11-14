@@ -35,6 +35,14 @@ REGLAS CRÍTICAS PARA EL CAMPO "type":
 - Si es para el mediodía → usa "comida"
 - Si es para la noche → usa "cena"
 
+INSTRUCCIONES CRÍTICAS PARA LOS PASOS DE PREPARACIÓN:
+- Los pasos DEBEN ser detallados, específicos y fáciles de seguir
+- Cada paso debe describir una acción concreta (ej: "Cortar la cebolla en cubos pequeños", "Calentar el aceite en una sartén a fuego medio")
+- Incluye detalles importantes como temperatura, tiempo de cocción, técnicas específicas
+- Mínimo 4-6 pasos por receta (más para recetas complejas)
+- Los pasos deben estar en orden lógico de preparación
+- Sé específico con cantidades, tiempos y técnicas cuando sea relevante
+
 IMPORTANTE: Responde SOLO con un JSON válido, sin texto adicional, sin comentarios, sin markdown.
 El JSON debe tener esta estructura exacta:
 
@@ -47,7 +55,13 @@ El JSON debe tener esta estructura exacta:
       "preparationTime": 30,
       "ingredients": ["ingrediente 1", "ingrediente 2"],
       "people": 4,
-      "steps": ["Paso 1", "Paso 2"],
+      "steps": [
+        "Paso 1: Descripción detallada del primer paso de preparación",
+        "Paso 2: Descripción detallada del segundo paso de preparación",
+        "Paso 3: Descripción detallada del tercer paso de preparación",
+        "Paso 4: Descripción detallada del cuarto paso de preparación",
+        "Paso 5: Descripción detallada del quinto paso de preparación"
+      ],
       "caloricRate": 250,
       "isFavorite": false,
       "type": "comida"
@@ -55,7 +69,9 @@ El JSON debe tener esta estructura exacta:
   ]
 }
 
-Recuerda: El campo "type" DEBE ser exactamente "desayuno", "comida" o "cena". Nada más.`;
+Recuerda: 
+- El campo "type" DEBE ser exactamente "desayuno", "comida" o "cena". Nada más.
+- Los pasos DEBEN ser detallados y específicos, mínimo 4-6 pasos por receta.`;
 }
 
 /**
@@ -78,6 +94,14 @@ function generateDailyMealPlanPrompt(userPreferences, date) {
 
 El plan debe incluir 3 comidas: desayuno, comida y cena.
 
+INSTRUCCIONES CRÍTICAS PARA LOS PASOS DE PREPARACIÓN:
+- Los pasos DEBEN ser detallados, específicos y fáciles de seguir
+- Cada paso debe describir una acción concreta (ej: "Cortar la cebolla en cubos pequeños", "Calentar el aceite en una sartén a fuego medio")
+- Incluye detalles importantes como temperatura, tiempo de cocción, técnicas específicas
+- Mínimo 4-6 pasos por receta (más para recetas complejas)
+- Los pasos deben estar en orden lógico de preparación
+- Sé específico con cantidades, tiempos y técnicas cuando sea relevante
+
 IMPORTANTE: Responde SOLO con un JSON válido, sin texto adicional, sin comentarios, sin markdown.
 El JSON debe tener esta estructura exacta:
 
@@ -95,7 +119,12 @@ El JSON debe tener esta estructura exacta:
         "preparationTime": 20,
         "ingredients": ["ingrediente 1", "ingrediente 2"],
         "people": 2,
-        "steps": ["Paso 1", "Paso 2"],
+        "steps": [
+          "Paso 1: Descripción detallada del primer paso de preparación",
+          "Paso 2: Descripción detallada del segundo paso de preparación",
+          "Paso 3: Descripción detallada del tercer paso de preparación",
+          "Paso 4: Descripción detallada del cuarto paso de preparación"
+        ],
         "caloricRate": 300,
         "isFavorite": false,
         "type": "desayuno"
@@ -143,11 +172,21 @@ El JSON debe tener esta estructura exacta:
  * Template para generar prompt de imagen de receta
  * 
  * @param {string} recipeName - Nombre de la receta
+ * @param {Array<string>} ingredients - Ingredientes principales (opcional)
  * @returns {string} Prompt para generación de imagen
  */
-function generateImagePrompt(recipeName) {
-  return `Crea una imagen apetitosa y profesional de un plato de comida llamado "${recipeName}". 
-La imagen debe ser realista, bien iluminada y mostrar el plato de forma atractiva.`;
+function generateImagePrompt(recipeName, ingredients = []) {
+  let prompt = `A delicious and appetizing ${recipeName}`;
+  
+  // Agregar ingredientes principales si están disponibles para mejor contexto
+  if (ingredients && ingredients.length > 0) {
+    const mainIngredients = ingredients.slice(0, 3).join(", ");
+    prompt += ` made with ${mainIngredients}`;
+  }
+  
+  prompt += `, professional food photography, high quality, appetizing, well lit, realistic, detailed, on a white plate, top view`;
+  
+  return prompt;
 }
 
 module.exports = {

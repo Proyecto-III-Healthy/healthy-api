@@ -56,3 +56,24 @@ module.exports.getUserDayPlans = async (req, res, next) => {
     next(error);
   }
 };
+
+/**
+ * Obtiene un plan diario específico por ID
+ * 
+ * @param {Object} req - Request object
+ * @param {string} req.params.id - ID del plan diario
+ * @param {Object} res - Response object
+ * @param {Function} next - Next middleware
+ */
+module.exports.getDayPlanById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const userId = req.currentUserId;
+
+    const dayPlan = await mealPlanService.getDayPlanById(id, userId);
+
+    res.json({ dayPlan });
+  } catch (error) {
+    next(error);
+  }
+};

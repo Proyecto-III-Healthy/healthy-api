@@ -76,10 +76,33 @@ class RecipeService {
     }
 
     // Determinar estrategia de imágenes
+    // Por defecto usa "stock" que es rápido y confiable
     const imageStrategy = options.imageStrategy || process.env.IMAGE_STRATEGY || "stock";
     
-    // Flujo ASÍNCRONO para generación con IA (lenta, ~30-60 seg por imagen)
-    if (options.generateImages !== false && imageStrategy === "ai") {
+    // Flujo SÍNCRONO para stock images (rápido, ~2-5 seg, siempre funciona)
+    // Stock images se genera antes de guardar para tener URLs inmediatas
+    if (options.generateImages !== false && imageStrategy === "stock") {
+      recipes = await this.addImagesToRecipes(recipes, {
+        ...options,
+        ingredients: ingredients,
+      });
+
+      // Agregar userId a cada receta antes de guardar
+      const recipesWithUserId = recipes.map((recipe) => ({
+        ...recipe,
+        userId: userId,
+        isGenerated: true,
+        imageStatus: "completed", // Stock images se completan inmediatamente
+      }));
+
+      // Guardar recetas con imágenes ya incluidas
+      const savedRecipes = await Recipe.insertMany(recipesWithUserId);
+      return savedRecipes;
+    }
+
+    // Flujo ASÍNCRONO solo para generación con IA (lenta, requiere créditos)
+    // Solo se usa si explícitamente se solicita IA
+    if (options.generateImages !== false && (imageStrategy === "ai" || imageStrategy === "free-ai" || imageStrategy === "dalle")) {
       // Guardar recetas con placeholder primero (respuesta rápida)
       const recipesWithPlaceholder = recipes.map((recipe) => ({
         ...recipe,
@@ -101,14 +124,40 @@ class RecipeService {
       return savedRecipes;
     }
 
-    // Flujo SÍNCRONO para stock images (rápido, ~2-5 seg)
-    if (options.generateImages !== false) {
+    // Flujo SÍNCRONO para "hybrid" (intenta stock primero, luego IA en background si falla)
+    if (options.generateImages !== false && imageStrategy === "hybrid") {
+      // Intentar stock images primero (rápido y confiable)
       recipes = await this.addImagesToRecipes(recipes, {
         ...options,
-        ingredients: ingredients, // Pasar ingredientes para búsqueda mejorada
+        ingredients: ingredients,
       });
-    } else {
-      // Usar placeholders mejorados si no se generan imágenes
+
+      // Guardar recetas con stock images
+      const recipesWithUserId = recipes.map((recipe) => ({
+        ...recipe,
+        userId: userId,
+        isGenerated: true,
+        imageStatus: "completed",
+      }));
+
+      const savedRecipes = await Recipe.insertMany(recipesWithUserId);
+
+      // Opcionalmente intentar mejorar con IA en background (solo si está configurado)
+      // Esto es opcional y no bloquea la respuesta
+      if (process.env.REPLICATE_API_TOKEN || process.env.OPENAI_API_KEY) {
+        this.generateImagesInBackground(savedRecipes, ingredients, {
+          ...options,
+          imageStrategy: "free-ai", // Intentar mejorar con IA
+        }).catch((err) => {
+          console.log("Intentando mejorar imágenes con IA en background (opcional)");
+        });
+      }
+
+      return savedRecipes;
+    }
+
+    // Si no se generan imágenes, usar placeholders mejorados
+    if (options.generateImages === false) {
       recipes = recipes.map((recipe) => ({
         ...recipe,
         urlImage: stockImageService.getImprovedPlaceholder(recipe.name),
@@ -119,8 +168,8 @@ class RecipeService {
     const recipesWithUserId = recipes.map((recipe) => ({
       ...recipe,
       userId: userId,
-      isGenerated: true, // Marcar como generada por IA
-      imageStatus: "completed", // Stock images se completan inmediatamente
+      isGenerated: true,
+      imageStatus: "completed",
     }));
 
     // Guardar recetas en base de datos
@@ -146,7 +195,9 @@ class RecipeService {
    * en background. Esto mejora la UX de ~60 segundos a ~2 segundos de respuesta inicial."
    */
   async generateImagesInBackground(savedRecipes, ingredients, options = {}) {
-    const delayBetweenImages = options.aiImageDelay || 2000; // 2 segundos entre imágenes para evitar rate limits
+    // Delay aumentado para evitar rate limits de Replicate
+    const delayBetweenImages = options.aiImageDelay || 5000; // 5 segundos entre imágenes
+    const imageStrategy = options.imageStrategy || process.env.IMAGE_STRATEGY || "free-ai";
 
     for (const recipe of savedRecipes) {
       try {
@@ -155,30 +206,56 @@ class RecipeService {
           imageStatus: "processing",
         });
 
-        // Generar imagen con IA
+        // Generar imagen con IA (gratuita por defecto: Stable Diffusion)
+        // Si falla, automáticamente usa stock images como fallback
         const imageUrl = await imageService.generateAndUploadImage(recipe.name, {
           ingredients: ingredients,
-          strategy: "ai",
+          strategy: imageStrategy,
           uploadToCloudinary: options.uploadToCloudinary !== false,
         });
 
-        // Actualizar receta con imagen final
-        await Recipe.findByIdAndUpdate(recipe._id, {
-          urlImage: imageUrl,
-          imageStatus: "completed",
-        });
+        // Si se obtuvo una imagen (de IA o fallback), actualizar receta
+        if (imageUrl) {
+          await Recipe.findByIdAndUpdate(recipe._id, {
+            urlImage: imageUrl,
+            imageStatus: "completed",
+          });
 
-        console.log(`✅ Imagen generada para receta: ${recipe.name}`);
+          console.log(`✅ Imagen obtenida para receta: ${recipe.name}`);
+        } else {
+          // Si no se obtuvo imagen, mantener placeholder y marcar como fallido
+          await Recipe.findByIdAndUpdate(recipe._id, {
+            imageStatus: "failed",
+          });
+          console.warn(`⚠️ No se pudo obtener imagen para ${recipe.name}, manteniendo placeholder`);
+        }
       } catch (error) {
-        console.error(`❌ Error generando imagen para ${recipe.name}:`, error);
+        console.error(`❌ Error procesando imagen para ${recipe.name}:`, error.message);
         
-        // Marcar como fallido pero mantener placeholder
-        await Recipe.findByIdAndUpdate(recipe._id, {
-          imageStatus: "failed",
-        });
+        // Intentar obtener stock image como último recurso
+        try {
+          const stockImageUrl = await stockImageService.getRecipeImage(recipe.name, ingredients);
+          if (stockImageUrl) {
+            await Recipe.findByIdAndUpdate(recipe._id, {
+              urlImage: stockImageUrl,
+              imageStatus: "completed",
+            });
+            console.log(`✅ Imagen de stock obtenida como último recurso para: ${recipe.name}`);
+          } else {
+            // Marcar como fallido pero mantener placeholder
+            await Recipe.findByIdAndUpdate(recipe._id, {
+              imageStatus: "failed",
+            });
+          }
+        } catch (stockError) {
+          // Si todo falla, mantener placeholder
+          await Recipe.findByIdAndUpdate(recipe._id, {
+            imageStatus: "failed",
+          });
+        }
       }
 
-      // Delay entre imágenes para evitar rate limits de OpenAI
+      // Delay entre imágenes para evitar rate limits (aumentado para Replicate)
       if (savedRecipes.indexOf(recipe) < savedRecipes.length - 1) {
         await this.sleep(delayBetweenImages);
       }

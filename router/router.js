@@ -6,6 +6,7 @@ const { generateRecipes, saveRecipes } = require("./../controllers/chat.controll
 const {
   generateDailyMealPlan,
   getUserDayPlans,
+  getDayPlanById,
 } = require("../controllers/dayPlan.controller");
 const {
   listRecipes,
@@ -33,6 +34,7 @@ router.post(
 );
 router.post("/dayPlan", isAuthenticated, generateDailyMealPlan);
 router.get("/userDayPlans", isAuthenticated, getUserDayPlans);
+router.get("/day-plan/:id", isAuthenticated, getDayPlanById);
 //Recipe
 router.get("/recipes", listRecipes);
 router.get("/recipes/favorites", listFavorites);

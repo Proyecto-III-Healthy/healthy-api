@@ -2,6 +2,7 @@ const axios = require("axios");
 const cloudinary = require("../config/cloudinary.config");
 const aiService = require("./ai.service");
 const stockImageService = require("./stock-image.service");
+const freeAIImageService = require("./free-ai-image.service");
 const { generateImagePrompt } = require("../templates/prompts.template");
 const createError = require("http-errors");
 
@@ -88,10 +89,59 @@ class ImageService {
       }
     }
 
-    // Estrategia 2: IA Generation (Solo si está configurado y se requiere)
-    if (strategy === "ai" || (strategy === "hybrid" && process.env.OPENAI_API_KEY)) {
+    // Estrategia 2: IA Generation Gratuita (Stable Diffusion via Replicate)
+    // Con fallback automático a stock images si falla
+    // También se usa en "hybrid" para intentar IA primero
+    if (strategy === "ai" || strategy === "free-ai" || strategy === "hybrid") {
       try {
-        const imagePrompt = generateImagePrompt(recipeName);
+        const imagePrompt = generateImagePrompt(recipeName, ingredients);
+        const imageUrl = await freeAIImageService.generateImage(imagePrompt, {
+          size: options.size || "512x512",
+        });
+
+        // Descargar y subir a Cloudinary
+        const imageResponse = await axios.get(imageUrl, {
+          responseType: "arraybuffer",
+          timeout: 30000,
+        });
+
+        const cloudinaryUrl = await this.uploadToCloudinary(
+          imageResponse.data,
+          recipeName
+        );
+
+        return cloudinaryUrl;
+      } catch (error) {
+        // Si Replicate falla (sin créditos, rate limit, etc.), usar stock images como fallback
+        console.warn(`⚠️ Replicate falló para "${recipeName}", usando stock images como fallback:`, error.message);
+        
+        // Fallback automático a stock images mejorado
+        try {
+          const stockImageUrl = await stockImageService.getRecipeImage(recipeName, ingredients);
+          if (stockImageUrl) {
+            // Opcional: Subir a Cloudinary si está configurado
+            if (options.uploadToCloudinary === true) {
+              try {
+                return await this.uploadStockImageToCloudinary(stockImageUrl, recipeName);
+              } catch (uploadError) {
+                console.warn("Error subiendo stock image a Cloudinary, usando URL directa:", uploadError.message);
+                return stockImageUrl;
+              }
+            }
+            return stockImageUrl;
+          }
+        } catch (stockError) {
+          console.warn("Error obteniendo stock image como fallback:", stockError.message);
+        }
+        
+        // Si todo falla, continuar con placeholder
+      }
+    }
+
+    // Estrategia 3: IA Generation Premium (DALL-E de OpenAI - requiere API key)
+    if (strategy === "dalle" && process.env.OPENAI_API_KEY) {
+      try {
+        const imagePrompt = generateImagePrompt(recipeName, ingredients);
         const imageUrl = await aiService.generateImage(imagePrompt, {
           size: options.size || "512x512",
         });
@@ -108,7 +158,7 @@ class ImageService {
 
         return cloudinaryUrl;
       } catch (error) {
-        console.warn("Error generando imagen con IA:", error);
+        console.warn("Error generando imagen con DALL-E:", error);
         // Continuar con fallback
       }
     }
