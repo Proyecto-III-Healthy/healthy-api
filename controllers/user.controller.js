@@ -32,6 +32,11 @@ module.exports.create = (req, res, next) => {
     alergic,
   })
     .then((userCreated) => {
+      // Responder inmediatamente sin esperar el email
+      res.status(201).json(userCreated);
+
+      // Enviar email de forma asíncrona (no bloqueante)
+      // Si falla, solo se registra en logs pero no afecta el registro
       const userEmail = email;
       const subject = "¡Healthy App!";
       const text = "¡Gracias por registrarte en Healthy App!";
@@ -46,9 +51,15 @@ module.exports.create = (req, res, next) => {
   
         `;
 
-      return sendEmail(userEmail, subject, text, html).then(() => {
-        res.status(204).json(userCreated);
-      });
+      // Enviar email en background sin bloquear la respuesta
+      sendEmail(userEmail, subject, text, html)
+        .then(() => {
+          console.log(`✅ Email de bienvenida enviado a: ${userEmail}`);
+        })
+        .catch((emailError) => {
+          console.error(`⚠️ Error enviando email a ${userEmail}:`, emailError.message);
+          // No lanzamos el error, solo lo registramos
+        });
     })
 
     .catch((err) => {
